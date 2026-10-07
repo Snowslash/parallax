@@ -10,6 +10,8 @@ Parallax is a static HTML/CSS/ES-module application. The guided lesson displays 
 
 Each page owns its in-memory state. Shared styling and the persisted theme preference are described in [Estate UI integration](ESTATE-UI.md).
 
+`demo/index.html` is the public project page. Its Open lab action leads to `demo/lab.html`, the mode chooser. The existing `guided.html`, `beam3d.html` and `mesh-spike.html` URLs remain direct entrypoints; neither introductory page loads a lab renderer.
+
 ## Guided lesson: state and cached images
 
 [`lesson-model.mjs`](../demo/lesson-model.mjs) is a pure reducer. It holds the current case, acquired angles, selected angle, displayed angle, pinned reference, prediction, judgement and reveal state. `guided.mjs` dispatches actions, loads images and updates the page.

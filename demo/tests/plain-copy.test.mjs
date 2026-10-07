@@ -23,7 +23,7 @@ test('internal mesh diagnostics stay available without adding visible UI',()=>{
 });
 
 test('working pages link to one about page instead of repeating disclaimers',()=>{
-  for(const name of ['index.html','guided.html','beam3d.html','mesh-spike.html']){
+  for(const name of ['index.html','lab.html','guided.html','beam3d.html','mesh-spike.html']){
     const html=read(name);
     assert.doesNotMatch(html,/Not for clinical use|Synthetic education only|not anatomically validated|clinical.safety|competence claim|clinical accuracy claim|PARTIAL/i,name);
     assert.match(html,/href="licences.html">About &amp; licences/,name);

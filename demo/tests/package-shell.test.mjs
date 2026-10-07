@@ -4,12 +4,12 @@ import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const demo=new URL('../',import.meta.url),root=new URL('../../',import.meta.url);
 const read=(path,base=demo)=>{const u=new URL(path,base);assert.ok(existsSync(u),`missing packaged file: ${path}`);return readFileSync(u,'utf8');};
-const pages=['index.html','guided.html','beam3d.html','mesh-spike.html'];
+const pages=['index.html','lab.html','guided.html','beam3d.html','mesh-spike.html'];
 
-test('home prioritises guided study and links the separate labs',()=>{
-  const html=read('index.html');
+test('lab chooser prioritises guided study and links the separate labs',()=>{
+  const html=read('lab.html');
   assert.doesNotMatch(html,/http-equiv="refresh"/i);
-  for(const p of pages.slice(1))assert.ok(html.includes(`href="${p}"`));
+  for(const p of pages.slice(2))assert.ok(html.includes(`href="${p}"`));
   assert.match(html,/Start the guided lesson/);assert.match(html,/A model femur\./);
 });
 test('all three modes return home and have no links to omitted prototypes',()=>{

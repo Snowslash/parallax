@@ -4,6 +4,8 @@ An interactive lab for learning how X-ray views relate to 3D geometry.
 
 Built for junior trauma & orthopaedics trainees. Choose another view, compare projections and explore the geometry behind the image.
 
+[Project page](https://parallax.sangeev.me/) · [Open lab](https://parallax.sangeev.me/lab.html)
+
 ## Explore
 
 - **Guided lesson:** Work through three wire-position challenges, then compare your answer with the 3D view.

@@ -7,7 +7,7 @@ import vm from 'node:vm';
 
 const demo=process.env.FTV_DEMO?pathToFileURL(process.env.FTV_DEMO.replace(/\/$/,'')+'/'):new URL('../',import.meta.url);
 const read=name=>readFileSync(new URL(name,demo),'utf8');
-const pages=['index.html','guided.html','beam3d.html','mesh-spike.html','licences.html'];
+const pages=['index.html','lab.html','guided.html','beam3d.html','mesh-spike.html','licences.html'];
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 
 // Small source/adapter tests. Rendered geometry, interaction, contrast and motion

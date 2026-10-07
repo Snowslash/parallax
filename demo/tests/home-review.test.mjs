@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
 
 const demo=process.env.FTV_DEMO?pathToFileURL(process.env.FTV_DEMO.replace(/\/$/,'')+'/'):new URL('../',import.meta.url);
-const html=readFileSync(new URL('index.html',demo),'utf8');
+const html=readFileSync(new URL('lab.html',demo),'utf8');
 const femurRow=html.match(/<article class="mode-row">[\s\S]*?<\/article>/g).find(row=>row.includes('href="mesh-spike.html"'));
 
 test('homepage group 1: femur description is one short sentence without the performance report',()=>{

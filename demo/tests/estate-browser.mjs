@@ -35,6 +35,12 @@ export async function audit(doc=document){
     if(w.innerWidth<=780)check('initial guided projections precede geometry and fit first screen',rect($('#projection')).bottom<=w.innerHeight&&rect($('.evidence-panel')).y<rect($('.geometry-panel')).y,{projection:rect($('#projection')),geometry:rect($('.geometry-panel'))});
   }
   if($('#start'))check('primary lesson action is in first viewport',rect($('#start')).bottom<=w.innerHeight,rect($('#start')));
+  if($('#open-lab')){
+    const action=$('#open-lab'),source=$('.project-actions [aria-label="Source on GitHub"]');
+    check('project page opens the separate lab chooser',action.getAttribute('href')==='lab.html'&&!$('canvas'));
+    check('project actions are visible and meet the target floor',[action,source].every(e=>e&&rect(e).width>=44&&rect(e).height>=44)&&rect(action).bottom<=w.innerHeight);
+    check('project page retains the pinned source icon',source?.querySelector('svg.estate-github-mark')&&source.href==='https://github.com/Snowslash/parallax');
+  }
   if($('#mesh-projection'))check('femur hides internal diagnostics while keeping status visible',!$('details')&&$('#diagnostics')&&$('#load-metrics')&&!visible($('#diagnostics'))&&!visible($('#load-metrics'))&&visible($('#mesh-status'))&&$('.project-footer a[href="licences.html"]'));
   const parser=doc.createElement('canvas');parser.width=parser.height=1;const ctx=parser.getContext('2d');
   function rgba(value){ctx.clearRect(0,0,1,1);ctx.fillStyle=value;ctx.fillRect(0,0,1,1);return [...ctx.getImageData(0,0,1,1).data].map((v,i)=>i===3?v/255:v);}
