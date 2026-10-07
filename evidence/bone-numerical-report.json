@@ -1,0 +1,786 @@
+{
+  "candidate": "ftv-proximal-femur-left-v001",
+  "assets": {
+    "outer": {
+      "sha256": "1367defee70c21312f504b42d07d2e2208e0ec2d2aa309bcb0ed3eace32fda4d",
+      "bytes": 646696
+    },
+    "core": {
+      "sha256": "05a504a797ef08d37aef092dba0de1c187b9a7a43d94c808489e35bb9abc8a99",
+      "bytes": 573597
+    }
+  },
+  "units": "mm",
+  "assetToWorld": "identity",
+  "axes": {
+    "x": "subject left/lateral",
+    "y": "posterior",
+    "z": "superior"
+  },
+  "FOV_MM": 320,
+  "MU_SHELL": 0.04,
+  "MU_CORE": 0.008,
+  "mapping": "round(255*(1-exp(-attenuation)))",
+  "sourcePivotMm": 800,
+  "sddMm": 1200,
+  "rawFormat": "row-major Float64 little-endian; row increases down, column right; pixel centres",
+  "invalidPolicy": "NaN raw values, magenta RGBA, full invalidRays list; no invalid frame acceptance",
+  "numerics": {
+    "eventMm": 1e-7,
+    "planeMm": 1e-9,
+    "parallelCos": 1e-14,
+    "edgeRoundoff": 7.105427357601002e-15
+  },
+  "runtime": {
+    "node": "v22.23.3",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "timingScope": "single Node offline runs, not worker/browser latency; no performance gate judged here",
+  "buildTimings": {
+    "outer": {
+      "parseMs": 47.953564,
+      "buildMs": 191.82173
+    },
+    "core": {
+      "parseMs": 29.73703400000005,
+      "buildMs": 108.649926
+    }
+  },
+  "analytic": {
+    "method": "asymmetric nested boxes; independent slab half-space integration and matrix camera; same production integrator",
+    "tolerances": {
+      "lengthMm": 1e-7,
+      "attenuation": 1e-8,
+      "tessellationMm": 1e-7,
+      "actualReferenceMm": 0.000002,
+      "samplingRelative": 0.02
+    },
+    "rays": 5547,
+    "invalidCount": 0,
+    "maxLengthErrorMm": 7.460698725481052e-13,
+    "maxAttenuationError": 2.731148640577885e-14,
+    "pass": true,
+    "tessellation": {
+      "method": "same planar geometry, every triangle subdivided into four, not smoothing the model",
+      "maxLengthDeltaMm": 9.094947017729282e-13,
+      "pass": true
+    },
+    "sampling": {
+      "method": "pixel-centre attenuation detector integral; not pixelwise equality across resolutions",
+      "resolutions": [
+        64,
+        128,
+        256
+      ],
+      "integrals": [
+        24564.945799757992,
+        24541.80505951773,
+        24541.96825104401
+      ],
+      "relativeChange": 0.000006649488118118986,
+      "pass": true
+    },
+    "records": [
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 7,
+        "col": 18,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -179.40156360742944,
+          356.0911266489259,
+          -40.47719656663688
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 0.9613381312969977,
+          "core": 0,
+          "shell": 0.9613381312969977,
+          "attenuation": 0.03845352525187991
+        },
+        "reference": {
+          "outer": 0.9613381312973605,
+          "core": 0,
+          "shell": 0.9613381312973605,
+          "attenuation": 0.03845352525189442
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 16,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -192.14051071224964,
+          348.0822663571751,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 10.842014218107806,
+          "core": 0,
+          "shell": 10.842014218107806,
+          "attenuation": 0.43368056872431227
+        },
+        "reference": {
+          "outer": 10.842014218107938,
+          "core": 0,
+          "shell": 10.842014218107938,
+          "attenuation": 0.43368056872431754
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 17,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -185.3262774594901,
+          351.0735056253125,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 22.04216510860283,
+          "core": 0,
+          "shell": 22.04216510860283,
+          "attenuation": 0.8816866043441133
+        },
+        "reference": {
+          "outer": 22.042165108602937,
+          "core": 0,
+          "shell": 22.042165108602937,
+          "attenuation": 0.8816866043441175
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 18,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -178.51204420673056,
+          354.0647448934499,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 24.902863356489092,
+          "core": 0,
+          "shell": 24.902863356489092,
+          "attenuation": 0.9961145342595638
+        },
+        "reference": {
+          "outer": 24.9028633564889,
+          "core": 0,
+          "shell": 24.9028633564889,
+          "attenuation": 0.9961145342595561
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 19,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -171.69781095397104,
+          357.0559841615873,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 22.565713282204115,
+          "core": 0,
+          "shell": 22.565713282204115,
+          "attenuation": 0.9026285312881646
+        },
+        "reference": {
+          "outer": 22.565713282204488,
+          "core": 0,
+          "shell": 22.565713282204488,
+          "attenuation": 0.9026285312881795
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 20,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -164.88357770121152,
+          360.0472234297246,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 20.242805506485638,
+          "core": 0,
+          "shell": 20.242805506485638,
+          "attenuation": 0.8097122202594256
+        },
+        "reference": {
+          "outer": 20.242805506485695,
+          "core": 0,
+          "shell": 20.242805506485695,
+          "attenuation": 0.8097122202594278
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 21,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -158.069344448452,
+          363.03846269786203,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 17.933763173543525,
+          "core": 0,
+          "shell": 17.933763173543525,
+          "attenuation": 0.7173505269417411
+        },
+        "reference": {
+          "outer": 17.93376317354351,
+          "core": 0,
+          "shell": 17.93376317354351,
+          "attenuation": 0.7173505269417405
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 22,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -151.25511119569248,
+          366.02970196599944,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 15.638213481276807,
+          "core": 0,
+          "shell": 15.638213481276807,
+          "attenuation": 0.6255285392510723
+        },
+        "reference": {
+          "outer": 15.638213481276868,
+          "core": 0,
+          "shell": 15.638213481276868,
+          "attenuation": 0.6255285392510748
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 23,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -144.44087794293296,
+          369.0209412341368,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 13.355787674229987,
+          "core": 0,
+          "shell": 13.355787674229987,
+          "attenuation": 0.5342315069691995
+        },
+        "reference": {
+          "outer": 13.35578767422997,
+          "core": 0,
+          "shell": 13.35578767422997,
+          "attenuation": 0.5342315069691989
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 24,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -137.6266446901734,
+          372.01218050227413,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 11.086121036710324,
+          "core": 0,
+          "shell": 11.086121036710324,
+          "attenuation": 0.44344484146841295
+        },
+        "reference": {
+          "outer": 11.086121036710097,
+          "core": 0,
+          "shell": 11.086121036710097,
+          "attenuation": 0.44344484146840385
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 25,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -130.81241143741389,
+          375.00341977041154,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 8.828852886024833,
+          "core": 0,
+          "shell": 8.828852886024833,
+          "attenuation": 0.35315411544099334
+        },
+        "reference": {
+          "outer": 8.82885288602467,
+          "core": 0,
+          "shell": 8.82885288602467,
+          "attenuation": 0.3531541154409868
+        }
+      },
+      {
+        "pose": {
+          "orbit": 23.7,
+          "tilt": -17.3,
+          "x": 7,
+          "y": -13,
+          "z": -21
+        },
+        "row": 8,
+        "col": 26,
+        "source": [
+          314.01118447873307,
+          -712.3909997533474,
+          216.89989926222876
+        ],
+        "detector": [
+          -123.99817818465436,
+          377.99465903854895,
+          -47.582393214099554
+        ],
+        "candidate": {
+          "valid": true,
+          "outer": 6.5836265657968625,
+          "core": 0,
+          "shell": 6.5836265657968625,
+          "attenuation": 0.2633450626318745
+        },
+        "reference": {
+          "outer": 6.583626565796738,
+          "core": 0,
+          "shell": 6.583626565796738,
+          "attenuation": 0.2633450626318695
+        }
+      }
+    ]
+  },
+  "frames": [
+    {
+      "prefix": "pose-0-128",
+      "pose": {
+        "orbit": 0,
+        "tilt": 0,
+        "x": 24,
+        "y": 7,
+        "z": -68
+      },
+      "size": 128,
+      "durationMs": 82.86785599999996,
+      "invalidCount": 0,
+      "attenuationIntegral": 6351.524306632204,
+      "foregroundPixels": 2564
+    },
+    {
+      "prefix": "pose-0-256",
+      "pose": {
+        "orbit": 0,
+        "tilt": 0,
+        "x": 24,
+        "y": 7,
+        "z": -68
+      },
+      "size": 256,
+      "durationMs": 148.60974500000003,
+      "invalidCount": 0,
+      "attenuationIntegral": 6369.7630687083,
+      "foregroundPixels": 10137
+    },
+    {
+      "prefix": "pose-1-128",
+      "pose": {
+        "orbit": 23.7,
+        "tilt": -17.3,
+        "x": 7,
+        "y": -13,
+        "z": -21
+      },
+      "size": 128,
+      "durationMs": 49.24628300000006,
+      "invalidCount": 0,
+      "attenuationIntegral": 5671.644615089891,
+      "foregroundPixels": 2133
+    },
+    {
+      "prefix": "pose-1-256",
+      "pose": {
+        "orbit": 23.7,
+        "tilt": -17.3,
+        "x": 7,
+        "y": -13,
+        "z": -21
+      },
+      "size": 256,
+      "durationMs": 178.52560900000003,
+      "invalidCount": 0,
+      "attenuationIntegral": 5674.633174493404,
+      "foregroundPixels": 8549
+    },
+    {
+      "prefix": "pose-2-128",
+      "pose": {
+        "orbit": 137.2,
+        "tilt": 31.6,
+        "x": -9,
+        "y": 24,
+        "z": -18
+      },
+      "size": 128,
+      "durationMs": 78.68530999999996,
+      "invalidCount": 0,
+      "attenuationIntegral": 6502.301472702129,
+      "foregroundPixels": 2187
+    },
+    {
+      "prefix": "pose-2-256",
+      "pose": {
+        "orbit": 137.2,
+        "tilt": 31.6,
+        "x": -9,
+        "y": 24,
+        "z": -18
+      },
+      "size": 256,
+      "durationMs": 305.18450099999995,
+      "invalidCount": 0,
+      "attenuationIntegral": 6514.154250444466,
+      "foregroundPixels": 8742
+    },
+    {
+      "prefix": "pose-3-128",
+      "pose": {
+        "orbit": 281.1,
+        "tilt": -39.2,
+        "x": 12,
+        "y": 17,
+        "z": -37
+      },
+      "size": 128,
+      "durationMs": 67.95891600000004,
+      "invalidCount": 0,
+      "attenuationIntegral": 6089.3791374770635,
+      "foregroundPixels": 1468
+    },
+    {
+      "prefix": "pose-3-256",
+      "pose": {
+        "orbit": 281.1,
+        "tilt": -39.2,
+        "x": 12,
+        "y": 17,
+        "z": -37
+      },
+      "size": 256,
+      "durationMs": 172.40753200000017,
+      "invalidCount": 0,
+      "attenuationIntegral": 6084.882517386904,
+      "foregroundPixels": 5880
+    },
+    {
+      "prefix": "pose-4-128",
+      "pose": {
+        "orbit": 41.3,
+        "tilt": 53.1,
+        "x": 44,
+        "y": 12,
+        "z": -120
+      },
+      "size": 128,
+      "durationMs": 54.277612999999974,
+      "invalidCount": 0,
+      "attenuationIntegral": 5610.797849376755,
+      "foregroundPixels": 1594
+    },
+    {
+      "prefix": "pose-4-256",
+      "pose": {
+        "orbit": 41.3,
+        "tilt": 53.1,
+        "x": 44,
+        "y": 12,
+        "z": -120
+      },
+      "size": 256,
+      "durationMs": 154.64119800000003,
+      "invalidCount": 0,
+      "attenuationIntegral": 5617.730532929492,
+      "foregroundPixels": 6368
+    }
+  ],
+  "sampling": [
+    {
+      "pose": {
+        "orbit": 0,
+        "tilt": 0,
+        "x": 24,
+        "y": 7,
+        "z": -68
+      },
+      "relativeChange": 0.002863334456770467,
+      "tolerance": 0.02,
+      "pass": true
+    },
+    {
+      "pose": {
+        "orbit": 23.7,
+        "tilt": -17.3,
+        "x": 7,
+        "y": -13,
+        "z": -21
+      },
+      "relativeChange": 0.0005266524393059003,
+      "tolerance": 0.02,
+      "pass": true
+    },
+    {
+      "pose": {
+        "orbit": 137.2,
+        "tilt": 31.6,
+        "x": -9,
+        "y": 24,
+        "z": -18
+      },
+      "relativeChange": 0.001819542075094121,
+      "tolerance": 0.02,
+      "pass": true
+    },
+    {
+      "pose": {
+        "orbit": 281.1,
+        "tilt": -39.2,
+        "x": 12,
+        "y": 17,
+        "z": -37
+      },
+      "relativeChange": 0.0007389822362734711,
+      "tolerance": 0.02,
+      "pass": true
+    },
+    {
+      "pose": {
+        "orbit": 41.3,
+        "tilt": 53.1,
+        "x": 44,
+        "y": 12,
+        "z": -120
+      },
+      "relativeChange": 0.0012340719285305435,
+      "tolerance": 0.02,
+      "pass": true
+    }
+  ],
+  "diagnosticRays": [
+    {
+      "name": "sliver-centroid-axial",
+      "valid": true,
+      "outer": 136.45125214762348,
+      "core": 13.684730580923087,
+      "shell": 122.76652156670039,
+      "attenuation": 5.020138707315401
+    },
+    {
+      "name": "sliver-vertex-0",
+      "valid": true,
+      "outer": 135.8615053926386,
+      "core": 15.005510080709541,
+      "shell": 120.85599531192906,
+      "attenuation": 4.954283893122839
+    },
+    {
+      "name": "sliver-vertex-1",
+      "valid": true,
+      "outer": 138.5099248278326,
+      "core": 12.294078906247705,
+      "shell": 126.2158459215849,
+      "attenuation": 5.1469864681133775
+    },
+    {
+      "name": "sliver-vertex-2",
+      "valid": true,
+      "outer": 136.44721324645707,
+      "core": 13.690965469913152,
+      "shell": 122.75624777654392,
+      "attenuation": 5.019777634821062
+    },
+    {
+      "name": "sliver-centroid-near-parallel",
+      "valid": true,
+      "outer": 0.04478982808680598,
+      "core": 0,
+      "shell": 0.04478982808680598,
+      "attenuation": 0.0017915931234722393
+    },
+    {
+      "name": "sliver-coplanar-explicit-invalid",
+      "valid": false,
+      "outer": "NaN",
+      "core": "NaN",
+      "shell": "NaN",
+      "attenuation": "NaN",
+      "reason": "coplanar/near-parallel boundary unresolved",
+      "face": 13959,
+      "boundary": "outer"
+    },
+    {
+      "name": "cap-finite-short-shell",
+      "valid": true,
+      "outer": 1,
+      "core": 0,
+      "shell": 1,
+      "attenuation": 0.04
+    },
+    {
+      "name": "cap-finite-inside-core",
+      "valid": true,
+      "outer": 5,
+      "core": 5,
+      "shell": 0,
+      "attenuation": 0.04
+    }
+  ],
+  "limitations": [
+    "Independent analytic boxes validate actual triangle integrator, not anatomical truth",
+    "Actual geometry independent ray verification is in independent-reference.json, separately executed",
+    "Boundary-coplanar and mixed-sign tangent rays explicitly fail; no jitter or geometry repair",
+    "No complete mesh self-intersection re-audit",
+    "Sampling change is detector-integral convergence, not a per-pixel error bound",
+    "No smoothing/refinement of frozen v001 asset; planar control tessellation only"
+  ]
+}

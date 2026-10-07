@@ -1,0 +1,165 @@
+{
+  "candidate_id": "ftv-proximal-femur-left-v001",
+  "licence": "MIT",
+  "anatomically_validated": false,
+  "provenance": "Original procedural sphere/capsule signed-distance blends and marching tetrahedra; no external anatomy, code download, donor, scan or texture. Blender built-ins and its bundled numpy/mathutils used.",
+  "method": "Polynomial smooth minima of exact sphere/capsule signed distances; outer isovalue 0, core isovalue -2 mm; maximum with distal cut plane. Marching tetrahedra, deterministic Blender decimation, explicit world-space triangle OBJ export.",
+  "authoring_versions_reported": {
+    "blender_version": "5.2.2 LTS",
+    "blender_build_hash": "d13f752e3b9c",
+    "bundled_python": "3.13.13 (main, May  8 2026, 12:37:03) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "units": "numeric millimetres; one Blender coordinate unit = one mm",
+  "axes": {
+    "+X": "subject left / lateral for this left femur",
+    "+Y": "posterior",
+    "+Z": "superior"
+  },
+  "handedness": "right",
+  "export_transform": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "parameters": {
+    "candidate_id": "ftv-proximal-femur-left-v001",
+    "head_diameter_mm": 46.0,
+    "neck_diameter_mm": 28.0,
+    "neck_length_mm": 60.0,
+    "neck_shaft_angle_deg": 130.0,
+    "anterior_version_deg": 15.0,
+    "shaft_diameter_mm": 28.0,
+    "distal_cut_z_mm": -160.0,
+    "shell_nominal_mm": 2.0,
+    "greater_trochanter": {
+      "endpoint_offsets_from_neck_base_mm": [
+        [
+          12,
+          0,
+          2
+        ],
+        [
+          11,
+          0,
+          20
+        ]
+      ],
+      "radius_mm": 14.5
+    },
+    "lesser_trochanter": {
+      "endpoint_offsets_from_neck_base_mm": [
+        [
+          -9,
+          11,
+          -26
+        ],
+        [
+          -14,
+          17,
+          -28
+        ]
+      ],
+      "radius_mm": 8.5
+    },
+    "blend_widths_mm": {
+      "head_neck": 5.0,
+      "shaft": 8.0,
+      "greater_trochanter": 7.0,
+      "lesser_trochanter": 4.0
+    },
+    "grid_spacing_mm": 1.6,
+    "grid_min_mm": [
+      -31.37,
+      -36.37,
+      -166.37
+    ],
+    "grid_max_mm": [
+      82.63,
+      55.63,
+      31.63
+    ],
+    "target_triangles": {
+      "outer": 18000,
+      "core": 16000
+    },
+    "qa_fiducials_mm": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        70,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        50
+      ]
+    ],
+    "render": {
+      "width": 1500,
+      "height": 1400,
+      "samples": 32
+    },
+    "notes": "Synthetic engineering defaults and exposed contour choices. No clinical reference measurements. No wire. No attenuation coefficients."
+  },
+  "caps": {
+    "outer_distal_z_mm": -160,
+    "core_distal_z_mm": -158,
+    "nominal_axial_cap_mm": 2,
+    "artificial": true
+  },
+  "thickness_assumptions": "Core is an inward isovalue of the blended field. The blend field is not an exact Euclidean distance near blends; mesh extraction/decimation introduces further approximation. Measure both exported boundaries.",
+  "artifacts_included": "Outer/core OBJ material boundaries. The repository reproduces projections from these meshes; procedural model-generation source is not included.",
+  "raw_metadata_sha256": "f5d311f59bca7292bc4e2f90acf571c68fa421259954a6f435405ec53cc8b707",
+  "original_archive_sha256": "5a7981ceb1fc48287f52e1777f7a5585801d77652e14938256e2976da01f4804",
+  "assets": {
+    "demo/mesh-spike/assets/outer.obj": "1367defee70c21312f504b42d07d2e2208e0ec2d2aa309bcb0ed3eace32fda4d",
+    "demo/mesh-spike/assets/core.obj": "05a504a797ef08d37aef092dba0de1c187b9a7a43d94c808489e35bb9abc8a99"
+  },
+  "mesh_counts": {
+    "outer": {
+      "exported_vertices": 9002,
+      "exported_triangles": 18000
+    },
+    "core": {
+      "exported_vertices": 8002,
+      "exported_triangles": 16000
+    }
+  },
+  "limitations": [
+    "Not anatomically validated",
+    "Artificial distal cap retained",
+    "Face 13960 retained unchanged; degeneracies may explicitly reject a frame",
+    "Parameters are synthetic defaults, not clinical reference measurements"
+  ]
+}

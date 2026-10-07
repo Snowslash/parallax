@@ -1,0 +1,501 @@
+@font-face {
+  font-family: "Literata";
+  src: url("../assets/fonts/Literata-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("../assets/fonts/AtkinsonHyperlegibleNext-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+:root {
+  --estate-ui-version: "2.0.0-alpha.7";
+  --estate-atlas: #0b655f;
+  --estate-deep: #073f3c;
+  --estate-channel: #0a5652;
+  --estate-shoal: #3b8c83;
+  --estate-mist: #d9eee9;
+  --estate-mist-soft: #c5e3dd;
+  --estate-foam: #f5fffc;
+  --estate-coral: #ff7a66;
+  --estate-focus: #b8322a;
+  --estate-leaf: #c4eb62;
+  --estate-ink: #092c2a;
+  /* Deep Atlas dark roles; legacy palette constants above remain theme-invariant. */
+  --estate-night: #061e1d;
+  --estate-night-chrome: #041615;
+  --estate-night-panel: #0b2b29;
+  --estate-night-raised: #123a37;
+  --estate-night-text: #d4e3df;
+  --estate-night-muted: #9bb8b1;
+  --estate-night-edge: #5f9189;
+  --estate-night-rule: #254b46;
+  --estate-night-link: #8dc7b9;
+  --estate-rule: var(--estate-shoal);
+  --estate-chrome-background: var(--estate-deep);
+  --estate-chrome-foreground: var(--estate-mist);
+  --estate-chrome-strong: var(--estate-foam);
+  --estate-chrome-focus: var(--estate-coral);
+  --estate-boundary-background: var(--estate-mist);
+  --estate-boundary-foreground: var(--estate-ink);
+  --estate-boundary-border: var(--estate-deep);
+  --estate-link: var(--estate-channel);
+  --estate-shell-standard: 1180px;
+  --estate-shell-wide: 1480px;
+  --estate-gutter-desktop: 40px;
+  --estate-gutter-mobile: 28px;
+  --estate-header-height: 72px;
+  --estate-radius: 2px;
+  --estate-space-1: 0.25rem;
+  --estate-space-2: 0.5rem;
+  --estate-space-3: 0.75rem;
+  --estate-space-4: 1rem;
+  --estate-space-5: 1.5rem;
+  --estate-space-6: 2rem;
+  --estate-space-7: 3rem;
+  --estate-space-8: 4rem;
+  --estate-font-heading: "Literata", Georgia, serif;
+  --estate-font-body: "Atkinson", system-ui, sans-serif;
+
+  --background: var(--estate-mist);
+  --foreground: var(--estate-ink);
+  --card: var(--estate-foam);
+  --card-foreground: var(--estate-ink);
+  --popover: var(--estate-foam);
+  --popover-foreground: var(--estate-ink);
+  --primary: var(--estate-atlas);
+  --primary-foreground: var(--estate-foam);
+  --primary-hover: var(--estate-deep);
+  --secondary: var(--estate-mist-soft);
+  --secondary-foreground: var(--estate-ink);
+  --muted: var(--estate-mist-soft);
+  --muted-foreground: var(--estate-channel);
+  --accent: var(--estate-coral);
+  --accent-foreground: var(--estate-ink);
+  --destructive: #a33838;
+  --border: var(--estate-shoal);
+  --input: var(--estate-shoal);
+  --ring: var(--estate-focus);
+  --radius: var(--estate-radius);
+  --radius-sm: var(--estate-radius);
+  --radius-md: var(--estate-radius);
+
+  --bg: var(--background);
+  --panel: var(--card);
+  --text: var(--foreground);
+  --text-strong: var(--foreground);
+  --text-muted: var(--muted-foreground);
+  --accent-hover: var(--primary-hover);
+  --warning-bg: var(--estate-foam);
+  --warning-border: var(--estate-shoal);
+  --font-sans: var(--estate-font-body);
+  --font-serif: var(--estate-font-heading);
+  --font-heading: var(--estate-font-heading);
+  color-scheme: light;
+}
+
+[data-theme="dark"],
+.dark {
+  --estate-focus: var(--estate-coral);
+  --estate-rule: var(--estate-night-rule);
+  --estate-chrome-background: var(--estate-night-chrome);
+  --estate-chrome-foreground: var(--estate-night-muted);
+  --estate-chrome-strong: var(--estate-night-text);
+  --estate-boundary-background: var(--estate-night-panel);
+  --estate-boundary-foreground: var(--estate-night-text);
+  --estate-boundary-border: var(--estate-night-edge);
+  --estate-link: var(--estate-night-link);
+  --background: var(--estate-night);
+  --foreground: var(--estate-night-text);
+  --card: var(--estate-night-panel);
+  --card-foreground: var(--estate-night-text);
+  --popover: var(--estate-night-panel);
+  --popover-foreground: var(--estate-night-text);
+  --primary: var(--estate-coral);
+  --primary-foreground: var(--estate-ink);
+  --primary-hover: var(--estate-coral);
+  --secondary: var(--estate-night-raised);
+  --secondary-foreground: var(--estate-night-text);
+  --muted: var(--estate-night-raised);
+  --muted-foreground: var(--estate-night-muted);
+  --accent: var(--estate-coral);
+  --accent-foreground: var(--estate-ink);
+  --destructive: #ffb0a3;
+  --border: var(--estate-night-edge);
+  --input: var(--estate-night-edge);
+  --ring: var(--estate-focus);
+  --bg: var(--background);
+  --panel: var(--card);
+  --text: var(--foreground);
+  --text-strong: var(--foreground);
+  --text-muted: var(--muted-foreground);
+  --accent-hover: var(--primary-hover);
+  --warning-bg: var(--estate-night-panel);
+  --warning-border: var(--estate-night-edge);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 0;
+  background: var(--background);
+  scroll-behavior: smooth;
+  scrollbar-color: var(--estate-shoal) var(--background);
+}
+
+body {
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--estate-font-body);
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.24em;
+}
+
+.estate-shell a {
+  min-height: 44px;
+}
+
+.estate-shell button:not([role="checkbox"]):not([role="radio"]):not([role="switch"]) {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.estate-shell input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+.estate-shell select,
+.estate-shell textarea {
+  min-height: 44px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--estate-focus);
+  outline-color: var(--estate-focus) !important;
+  outline-offset: 2px;
+  box-shadow: none;
+  transition: none !important;
+}
+
+.estate-site-header {
+  --estate-focus: var(--estate-chrome-focus);
+  width: 100%;
+  min-height: var(--estate-header-height);
+  border-bottom: 1px solid var(--estate-rule);
+  background: var(--estate-chrome-background);
+  color: var(--estate-chrome-foreground);
+  font-family: var(--estate-font-body);
+  font-size: 0.95rem;
+}
+
+.estate-site-header__inner {
+  width: min(var(--estate-shell-standard), calc(100% - var(--estate-gutter-desktop)));
+  min-height: var(--estate-header-height);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--estate-space-6);
+}
+
+.estate-wordmark {
+  justify-self: start;
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  color: var(--estate-chrome-strong);
+  font-family: var(--estate-font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.estate-wordmark__suffix {
+  color: var(--estate-coral);
+}
+
+.estate-site-header nav {
+  display: flex;
+  align-items: center;
+  gap: var(--estate-space-5);
+  line-height: 1.5;
+}
+
+.estate-site-header nav a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  font-weight: 700;
+}
+
+.estate-site-header nav a:hover,
+.estate-site-header nav a[aria-current="page"] {
+  color: var(--estate-chrome-strong);
+  text-decoration-color: var(--estate-coral);
+  text-decoration-thickness: 2px;
+}
+
+.estate-github-link {
+  text-decoration: none;
+}
+
+.estate-github-link:hover {
+  color: var(--estate-coral);
+}
+
+.estate-github-mark {
+  display: block;
+  flex: none;
+}
+
+.estate-theme-toggle {
+  justify-self: end;
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--estate-chrome-foreground);
+  cursor: pointer;
+  font: inherit;
+}
+
+.estate-theme-toggle:hover,
+.estate-theme-toggle:focus-visible {
+  color: var(--estate-chrome-strong);
+}
+
+.estate-shell {
+  margin-inline: auto;
+}
+
+.estate-shell--landing,
+.estate-shell--standard-app {
+  width: min(var(--estate-shell-standard), calc(100% - var(--estate-gutter-desktop)));
+}
+
+.estate-shell--wide-app {
+  width: min(var(--estate-shell-wide), calc(100% - var(--estate-gutter-desktop)));
+}
+
+.estate-page-title,
+.estate-section-title {
+  margin: 0;
+  color: var(--foreground);
+  font-family: var(--estate-font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.estate-page-title--landing {
+  max-width: 17ch;
+  font-size: 3.35rem;
+  line-height: 1.08;
+}
+
+.estate-page-title--app {
+  font-size: 2.25rem;
+  line-height: 1.12;
+}
+
+.estate-section-title {
+  font-size: 1.65rem;
+  line-height: 1.15;
+}
+
+.estate-registration-rule {
+  position: relative;
+  height: 1px;
+  background: var(--estate-shoal);
+}
+
+.estate-registration-rule::after {
+  position: absolute;
+  inset-block-start: -1px;
+  inset-inline-start: 0;
+  width: 5.5rem;
+  height: 3px;
+  background: var(--estate-coral);
+  content: "";
+}
+
+.estate-boundary {
+  border: 2px solid var(--estate-boundary-border);
+  border-radius: 0;
+  background: var(--estate-boundary-background);
+  color: var(--estate-boundary-foreground);
+}
+
+.estate-boundary p {
+  color: var(--estate-boundary-foreground);
+}
+
+.estate-boundary--stack {
+  padding: var(--estate-space-5);
+}
+
+.estate-boundary--grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.estate-boundary--grid > * {
+  min-width: 0;
+  padding: var(--estate-space-4);
+}
+
+.estate-boundary--grid > * + * {
+  border-inline-start: 1px solid var(--estate-shoal);
+}
+
+.estate-primary-action {
+  display: inline-flex;
+  min-width: 44px;
+  height: 48px;
+  min-height: 48px;
+  padding: 0 var(--estate-space-5);
+  align-items: center;
+  justify-content: center;
+  gap: var(--estate-space-2);
+  border: 2px solid var(--estate-deep);
+  border-radius: 0;
+  background: var(--estate-coral);
+  color: var(--estate-ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.estate-primary-action.estate-icon-action {
+  width: 48px;
+  padding-inline: 0;
+}
+
+.estate-evidence-frame {
+  overflow: hidden;
+  margin: 0;
+  border: 2px solid var(--estate-deep);
+  border-radius: 0;
+  background: var(--estate-deep);
+}
+
+.estate-evidence-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .estate-site-header__inner,
+  .estate-shell--landing,
+  .estate-shell--standard-app,
+  .estate-shell--wide-app {
+    width: min(calc(100% - var(--estate-gutter-mobile)), 680px);
+  }
+
+  .estate-site-header__inner {
+    grid-template-columns: 1fr auto;
+    min-height: 64px;
+    column-gap: var(--estate-space-4);
+    row-gap: 0;
+  }
+
+  .estate-site-header nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    padding-block-end: 0.65rem;
+    flex-wrap: wrap;
+    gap: 0 0.45rem;
+    font-size: 0.9rem;
+  }
+
+  .estate-page-title--landing {
+    font-size: 2.35rem;
+  }
+
+  .estate-page-title--app {
+    font-size: 2rem;
+  }
+
+  .estate-boundary--grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .estate-boundary--grid > * + * {
+    border-block-start: 1px solid var(--estate-shoal);
+    border-inline-start: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .estate-site-header,
+  .estate-boundary,
+  .estate-primary-action,
+  .estate-evidence-frame {
+    border-color: CanvasText;
+  }
+}
+
+@media print {
+  [data-print-hidden] {
+    display: none !important;
+  }
+}

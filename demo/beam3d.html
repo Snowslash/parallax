@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-GB" data-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Move the beam around a visible wire and compare the images.">
+<title>3D Explore — Parallax</title>
+<meta name="theme-color" content="#061e1d">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:,">
+<script src="estate-theme.js?v=estate-1"></script>
+<link rel="stylesheet" href="vendor/estate-ui/src/contract.css">
+<link rel="stylesheet" href="publication.css?v=estate-1">
+
+<link rel="stylesheet" href="lab.css?v=estate-3">
+<script type="module" src="beam3d.mjs?v=copy-1"></script>
+</head>
+<body data-page="beam" data-mode="beam3d" data-pending="true" data-tool="angle">
+<a class="skip-link" href="#lesson">Skip to the lab</a>
+<header class="estate-site-header" data-estate-ui="2.0.0-alpha.7" data-print-hidden="true"><div class="estate-site-header__inner"><a class="estate-wordmark" href="https://sangeev.me">Sangeev<span class="estate-wordmark__suffix">.me</span></a><nav aria-label="Primary navigation"><a href="https://sangeev.me/#projects">Projects</a><a href="https://github.com/Snowslash" class="estate-github-link" aria-label="GitHub" title="GitHub"><svg class="estate-github-mark" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.435.372.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.627.297 12 .297z"></path></svg></a></nav><button type="button" class="estate-theme-toggle" aria-label="Switch to light mode" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"></path></svg><span>Light</span></button></div></header>
+<div class="estate-shell estate-shell--wide-app lab" data-estate-layout="wide-app">
+<nav class="project-nav" aria-label="Project modes"><a href="index.html" class="project-name">Parallax</a><a href="guided.html">Guided lesson</a><a href="beam3d.html" aria-current="page">3D Explore</a><a href="mesh-spike.html">Femur</a></nav>
+    <main id="lesson">
+      <header class="page-intro"><h1 class="estate-page-title estate-page-title--app">3D Explore</h1><p id="wire-note">The wire is visible, with its tip beyond the cylinder wall.</p></header>
+      <section class="bench" aria-label="3D acquisition and projection comparison">
+        <section class="rig-panel" aria-labelledby="rig-title">
+          <header class="panel-head"><div><h2 id="rig-title">Angle the beam</h2></div></header>
+          <div class="tool-bar" role="group" aria-label="Interaction tool"><button id="tool-angle" data-tool="angle" aria-pressed="true">Angle beam</button><button id="tool-position" data-tool="position" aria-pressed="false">Reposition rig</button><button id="tool-look" data-tool="look" aria-pressed="false">Look around</button></div>
+          <div id="rig-view" class="rig-view">
+            <canvas id="rig-scene" tabindex="0" role="img" aria-label="Three-dimensional source, detector and fixed phantom. Use the labelled handles or controls below." aria-describedby="tool-help"></canvas>
+            <div class="scene-tags"><span id="scene-tool-label">Acquisition</span><span>Wire visible</span></div>
+            <div class="rig-handles" aria-label="Direct rig handles">
+              <button class="handle gold" id="handle-orbit" data-handle="orbit" aria-label="Drag orbit handle; arrow keys adjust orbit" disabled>Orbit ↔</button>
+              <button class="handle cyan" id="handle-tilt" data-handle="tilt" aria-label="Drag angulation handle; arrow keys adjust tilt" disabled>Tilt ↔</button>
+              <button class="handle axis-x" id="handle-x" data-handle="x" aria-label="Drag rig across X; arrow keys adjust millimetres" hidden disabled>X across</button>
+              <button class="handle axis-y" id="handle-y" data-handle="y" aria-label="Drag rig height Y; arrow keys adjust millimetres" hidden disabled>Y height</button>
+              <button class="handle axis-z" id="handle-z" data-handle="z" aria-label="Drag rig along Z; arrow keys adjust millimetres" hidden disabled>Z along</button>
+            </div>
+            <span class="closeup-label">Phantom close-up</span>
+          </div>
+          <p id="scene-error" class="error" hidden></p>
+          <p id="tool-help" class="tool-help">Drag the gold orbit or blue tilt handle, or use the sliders.</p>
+          <div class="control-panel" id="angle-controls">
+            <div class="control-row"><label for="orbit">Orbit <output id="orbit-value">0.0°</output></label><input id="orbit" type="range" min="0" max="360" step="0.1" value="0" disabled></div>
+            <div class="control-row"><label for="tilt">Angulation <output id="tilt-value">0.0°</output></label><input id="tilt" type="range" min="-60" max="60" step="0.1" value="0" disabled></div>
+            <div class="presets" role="group" aria-label="Orbit-only presets"><span>Orbit only</span><button data-preset="0">0°</button><button data-preset="45">45°</button><button data-preset="90">90°</button><button data-preset="180">180°</button><button data-preset="270">270°</button></div>
+          </div>
+          <div class="control-panel" id="position-controls" hidden>
+            <div class="control-row"><label for="x">Across · X <output id="x-value">0.0 mm</output></label><input id="x" type="range" min="-120" max="120" step="0.1" value="0" disabled></div>
+            <div class="control-row"><label for="y">Height · Y <output id="y-value">0.0 mm</output></label><input id="y" type="range" min="-200" max="200" step="0.1" value="0" disabled></div>
+            <div class="control-row"><label for="z">Along phantom · Z <output id="z-value">0.0 mm</output></label><input id="z" type="range" min="-120" max="120" step="0.1" value="0" disabled></div>
+            <p class="hint">The rig moves along fixed world axes. The cylinder stays still.</p>
+          </div>
+          <div class="control-panel" id="look-controls" hidden>
+            <div class="control-row"><label for="observer-yaw">Observer orbit <output id="observer-yaw-value">35°</output></label><input id="observer-yaw" type="range" min="-180" max="180" step="1" value="35"></div>
+            <div class="control-row"><label for="observer-elevation">Observer elevation <output id="observer-elevation-value">25°</output></label><input id="observer-elevation" type="range" min="-65" max="75" step="1" value="25"></div>
+            <div class="control-row"><label for="observer-zoom">Observer zoom <output id="observer-zoom-value">1.0×</output></label><input id="observer-zoom" type="range" min="0.7" max="1.6" step="0.1" value="1"></div>
+            <p class="hint">Looking around leaves the beam and both images unchanged.</p>
+          </div>
+          <div class="reset-tools"><button id="reset-beam" disabled>Reset beam</button><button id="reset-observer">Reset observer</button></div>
+          <p class="geometry-note"><span id="object-distance">Source–phantom-centre distance: 800.0 mm.</span></p>
+        </section>
+        <section class="image-panel" aria-labelledby="image-title">
+          <header class="panel-head"><div><h2 id="image-title">Compare views</h2></div></header>
+          <div class="image-pair">
+            <figure><div class="image-label">Pinned</div><div class="projection-surface"><canvas id="reference-image" width="256" height="256" role="img" aria-label="Waiting for pinned projection"></canvas></div><figcaption id="pin-pose">Waiting for first image</figcaption></figure>
+            <figure><div class="image-label">Displayed</div><div class="projection-surface"><canvas id="projection" width="256" height="256" role="img" aria-label="Waiting for rendered projection"></canvas></div><figcaption id="displayed-pose">Waiting for first image</figcaption></figure>
+          </div>
+          <div class="compare-tools"><span>Fixed detector field & contrast</span><button id="pin-current" disabled>Pin displayed image</button></div>
+          <div class="render-info"><p id="requested-pose">Orbit 0.0° · tilt 0.0° | X 0.0, Y 0.0, Z 0.0 mm</p><p id="render-status" role="status" aria-live="polite">Preparing the first image…</p><button id="retry" hidden>Retry rendering</button></div>
+          
+          
+        </section>
+      </section>
+
+    </main>
+<footer class="project-footer"><a href="licences.html">About &amp; licences</a></footer>
+</div>
+<noscript>Enable JavaScript to use 3D Explore.</noscript>
+</body></html>

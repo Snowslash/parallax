@@ -1,0 +1,200 @@
+/* Local lab layout. Dark image wells are intentional in either UI theme:
+   their pixels, geometry colours and comparison mapping are not theme data. */
+.lab { padding-bottom: 12px; }
+.lab h2, .lab h3, .lab p, .lab figure { margin: 0; }
+.lab h3 { font-size: 1rem; }
+.lab button:not(.estate-primary-action) { padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); color: var(--foreground); cursor: pointer; }
+.lab button:disabled { opacity: .45; cursor: default; }
+.lab button:hover:not(:disabled):not(.handle):not(.estate-primary-action) { background: var(--secondary); }
+.lab button[aria-pressed="true"]:not(.handle) { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); font-weight: 700; }
+.lab input[type="range"] { display: block; width: 100%; min-width: 0; min-height: 44px; margin: 0; accent-color: var(--primary); cursor: pointer; }
+.lab input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--primary); }
+.lab output { font-variant-numeric: tabular-nums; color: var(--foreground); }
+.lab .quiet, .hint, .status, .image-note, .geometry-note, .section-note, .tool-help, .lab figcaption { color: var(--muted-foreground); font-size: .85rem; }
+.lab .status { min-height: 44px; padding-block: 10px; }
+.lab .error, .lab .status.error { color: var(--destructive); }
+.lab .intro { padding-block: 18px 24px; }
+.lab .intro p { margin-top: 12px; max-width: 80ch; color: var(--muted-foreground); }
+.lab .panel-heading, .lab .panel-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px; }
+.lab .panel-heading h2, .lab .panel-head h2 { font-size: 1.25rem; font-family: var(--estate-font-heading); }
+.lab .badge { font-size: .85rem; font-variant-numeric: tabular-nums; color: var(--foreground); white-space: nowrap; }
+.lab .image-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; padding-inline: 20px; }
+.lab .image-label { display: flex; justify-content: space-between; gap: 8px; margin-block: 0 8px; font-size: .85rem; color: var(--muted-foreground); }
+.lab .image-label strong { color: var(--foreground); font-weight: 600; }
+.lab figcaption { margin-top: 8px; min-height: 44px; overflow-wrap: anywhere; }
+.lab .compare-tools { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 20px; color: var(--muted-foreground); font-size: .85rem; }
+.lab .compare-tools button { flex-shrink: 0; }
+.lab .image-note { padding: 0 20px 20px; }
+.lab .scene-wrap { height: 267px; position: relative; background: #171a1a; }
+.lab .scene-wrap canvas { display: block; width: 100%; height: 100%; }
+.lab .canvas-label { position: absolute; top: 8px; left: 16px; font-size: .75rem; color: #e6b96b; pointer-events: none; }
+.lab .canvas-label.right { left: auto; right: 16px; color: #d4e3df; }
+.lab .projection-stage { display: grid; grid-template-columns: minmax(0,1fr); place-items: center; aspect-ratio: 1; background: #060808; overflow: hidden; }
+.lab .image-surface { position: relative; width: 100%; max-width: 340px; aspect-ratio: 1; min-width: 0; }
+.lab .image-surface img { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+.lab .image-surface svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.lab .image-surface circle, .lab .image-surface path { fill: none; stroke: #e6b96b; stroke-width: 1; }
+.lab .text-button { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Guided lesson: the geometry and reveal gates remain owned by guided.mjs. */
+.chapters { display: flex; border-bottom: 1px solid var(--estate-rule); }
+.lab .chapters button { flex: 1; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: transparent; text-align: left; padding: 12px; font-size: .9rem; }
+.lab .chapters button[aria-current="step"] { border-bottom-color: var(--estate-focus); font-weight: 700; }
+.chapters .number { margin-right: 10px; font-variant-numeric: tabular-nums; }
+.chapters .done { margin-left: 10px; font-size: .75rem; }
+body[data-page="guided"] .workbench, .reveal { display: grid; grid-template-columns: minmax(280px,.85fr) minmax(0,1.8fr); border: 1px solid var(--estate-rule); background: var(--card); }
+.geometry-panel { border-right: 1px solid var(--estate-rule); min-width: 0; }
+.evidence-panel { min-width: 0; padding-bottom: 16px; }
+.rig-wrap { display: flex; align-items: center; gap: 12px; height: 118px; padding-inline: 16px; background: #171a1a; color: #d4e3df; border-top: 1px solid #39413f; }
+.rig-copy { flex: 0 0 88px; font-size: .75rem; }
+#rig { flex: 1; min-width: 0; width: 100px; height: 114px; }
+.orbit-controls { padding: 16px 20px; }
+.orbit-controls label { display: flex; justify-content: space-between; font-size: .9rem; }
+.orbit-controls p { font-size: .8rem; color: var(--muted-foreground); }
+.filmstrip { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 20px 16px; }
+.lab .filmstrip button { width: 62px; min-width: 0; padding: 4px; font-size: .8rem; }
+.filmstrip img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; }
+.filmstrip span { display: block; padding-top: 4px; }
+.acquisition { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 24px 20px; background: var(--secondary); border: 1px solid var(--estate-rule); border-top: 0; }
+.lab .acquisition h2 { margin: 0 0 16px; font: 700 1.2rem/1.4 var(--estate-font-heading); }
+.angle-controls { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 7px; }
+.lab .angle-controls button { padding-inline: 3px; font-variant-numeric: tabular-nums; }
+.lab .predict-question { margin-bottom: 12px; }
+.prediction { display: flex; gap: 7px; margin-bottom: 12px; }
+.lab .prediction button { flex: 1; padding-inline: 6px; font-size: .9rem; }
+#acquire { width: 100%; height: auto; }
+.lab #acquire-hint { min-height: 44px; margin-top: 10px; }
+.decision { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 28px; border-bottom: 1px solid var(--estate-rule); }
+.lab .decision h2 { font: 700 1.3rem/1.3 var(--estate-font-heading); }
+.lab #decision-hint { margin-top: 10px; font-size: .9rem; color: var(--muted-foreground); }
+.decision-actions, .judgement { display: flex; gap: 8px; align-items: center; }
+.decision-actions { gap: 16px; }
+.lab .judgement button { padding-inline: 10px; font-size: .9rem; }
+#commit { white-space: nowrap; }
+.reveal { margin-top: 24px; }
+.section-panel { min-width: 0; padding: 20px; background: #171a1a; color: #d4e3df; }
+.section-panel h2 { font: 700 1.25rem/1.4 var(--estate-font-heading); }
+#section { display: block; width: 100%; height: 260px; }
+.lab .section-note { color: #aeb9b2; margin-top: 8px; }
+.explanation-panel { min-width: 0; padding: 28px; }
+.lab .explanation-panel h2 { margin-block: 8px 16px; font: 700 1.65rem/1.2 var(--estate-font-heading); }
+.lab .explanation-panel p { margin-bottom: 16px; }
+.lab #your-choice { color: var(--muted-foreground); font-size: .9rem; }
+.lab .takeaway { font-size: 1.1rem; }
+.view-explanation { display: flex; gap: 16px; border-top: 1px solid var(--estate-rule); padding-top: 16px; }
+.reveal-toggles, .reveal-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; }
+.reveal-toggles label { display: flex; align-items: center; gap: 8px; min-height: 44px; }
+.reveal-actions { justify-content: space-between; margin-top: 20px; }
+.lab #ray-hint { margin-top: 12px; }
+.completion { max-width: 78ch; padding-block: 40px; }
+.completion li { margin-block: 16px; }
+.lab .completion p { margin-block: 16px; }
+
+/* Beam explorer. Handle positions are supplied by the unchanged 3D scene. */
+.bench { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); border: 1px solid var(--estate-rule); background: var(--card); }
+.rig-panel, .image-panel { min-width: 0; }
+.rig-panel { border-right: 1px solid var(--estate-rule); }
+.tool-bar { display: flex; gap: 8px; padding: 0 16px 16px; }
+.lab .tool-bar button { flex: 1; padding-inline: 5px; font-size: .9rem; white-space: nowrap; }
+.rig-view { position: relative; height: 410px; overflow: hidden; isolation: isolate; background: #121719; }
+.rig-view canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.scene-tags { position: absolute; top: 10px; inset-inline: 12px; display: flex; justify-content: space-between; font-size: .75rem; color: #d4e3df; pointer-events: none; }
+.rig-handles { position: absolute; inset: 0; pointer-events: none; }
+.lab button.handle { position: absolute; top: 0; left: 0; transform: translate(-50%,-50%); pointer-events: auto; touch-action: none; min-height: 44px; background: #192022; font-size: .8rem; white-space: nowrap; padding: 6px 10px; cursor: grab; z-index: 3; }
+.lab button.handle:active { cursor: grabbing; }
+.lab .handle.gold { color: #e6b96b; border-color: #e6b96b; }
+.lab .handle.cyan { color: #7ad3db; border-color: #7ad3db; }
+.lab .handle.axis-x { color: #f59692; border-color: #f59692; }
+.lab .handle.axis-y { color: #a8d397; border-color: #a8d397; }
+.lab .handle.axis-z { color: #91bfff; border-color: #91bfff; }
+.closeup-label { position: absolute; bottom: 6px; right: 7px; width: 170px; color: #d4e3df; font-size: .65rem; text-align: center; pointer-events: none; }
+.lab .tool-help { padding: 14px 18px; min-height: 86px; border-bottom: 1px solid var(--estate-rule); }
+.control-panel { padding: 14px 18px; min-height: 200px; }
+.control-row { display: grid; grid-template-columns: 155px minmax(0,1fr); align-items: center; gap: 14px; min-height: 44px; }
+.control-row label { font-size: .9rem; }
+.control-row output { display: block; }
+.presets { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 10px; }
+.presets span { color: var(--muted-foreground); font-size: .85rem; margin-right: auto; }
+.lab .presets button { padding-inline: 9px; }
+.lab .hint { padding-top: 10px; }
+.reset-tools { display: flex; gap: 8px; padding: 0 18px 16px; }
+.reset-tools button { flex: 1; }
+.lab .geometry-note { padding: 0 18px 18px; }
+.projection-surface { width: 100%; aspect-ratio: 1; background: #000; overflow: hidden; }
+.projection-surface canvas { display: block; width: 100%; height: 100%; }
+body[data-page="beam"] figcaption { min-height: 88px; font-variant-numeric: tabular-nums; }
+.render-info { margin: 0 20px 20px; padding: 16px; background: var(--secondary); min-height: 128px; }
+.lab #requested-pose { overflow-wrap: anywhere; font-size: .85rem; font-variant-numeric: tabular-nums; }
+.lab #render-status { min-height: 60px; font-size: .85rem; color: var(--muted-foreground); margin-top: 10px; }
+.lab #render-status.error { color: var(--destructive); }
+
+/* Frozen bone experiment: controls and provenance remain separate. */
+body[data-page="bone"] .workbench { display: grid; grid-template-columns: minmax(260px,.8fr) minmax(0,1.2fr); gap: 32px; }
+body[data-page="bone"] .workbench > section { min-width: 0; }
+body[data-page="bone"] .workbench h2 { font: 700 1.25rem/1.4 var(--estate-font-heading); margin-bottom: 16px; }
+#mesh-projection { display: block; width: min(100%,360px); height: auto; aspect-ratio: 1; margin-inline: auto; background: #000; image-rendering: pixelated; }
+body[data-page="bone"] figure { text-align: center; }
+body[data-page="bone"] .scene-wrap { height: 340px; }
+.inset-label { position: absolute; bottom: 4px; right: 8px; color: #d4e3df; font-size: .7rem; pointer-events: none; }
+.lab #scene-note { font-size: .85rem; color: var(--muted-foreground); margin-top: 12px; min-height: 44px; }
+body[data-page="bone"] .image-panel > p { margin-top: 16px; }
+.lab #mesh-status { padding: 16px; min-height: 112px; background: var(--secondary); font-size: .9rem; }
+.lab fieldset { margin: 20px 0; padding: 16px; border: 1px solid var(--estate-rule); }
+.lab legend { padding-inline: 8px; font-weight: 700; }
+.lab fieldset label { display: flex; justify-content: space-between; font-size: .9rem; }
+.lab select { background: var(--card); color: var(--foreground); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px; margin-block: 8px; max-width: 100%; }
+.lab fieldset button { margin-block: 8px; }
+.lab #distance { margin-top: 8px; color: var(--muted-foreground); font-size: .85rem; }
+
+@media (max-width: 1100px) {
+  .decision { flex-direction: column; align-items: flex-start; }
+  .decision-actions { width: 100%; justify-content: space-between; }
+  .control-row { grid-template-columns: 125px minmax(0,1fr); }
+}
+@media (max-width: 780px) {
+  body[data-page="guided"] .workbench, .reveal, body[data-page="bone"] .workbench { grid-template-columns: minmax(0,1fr); }
+  body[data-page="guided"] .evidence-panel { order: -1; border-bottom: 1px solid var(--estate-rule); }
+  body[data-page="guided"] .geometry-panel { border-bottom: 0; }
+  .geometry-panel, .rig-panel { border-right: 0; border-bottom: 1px solid var(--estate-rule); }
+  .lab .chapters button { font-size: .8rem; padding: 12px 8px; }
+  .chapters .number { display: block; margin: 0 0 4px; }
+  .chapters .done { display: none; }
+  .lab .scene-wrap { height: 220px; }
+  .lab .image-pair { padding-inline: 14px; gap: 10px; }
+  .lab .panel-heading, .lab .panel-head { padding: 16px 14px; }
+  .lab .compare-tools { padding-inline: 14px; gap: 8px; }
+  .lab .compare-tools > span { font-size: .75rem; }
+  .lab .compare-tools button { font-size: .8rem; }
+  .filmstrip { padding-inline: 14px; }
+  .lab .filmstrip button { width: calc((100% - 40px)/6); }
+  .acquisition { grid-template-columns: minmax(0,1fr); padding: 20px 14px; gap: 24px; }
+  .angle-controls { gap: 5px; }
+  .lab .angle-controls button { font-size: .85rem; min-width: 0; }
+  .decision-actions { align-items: stretch; flex-direction: column; }
+  .judgement { display: grid; grid-template-columns: 1fr 1fr 1.2fr; }
+  .lab .judgement button { padding-inline: 5px; }
+  .explanation-panel { padding: 22px 18px; }
+  .bench { display: flex; flex-direction: column; }
+  .rig-view { height: 360px; }
+  .lab .tool-bar { padding-inline: 10px; gap: 4px; }
+  .lab .tool-bar button { font-size: .8rem; }
+  .lab .tool-help { min-height: 108px; }
+  .closeup-label { width: 135px; font-size: .6rem; }
+  /* Real comparison pixels stay visible during narrow-screen manipulation.
+     Reserve caption/status height so rendering feedback cannot move a drag. */
+  body[data-page="beam"] .image-panel { order: -1; position: sticky; top: 0; z-index: 6; padding-top: 6px; background: var(--card); border-bottom: 1px solid var(--estate-rule); }
+  body[data-page="beam"] .image-panel > .panel-head, body[data-page="beam"] #requested-pose { display: none; }
+  body[data-page="beam"] .image-label { justify-content: center; margin-bottom: 4px; font-size: .75rem; }
+  .projection-surface { width: clamp(92px,25vw,112px); max-width: 100%; margin-inline: auto; }
+  body[data-page="beam"] figcaption { font-size: .7rem; line-height: 1.4; height: 48px; min-height: 48px; overflow: auto; margin-top: 6px; }
+  body[data-page="beam"] .compare-tools { padding-block: 4px; }
+  .render-info { height: 62px; min-height: 62px; padding: 4px 14px; margin: 0; background: var(--card); }
+  .lab #render-status { height: 54px; min-height: 54px; margin: 0; overflow: auto; font-size: .75rem; }
+  .render-info:has(#retry:not([hidden])) { height: auto; }
+  body[data-page="bone"] .scene-wrap { height: 280px; }
+  #mesh-projection { width: min(100%,256px); }
+}
+@media (max-width: 380px) {
+  .angle-controls { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .lab .intro { padding-block: 8px; }
+}

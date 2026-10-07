@@ -1,0 +1,276 @@
+{
+  "fixture": {
+    "outer_radius_mm": 12.0,
+    "inner_radius_mm": 10.0,
+    "half_length_mm": 30.0,
+    "wire_radius_mm": 0.65,
+    "mu_shell_per_mm": 0.08,
+    "mu_wire_per_mm": 0.6,
+    "wire_start_mm": [
+      0.0,
+      0.0,
+      -18.0
+    ],
+    "tips_mm": {
+      "contained": [
+        0.0,
+        7.0,
+        18.0
+      ],
+      "breached": [
+        0.0,
+        15.0,
+        18.0
+      ]
+    }
+  },
+  "cameras": [
+    {
+      "angle_deg": 0,
+      "size": 256,
+      "pixel_mm": 0.5,
+      "sod": 800.0,
+      "sdd": 1200.0,
+      "source_mm": [
+        0.0,
+        -800.0,
+        -0.0
+      ],
+      "detector_centre_mm": [
+        0.0,
+        400.0,
+        0.0
+      ],
+      "detector_right": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "detector_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "forward": [
+        -0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "angle_deg": 30,
+      "size": 256,
+      "pixel_mm": 0.5,
+      "sod": 800.0,
+      "sdd": 1200.0,
+      "source_mm": [
+        399.99999999999994,
+        -692.820323027551,
+        -0.0
+      ],
+      "detector_centre_mm": [
+        -199.99999999999994,
+        346.4101615137754,
+        0.0
+      ],
+      "detector_right": [
+        0.8660254037844387,
+        0.49999999999999994,
+        0.0
+      ],
+      "detector_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "forward": [
+        -0.49999999999999994,
+        0.8660254037844387,
+        0.0
+      ]
+    },
+    {
+      "angle_deg": 45,
+      "size": 256,
+      "pixel_mm": 0.5,
+      "sod": 800.0,
+      "sdd": 1200.0,
+      "source_mm": [
+        565.6854249492379,
+        -565.685424949238,
+        -0.0
+      ],
+      "detector_centre_mm": [
+        -282.842712474619,
+        282.842712474619,
+        0.0
+      ],
+      "detector_right": [
+        0.7071067811865476,
+        0.7071067811865475,
+        0.0
+      ],
+      "detector_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "forward": [
+        -0.7071067811865475,
+        0.7071067811865476,
+        0.0
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "size": 256,
+      "pixel_mm": 0.5,
+      "sod": 800.0,
+      "sdd": 1200.0,
+      "source_mm": [
+        692.8203230275509,
+        -400.0000000000001,
+        -0.0
+      ],
+      "detector_centre_mm": [
+        -346.4101615137755,
+        200.0,
+        0.0
+      ],
+      "detector_right": [
+        0.5000000000000001,
+        0.8660254037844386,
+        0.0
+      ],
+      "detector_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "forward": [
+        -0.8660254037844386,
+        0.5000000000000001,
+        0.0
+      ]
+    },
+    {
+      "angle_deg": 90,
+      "size": 256,
+      "pixel_mm": 0.5,
+      "sod": 800.0,
+      "sdd": 1200.0,
+      "source_mm": [
+        800.0,
+        -4.898587196589413e-14,
+        -0.0
+      ],
+      "detector_centre_mm": [
+        -400.0,
+        2.449293598294706e-14,
+        0.0
+      ],
+      "detector_right": [
+        6.123233995736766e-17,
+        1.0,
+        0.0
+      ],
+      "detector_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "forward": [
+        -1.0,
+        6.123233995736766e-17,
+        0.0
+      ]
+    },
+    {
+      "angle_deg": 135,
+      "size": 256,
+      "pixel_mm": 0.5,
+      "sod": 800.0,
+      "sdd": 1200.0,
+      "source_mm": [
+        565.685424949238,
+        565.6854249492379,
+        -0.0
+      ],
+      "detector_centre_mm": [
+        -282.842712474619,
+        -282.842712474619,
+        0.0
+      ],
+      "detector_right": [
+        -0.7071067811865475,
+        0.7071067811865476,
+        0.0
+      ],
+      "detector_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "forward": [
+        -0.7071067811865476,
+        -0.7071067811865475,
+        0.0
+      ]
+    }
+  ],
+  "source_directory": "spikes/001-projection-geometry",
+  "source_sha256": {
+    "geometry.py": "bb2221b6c8f3241866c21614cfe9a714e577f23970b64b62b89af119c8e2293f",
+    "reference.py": "a37a6ef7868397a52174ab0cb34b1ac963e511b17564af7454232c6df649ee90",
+    "run.py": "d4899d509001b5e1f98d8420122e5e7a4f3e0d65353d1e995267b0f66e8d547a"
+  },
+  "generator_sha256": "f5dcd7dd1b26cfb433c5e37b8bc478ef1f5b55159754703b5d8b13cbb981bd60",
+  "tests_sha256": "d5cbc5587b5ae214a6febc467e722c0ce7de38ac38181b49cd70442fd62f4c9c",
+  "units": "mm",
+  "world": "right handed; cylinder +Z; positive orbit about +Z; 0\u00b0 source -Y, image +X/+Z",
+  "image": "array[row=v,col=u]; u right, v down; integer coordinates are pixel centres",
+  "display_mapping": "round(255 * (1 - exp(-line_integral)))",
+  "physics": "idealised monoenergetic attenuation; wire replaces shell in overlap; no noise/scatter",
+  "authored_tips_mm": {
+    "c1": [
+      0,
+      15,
+      18
+    ],
+    "c2": [
+      10,
+      10,
+      18
+    ],
+    "c3": [
+      0,
+      7,
+      18
+    ]
+  },
+  "fiducial_centres_mm": [
+    [
+      -6.0,
+      -9.0,
+      11.0
+    ],
+    [
+      4.0,
+      8.0,
+      -12.0
+    ],
+    [
+      7.0,
+      -4.0,
+      3.0
+    ],
+    [
+      -2.0,
+      12.0,
+      -7.0
+    ]
+  ],
+  "fiducial_radius_mm": 1.1,
+  "evidence_definition": "Conservative finite distal cap projection against the outer-cylinder side silhouette; overlap never proves 3D containment.",
+  "raw_convention": "cN-AAA_total/shell/wire/background: line integrals; _pixels: delivered uint8; _refined2/4: downsampled floating 8-bit detector response"
+}

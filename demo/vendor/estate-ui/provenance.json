@@ -1,0 +1,17 @@
+{
+  "package": "@sangeev/estate-ui",
+  "version": "2.0.0-alpha.7",
+  "archive_sha256": "d062371402bb538c008888255597349d5cf7425d5bb51e399f7b3cf97b69ef76",
+  "integration": "Static rendering of PublicEstateHeader/navigation=projects; exact CSS/fonts; mechanically extracted theme functions. No browser React.",
+  "files": {
+    "src/contract.css": "3a23669f120bd7fc3216984f4347fe1ae5e992467ea50fff748ebb01719a61a2",
+    "src/index.js": "cf8fc589c08577bfd7400587f06e2c4e5a037585e9ee7962cb5152330a7de9bb",
+    "package.json": "9ea54cfd1a5eaa39d7ae2b9037587c2f53a20fcbf4a37de6fde4cc8f903e4104",
+    "DESIGN_CONTRACT.md": "819be07c21001f0ad42b380fcca3b093e2a99a610a055d20b8483d3b213e18f9",
+    "LICENSE": "4fa09abc42d71948db6dc1c9766d05662ce00bfe2595009e9203a99ba74feb61",
+    "assets/fonts/Literata-Variable.ttf": "b41138c9373112f32abb589cc22e8674b06ed4048b0c513be922bdd26f274440",
+    "assets/fonts/AtkinsonHyperlegibleNext-Variable.ttf": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745",
+    "LICENSES/OFL-Literata.txt": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+    "LICENSES/OFL-Atkinson-Hyperlegible-Next.txt": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+  }
+}

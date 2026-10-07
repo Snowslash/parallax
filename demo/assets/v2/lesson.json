@@ -1,0 +1,1003 @@
+{
+  "schemaVersion": 2,
+  "geometry": {
+    "fixture": {
+      "outer_radius_mm": 12.0,
+      "inner_radius_mm": 10.0,
+      "half_length_mm": 30.0,
+      "wire_radius_mm": 0.65,
+      "mu_shell_per_mm": 0.08,
+      "mu_wire_per_mm": 0.6,
+      "wire_start_mm": [
+        0.0,
+        0.0,
+        -18.0
+      ],
+      "tips_mm": {
+        "contained": [
+          0.0,
+          7.0,
+          18.0
+        ],
+        "breached": [
+          0.0,
+          15.0,
+          18.0
+        ]
+      }
+    },
+    "cameras": [
+      {
+        "angle_deg": 0,
+        "size": 256,
+        "pixel_mm": 0.5,
+        "sod": 800.0,
+        "sdd": 1200.0,
+        "source_mm": [
+          0.0,
+          -800.0,
+          -0.0
+        ],
+        "detector_centre_mm": [
+          0.0,
+          400.0,
+          0.0
+        ],
+        "detector_right": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "detector_up": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "forward": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "angle_deg": 30,
+        "size": 256,
+        "pixel_mm": 0.5,
+        "sod": 800.0,
+        "sdd": 1200.0,
+        "source_mm": [
+          399.99999999999994,
+          -692.820323027551,
+          -0.0
+        ],
+        "detector_centre_mm": [
+          -199.99999999999994,
+          346.4101615137754,
+          0.0
+        ],
+        "detector_right": [
+          0.8660254037844387,
+          0.49999999999999994,
+          0.0
+        ],
+        "detector_up": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "forward": [
+          -0.49999999999999994,
+          0.8660254037844387,
+          0.0
+        ]
+      },
+      {
+        "angle_deg": 45,
+        "size": 256,
+        "pixel_mm": 0.5,
+        "sod": 800.0,
+        "sdd": 1200.0,
+        "source_mm": [
+          565.6854249492379,
+          -565.685424949238,
+          -0.0
+        ],
+        "detector_centre_mm": [
+          -282.842712474619,
+          282.842712474619,
+          0.0
+        ],
+        "detector_right": [
+          0.7071067811865476,
+          0.7071067811865475,
+          0.0
+        ],
+        "detector_up": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "forward": [
+          -0.7071067811865475,
+          0.7071067811865476,
+          0.0
+        ]
+      },
+      {
+        "angle_deg": 60,
+        "size": 256,
+        "pixel_mm": 0.5,
+        "sod": 800.0,
+        "sdd": 1200.0,
+        "source_mm": [
+          692.8203230275509,
+          -400.0000000000001,
+          -0.0
+        ],
+        "detector_centre_mm": [
+          -346.4101615137755,
+          200.0,
+          0.0
+        ],
+        "detector_right": [
+          0.5000000000000001,
+          0.8660254037844386,
+          0.0
+        ],
+        "detector_up": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "forward": [
+          -0.8660254037844386,
+          0.5000000000000001,
+          0.0
+        ]
+      },
+      {
+        "angle_deg": 90,
+        "size": 256,
+        "pixel_mm": 0.5,
+        "sod": 800.0,
+        "sdd": 1200.0,
+        "source_mm": [
+          800.0,
+          -4.898587196589413e-14,
+          -0.0
+        ],
+        "detector_centre_mm": [
+          -400.0,
+          2.449293598294706e-14,
+          0.0
+        ],
+        "detector_right": [
+          6.123233995736766e-17,
+          1.0,
+          0.0
+        ],
+        "detector_up": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "forward": [
+          -1.0,
+          6.123233995736766e-17,
+          0.0
+        ]
+      },
+      {
+        "angle_deg": 135,
+        "size": 256,
+        "pixel_mm": 0.5,
+        "sod": 800.0,
+        "sdd": 1200.0,
+        "source_mm": [
+          565.685424949238,
+          565.6854249492379,
+          -0.0
+        ],
+        "detector_centre_mm": [
+          -282.842712474619,
+          -282.842712474619,
+          0.0
+        ],
+        "detector_right": [
+          -0.7071067811865475,
+          0.7071067811865476,
+          0.0
+        ],
+        "detector_up": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "forward": [
+          -0.7071067811865476,
+          -0.7071067811865475,
+          0.0
+        ]
+      }
+    ]
+  },
+  "angles": [
+    0,
+    30,
+    45,
+    60,
+    90,
+    135
+  ],
+  "cases": [
+    {
+      "id": "c1",
+      "title": "Look again",
+      "brief": "Which view would show where the wire ends?",
+      "initialAngles": [
+        0
+      ],
+      "tip": [
+        0,
+        15,
+        18
+      ],
+      "revealTitle": "The starting view hides the breach",
+      "takeaway": "The wire end is outside the wall. It overlaps the outline at 0°, but separates from it at 60° and 90°.",
+      "truthBounds": {
+        "classification": "breached",
+        "lumen_clearance_lower_bound_mm": -5.65,
+        "sidewall_breach_lower_bound_mm": 2.3499999999999996,
+        "away_from_ends": true
+      },
+      "truth": "breached",
+      "frames": [
+        {
+          "angle": 0,
+          "image": "assets/v2/c1-000.png",
+          "raw_key": "c1-000",
+          "tip_uv_px": [
+            127.5,
+            74.49386503067484
+          ],
+          "sha256": "16773e7fbcdc26c44bbff7c636dc986f72d3e8c0f0735fcc209c98f53520159d",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 14,
+            "distal_peak_delta_8bit": 104,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 14,
+            "base_roi_mae_vs4_8bit": 2.732649686860804,
+            "refined2_roi_mae_vs4_8bit": 0.9244138565532687,
+            "roi_pixels": 654
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              125.58436176091361,
+              72.53591821698288
+            ],
+            [
+              129.41563823908638,
+              76.44869122785508
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 34.08841244447928,
+          "beyond_margin_lower_bound_px": -37.919688922652064,
+          "end_exclusion_margin_lower_bound_px": 33.70586895589913,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 30,
+          "image": "assets/v2/c1-030.png",
+          "raw_key": "c1-030",
+          "tip_uv_px": [
+            149.6404833555382,
+            74.36283994670832
+          ],
+          "sha256": "ebaf8f3616ee43e231dd7351b36c8b68e71abd919d3dd406fdf51d665b55e947",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 15,
+            "distal_peak_delta_8bit": 94,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 15,
+            "base_roi_mae_vs4_8bit": 4.077194019147434,
+            "refined2_roi_mae_vs4_8bit": 1.1190131295412558,
+            "roi_pixels": 654
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              147.70548682533126,
+              72.39994459985837
+            ],
+            [
+              151.57857648853374,
+              76.3225990628471
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 11.925474195031935,
+          "beyond_margin_lower_bound_px": -15.798563858234417,
+          "end_exclusion_margin_lower_bound_px": 33.569895338774636,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 45,
+          "image": "assets/v2/c1-045.png",
+          "raw_key": "c1-045",
+          "tip_uv_px": [
+            158.9034502911412,
+            74.20657763155067
+          ],
+          "sha256": "ef6a92daf2038a5ae9536352aa75754df7c4b66acec9a7ac48ac0bc4b9773e7f",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 15,
+            "distal_peak_delta_8bit": 57,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 15,
+            "base_roi_mae_vs4_8bit": 3.76285916268528,
+            "refined2_roi_mae_vs4_8bit": 0.8734393756391357,
+            "roi_pixels": 661
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              156.95534627652637,
+              72.23777989453922
+            ],
+            [
+              160.85468105997182,
+              76.17222046411797
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 2.6493696235938557,
+          "beyond_margin_lower_bound_px": -6.54870440703931,
+          "end_exclusion_margin_lower_bound_px": 33.40773063345547,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 60,
+          "image": "assets/v2/c1-060.png",
+          "raw_key": "c1-060",
+          "tip_uv_px": [
+            166.1091820882228,
+            74.0015479876161
+          ],
+          "sha256": "c4a7bc54ec367795594e48aeb8ef3bdbfebbd73a3d99dcca45d7628b9d71e13e",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 14,
+            "distal_peak_delta_8bit": 140,
+            "distal_visible_pixels_outside_side_silhouette": 14,
+            "distal_wire_support_pixels": 14,
+            "base_roi_mae_vs4_8bit": 3.860660077782711,
+            "refined2_roi_mae_vs4_8bit": 0.813530697355424,
+            "roi_pixels": 672
+          },
+          "evidence": "beyond",
+          "cap_uv_bounds_px": [
+            [
+              164.14779377125524,
+              72.02500464770404
+            ],
+            [
+              168.0737306020201,
+              75.97491183567408
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": -4.569679918454433,
+          "beyond_margin_lower_bound_px": 0.6437430876895718,
+          "end_exclusion_margin_lower_bound_px": 33.1949553866203,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 90,
+          "image": "assets/v2/c1-090.png",
+          "raw_key": "c1-090",
+          "tip_uv_px": [
+            172.5,
+            73.5
+          ],
+          "sha256": "db4ff6f6fa0049cbd6faf808ffb49e5e131bbd0bb19ac79e981aab4ce69b6b20",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 11,
+            "distal_peak_delta_8bit": 138,
+            "distal_visible_pixels_outside_side_silhouette": 11,
+            "distal_wire_support_pixels": 11,
+            "base_roi_mae_vs4_8bit": 4.371889713509042,
+            "refined2_roi_mae_vs4_8bit": 0.7796731743928453,
+            "roi_pixels": 674
+          },
+          "evidence": "beyond",
+          "cap_uv_bounds_px": [
+            [
+              170.51505027165427,
+              71.50450365922312
+            ],
+            [
+              174.48817789453932,
+              75.49225629176294
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": -10.98412721097364,
+          "beyond_margin_lower_bound_px": 7.010999588088609,
+          "end_exclusion_margin_lower_bound_px": 32.674454398139375,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 135,
+          "image": "assets/v2/c1-135.png",
+          "raw_key": "c1-135",
+          "tip_uv_px": [
+            159.74734863264655,
+            72.77443465576546
+          ],
+          "sha256": "5d2bbdc58df4be759e3c9263613637c6fb461f8c31cacd921938accd5fbdc386",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 14,
+            "distal_peak_delta_8bit": 60,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 14,
+            "base_roi_mae_vs4_8bit": 3.690062131221147,
+            "refined2_roi_mae_vs4_8bit": 0.8525350893918247,
+            "roi_pixels": 675
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              157.74624238956076,
+              70.75150600628486
+            ],
+            [
+              161.75175308161485,
+              74.7940346181764
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 1.752297601950815,
+          "beyond_margin_lower_bound_px": -5.757808294004899,
+          "end_exclusion_margin_lower_bound_px": 31.921456745201112,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "title": "Are two views enough?",
+      "brief": "You have views at 0° and 90°. Choose another angle before deciding.",
+      "initialAngles": [
+        0,
+        90
+      ],
+      "tip": [
+        10,
+        10,
+        18
+      ],
+      "revealTitle": "Both starting views hide the breach",
+      "takeaway": "The wire end is outside the wall, but overlaps the outline at 0° and 90°. The 45° view shows the breach.",
+      "truthBounds": {
+        "classification": "breached",
+        "lumen_clearance_lower_bound_mm": -4.792135623730951,
+        "sidewall_breach_lower_bound_mm": 1.4921356237309507,
+        "away_from_ends": true
+      },
+      "truth": "breached",
+      "frames": [
+        {
+          "angle": 0,
+          "image": "assets/v2/c2-000.png",
+          "raw_key": "c2-000",
+          "tip_uv_px": [
+            157.12962962962962,
+            74.16666666666667
+          ],
+          "sha256": "f7cb4dff7b30301d93a9f2697491a8cf14394dd1095bec559e017bbec5624b1b",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 14,
+            "distal_peak_delta_8bit": 72,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 14,
+            "base_roi_mae_vs4_8bit": 3.7864442335449238,
+            "refined2_roi_mae_vs4_8bit": 0.9083828448274934,
+            "roi_pixels": 661
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              155.1814901622155,
+              72.19636127756843
+            ],
+            [
+              159.08089825168344,
+              76.13381237278728
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 4.423152431882222,
+          "beyond_margin_lower_bound_px": -8.322560521350166,
+          "end_exclusion_margin_lower_bound_px": 33.36631201648468,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 30,
+          "image": "assets/v2/c2-030.png",
+          "raw_key": "c2-030",
+          "tip_uv_px": [
+            168.29411607841288,
+            73.74594188533092
+          ],
+          "sha256": "3b7825f7bae346debd323b61fd247676727e89f6375244881bfc46f46df7f664",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 13,
+            "distal_peak_delta_8bit": 138,
+            "distal_visible_pixels_outside_side_silhouette": 13,
+            "distal_wire_support_pixels": 13,
+            "base_roi_mae_vs4_8bit": 4.032365817293126,
+            "refined2_roi_mae_vs4_8bit": 0.8075920930447626,
+            "roi_pixels": 673
+          },
+          "evidence": "beyond",
+          "cap_uv_bounds_px": [
+            [
+              166.32159842432822,
+              71.75974042681335
+            ],
+            [
+              170.26982705778502,
+              75.72893306288651
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": -6.765776374219342,
+          "beyond_margin_lower_bound_px": 2.8175477407625564,
+          "end_exclusion_margin_lower_bound_px": 32.92969116572961,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 45,
+          "image": "assets/v2/c2-045.png",
+          "raw_key": "c2-045",
+          "tip_uv_px": [
+            169.92640687119302,
+            73.5
+          ],
+          "sha256": "7137e68630baf5edda760e09d9b08a612bb1ccd4008e8538a68fbce68d4b60c9",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 12,
+            "distal_peak_delta_8bit": 138,
+            "distal_visible_pixels_outside_side_silhouette": 12,
+            "distal_wire_support_pixels": 12,
+            "base_roi_mae_vs4_8bit": 4.102359247848545,
+            "refined2_roi_mae_vs4_8bit": 0.8526100222420359,
+            "roi_pixels": 679
+          },
+          "evidence": "beyond",
+          "cap_uv_bounds_px": [
+            [
+              167.94354648967015,
+              71.50450365922312
+            ],
+            [
+              171.91249202096006,
+              75.49225629176294
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": -8.408441337394379,
+          "beyond_margin_lower_bound_px": 4.439495806104496,
+          "end_exclusion_margin_lower_bound_px": 32.674454398139375,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 60,
+          "image": "assets/v2/c2-060.png",
+          "raw_key": "c2-060",
+          "tip_uv_px": [
+            168.66912392865123,
+            73.25179724602998
+          ],
+          "sha256": "f5b831f5ced0a26efcf801b676c9ddea2fa9fce7d207c873521d06460b68586e",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 13,
+            "distal_peak_delta_8bit": 138,
+            "distal_visible_pixels_outside_side_silhouette": 13,
+            "distal_wire_support_pixels": 13,
+            "base_roi_mae_vs4_8bit": 3.960975001323704,
+            "refined2_roi_mae_vs4_8bit": 0.7945534746582381,
+            "roi_pixels": 681
+          },
+          "evidence": "beyond",
+          "cap_uv_bounds_px": [
+            [
+              166.67818246598782,
+              71.24691866127321
+            ],
+            [
+              170.66331819671345,
+              75.25340559779644
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": -7.159267513147782,
+          "beyond_margin_lower_bound_px": 3.174131782422151,
+          "end_exclusion_margin_lower_bound_px": 32.41686940018947,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 90,
+          "image": "assets/v2/c2-090.png",
+          "raw_key": "c2-090",
+          "tip_uv_px": [
+            157.87974683544306,
+            72.81645569620252
+          ],
+          "sha256": "0c801c8fc698c313fb36afe659754e8031003bfe4bbfd7bea9f539f03f7ffb07",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 15,
+            "distal_peak_delta_8bit": 63,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 15,
+            "base_roi_mae_vs4_8bit": 3.728037340624559,
+            "refined2_roi_mae_vs4_8bit": 0.8877093605865255,
+            "roi_pixels": 674
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              155.88171125023715,
+              70.7951162348768
+            ],
+            [
+              159.88107303477545,
+              74.83447163726048
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 3.6229776487902186,
+          "beyond_margin_lower_bound_px": -7.62233943332852,
+          "end_exclusion_margin_lower_bound_px": 31.965066973793057,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 135,
+          "image": "assets/v2/c2-135.png",
+          "raw_key": "c2-135",
+          "tip_uv_px": [
+            127.50000000000017,
+            72.52822716638765
+          ],
+          "sha256": "81ae89d73c8e3120c51b9bd819ef258e9b651d73982751c423b7c224c7924770",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 16,
+            "distal_peak_delta_8bit": 102,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 16,
+            "base_roi_mae_vs4_8bit": 2.2419528147882555,
+            "refined2_roi_mae_vs4_8bit": 0.6815281399521844,
+            "roi_pixels": 666
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              125.51326493177822,
+              70.49598611947783
+            ],
+            [
+              129.48673506822212,
+              74.55710917077462
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 34.01731561534355,
+          "beyond_margin_lower_bound_px": -37.99078575178745,
+          "end_exclusion_margin_lower_bound_px": 31.66593685839409,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "title": "Test your interpretation",
+      "brief": "Take another view, then decide where the wire ends.",
+      "initialAngles": [
+        0
+      ],
+      "tip": [
+        0,
+        7,
+        18
+      ],
+      "revealTitle": "The wire end is contained",
+      "takeaway": "The whole wire end, including its thickness, fits inside the lumen. The model confirms this; overlap in the images alone does not.",
+      "truthBounds": {
+        "classification": "contained",
+        "lumen_clearance_lower_bound_mm": 2.35,
+        "sidewall_breach_lower_bound_mm": -5.65,
+        "away_from_ends": true
+      },
+      "truth": "contained",
+      "frames": [
+        {
+          "angle": 0,
+          "image": "assets/v2/c3-000.png",
+          "raw_key": "c3-000",
+          "tip_uv_px": [
+            127.5,
+            73.96840148698885
+          ],
+          "sha256": "76b4a9b5f7d69a1c749e2334e3da6233eafe2533e627d6d10fdab723c3807d5c",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 16,
+            "distal_peak_delta_8bit": 99,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 16,
+            "base_roi_mae_vs4_8bit": 2.3909403169875088,
+            "refined2_roi_mae_vs4_8bit": 0.8302464579072762,
+            "roi_pixels": 656
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              125.5653562348856,
+              71.99060581633286
+            ],
+            [
+              129.4346437651144,
+              75.94301368166904
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 34.06940691845127,
+          "beyond_margin_lower_bound_px": -37.938694448680074,
+          "end_exclusion_margin_lower_bound_px": 33.160556555249116,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 30,
+          "image": "assets/v2/c3-030.png",
+          "raw_key": "c3-030",
+          "tip_uv_px": [
+            137.92103231124204,
+            73.90611954218373
+          ],
+          "sha256": "ca4a513a12fefd3f6f96fe180cde4c3f7336e4dd40fec1b6fe22d286572c8ec9",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 15,
+            "distal_peak_delta_8bit": 99,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 15,
+            "base_roi_mae_vs4_8bit": 4.156091618701529,
+            "refined2_roi_mae_vs4_8bit": 1.361014823848295,
+            "roi_pixels": 646
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              135.9788604758997,
+              71.92597066164228
+            ],
+            [
+              139.8663389680528,
+              75.88307745373345
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 23.637711715512882,
+          "beyond_margin_lower_bound_px": -27.52519020766598,
+          "end_exclusion_margin_lower_bound_px": 33.09592140055854,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 45,
+          "image": "assets/v2/c3-045.png",
+          "raw_key": "c3-045",
+          "tip_uv_px": [
+            142.25793235701565,
+            73.83205347803283
+          ],
+          "sha256": "d989edaa6f165597120546568337ec5538465b7d41a966719d671fa73be1d101",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 13,
+            "distal_peak_delta_8bit": 97,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 13,
+            "base_roi_mae_vs4_8bit": 4.187738666181231,
+            "refined2_roi_mae_vs4_8bit": 1.2774694421402535,
+            "roi_pixels": 647
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              140.3095793926997,
+              71.84910598829472
+            ],
+            [
+              144.2094344692228,
+              75.81180107633013
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 19.29461621434288,
+          "beyond_margin_lower_bound_px": -23.19447129086597,
+          "end_exclusion_margin_lower_bound_px": 33.01905672721099,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 60,
+          "image": "assets/v2/c3-060.png",
+          "raw_key": "c3-060",
+          "tip_uv_px": [
+            145.6073139808073,
+            73.7352209085252
+          ],
+          "sha256": "fdd1e4257ec3c84dcd4d776651404f54244d5c98ecb479be82cf8c050b765276",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 14,
+            "distal_peak_delta_8bit": 95,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 14,
+            "base_roi_mae_vs4_8bit": 4.179857041155248,
+            "refined2_roi_mae_vs4_8bit": 1.1811594542472381,
+            "roi_pixels": 649
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              143.65274113483636,
+              71.74861431151524
+            ],
+            [
+              147.56505173267567,
+              75.71861592986383
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 15.938998950890007,
+          "beyond_margin_lower_bound_px": -19.85130954872931,
+          "end_exclusion_margin_lower_bound_px": 32.91856505043149,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 90,
+          "image": "assets/v2/c3-090.png",
+          "raw_key": "c3-090",
+          "tip_uv_px": [
+            148.5,
+            73.5
+          ],
+          "sha256": "08b98c0a17b76960f8cfe3d73fcddbecf5fe5cee95dbbe918eb9f478962997cd",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 11,
+            "distal_peak_delta_8bit": 91,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 12,
+            "base_roi_mae_vs4_8bit": 4.077251294036479,
+            "refined2_roi_mae_vs4_8bit": 1.1335214759214634,
+            "roi_pixels": 656
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              146.5345344407669,
+              71.50450365922312
+            ],
+            [
+              150.4686620379058,
+              75.49225629176294
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 13.035388645659875,
+          "beyond_margin_lower_bound_px": -16.969516242798797,
+          "end_exclusion_margin_lower_bound_px": 32.674454398139375,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        },
+        {
+          "angle": 135,
+          "image": "assets/v2/c3-135.png",
+          "raw_key": "c3-135",
+          "tip_uv_px": [
+            142.44168939146465,
+            73.16381198869205
+          ],
+          "sha256": "d652744cb31b978985167bb5bc5f472c1eff0d955e6f8dd34a06b49bd75f1954",
+          "raster": {
+            "distal_visible_pixels_delta_ge_5": 14,
+            "distal_peak_delta_8bit": 97,
+            "distal_visible_pixels_outside_side_silhouette": 0,
+            "distal_wire_support_pixels": 14,
+            "base_roi_mae_vs4_8bit": 4.1474078952476034,
+            "refined2_roi_mae_vs4_8bit": 1.272517260017208,
+            "roi_pixels": 652
+          },
+          "evidence": "overlap",
+          "cap_uv_bounds_px": [
+            [
+              140.4689463979692,
+              71.1556070351775
+            ],
+            [
+              144.4176606894368,
+              75.16873597499404
+            ]
+          ],
+          "side_silhouette_u_px": [
+            91.49594931643432,
+            163.50405068356568
+          ],
+          "overlap_margin_lower_bound_px": 19.08638999412889,
+          "beyond_margin_lower_bound_px": -23.035104285596475,
+          "end_exclusion_margin_lower_bound_px": 32.32555777409376,
+          "region": "flat distal cap enclosed by radius-0.65-mm sphere; bounds are sufficient, not exact cap extrema"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source_directory": "spikes/001-projection-geometry",
+    "source_sha256": {
+      "geometry.py": "bb2221b6c8f3241866c21614cfe9a714e577f23970b64b62b89af119c8e2293f",
+      "reference.py": "a37a6ef7868397a52174ab0cb34b1ac963e511b17564af7454232c6df649ee90",
+      "run.py": "d4899d509001b5e1f98d8420122e5e7a4f3e0d65353d1e995267b0f66e8d547a"
+    },
+    "generator_sha256": "f5dcd7dd1b26cfb433c5e37b8bc478ef1f5b55159754703b5d8b13cbb981bd60",
+    "tests_sha256": "d5cbc5587b5ae214a6febc467e722c0ce7de38ac38181b49cd70442fd62f4c9c",
+    "raw_sha256": "12fa1e8ebe18552d6e04b131997e7263b33087e80d237602a43d22093d3cff96",
+    "geometry_sha256": "2c9cb1ff58de364b7381d24369426812c194c6404df79e5d7465073a22a44a2d"
+  }
+}

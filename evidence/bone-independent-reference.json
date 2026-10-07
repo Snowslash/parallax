@@ -1,0 +1,5360 @@
+{
+  "method": "Independent offline oracle: all-triangle plane crossings, 3D cross-product\nbarycentric inclusion and solid-angle interval midpoint membership. No candidate\nBVH, shear intersection, signed-event pairing, or received scripts imported.\nNot a second production renderer; bounded ray samples only.\n",
+  "python": "3.14.7",
+  "numpy": "2.5.0",
+  "assets": {
+    "outer": {
+      "sha256": "1367defee70c21312f504b42d07d2e2208e0ec2d2aa309bcb0ed3eace32fda4d",
+      "bytes": 646696
+    },
+    "core": {
+      "sha256": "05a504a797ef08d37aef092dba0de1c187b9a7a43d94c808489e35bb9abc8a99",
+      "bytes": 573597
+    }
+  },
+  "toleranceMm": 2e-06,
+  "rays": 178,
+  "resolvedComparisons": 177,
+  "explicitUnresolved": 1,
+  "maxLengthErrorMm": 9.094947017729282e-13,
+  "maxAttenuationError": 3.275157922644212e-14,
+  "pass": true,
+  "seconds": 5.810945024248213,
+  "results": [
+    {
+      "name": "pose-0-128-0-0",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        -134.75,
+        407,
+        90.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-127-127",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        182.75,
+        407,
+        -226.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-9-45",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        -22.25,
+        407,
+        68.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 4.991678750952019,
+        "core": 0,
+        "shell": 4.991678750952019,
+        "attenuation": 0.19966715003808078
+      },
+      "reference": {
+        "outer": 4.991678750951905,
+        "core": 0.0,
+        "shell": 4.991678750951905,
+        "attenuation": 0.19966715003807622
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-14-41",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        -32.25,
+        407,
+        55.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 25.97634355209175,
+        "core": 18.00794131546661,
+        "shell": 7.968402236625138,
+        "attenuation": 0.4627996199887384
+      },
+      "reference": {
+        "outer": 25.976343552091976,
+        "core": 18.007941315466837,
+        "shell": 7.968402236625138,
+        "attenuation": 0.4627996199887402
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-17-52",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        -4.75,
+        407,
+        48.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 41.2736513666639,
+        "core": 36.76460502742748,
+        "shell": 4.50904633923642,
+        "attenuation": 0.47447869378887664
+      },
+      "reference": {
+        "outer": 41.27365136666367,
+        "core": 36.76460502742748,
+        "shell": 4.509046339236193,
+        "attenuation": 0.47447869378886753
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-20-55",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        2.75,
+        407,
+        40.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 40.70346891855195,
+        "core": 36.11206013056153,
+        "shell": 4.591408787990417,
+        "attenuation": 0.47255283256410896
+      },
+      "reference": {
+        "outer": 40.70346891855206,
+        "core": 36.112060130561645,
+        "shell": 4.591408787990417,
+        "attenuation": 0.47255283256410985
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-23-55",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        2.75,
+        407,
+        33.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 41.37243819858486,
+        "core": 36.874251261169206,
+        "shell": 4.498186937415653,
+        "attenuation": 0.4749214875859798
+      },
+      "reference": {
+        "outer": 41.372438198584746,
+        "core": 36.874251261169206,
+        "shell": 4.498186937415539,
+        "attenuation": 0.47492148758597524
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-26-52",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        -4.75,
+        407,
+        25.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 43.21988257417729,
+        "core": 38.93403551529718,
+        "shell": 4.285847058880108,
+        "attenuation": 0.48290616647758183
+      },
+      "reference": {
+        "outer": 43.21988257417695,
+        "core": 38.93403551529718,
+        "shell": 4.285847058879767,
+        "attenuation": 0.4829061664775682
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3655743202889425e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-28-59",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        12.75,
+        407,
+        20.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 30.379123585629145,
+        "core": 25.068083062112578,
+        "shell": 5.311040523516567,
+        "attenuation": 0.4129862854375633
+      },
+      "reference": {
+        "outer": 30.379123585629372,
+        "core": 25.068083062112805,
+        "shell": 5.311040523516567,
+        "attenuation": 0.4129862854375651
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-30-51",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        -7.25,
+        407,
+        15.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 37.8552094173059,
+        "core": 32.86867824637545,
+        "shell": 4.986531170930448,
+        "attenuation": 0.46241067280822157
+      },
+      "reference": {
+        "outer": 37.85520941730579,
+        "core": 32.86867824637534,
+        "shell": 4.986531170930448,
+        "attenuation": 0.4624106728082207
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-31-89",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        87.75,
+        407,
+        13.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 14.941327983736414,
+        "core": 2.4426852067148275,
+        "shell": 12.498642777021587,
+        "attenuation": 0.5194871927345821
+      },
+      "reference": {
+        "outer": 14.9413279837363,
+        "core": 2.4426852067148275,
+        "shell": 12.498642777021473,
+        "attenuation": 0.5194871927345776
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-33-70",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        40.25,
+        407,
+        8.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 20.148376691170483,
+        "core": 13.747169169349377,
+        "shell": 6.401207521821107,
+        "attenuation": 0.3660256542276393
+      },
+      "reference": {
+        "outer": 20.148376691170142,
+        "core": 13.747169169349263,
+        "shell": 6.401207521820879,
+        "attenuation": 0.36602565422762934
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 9.936496070395151e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-35-56",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        5.25,
+        407,
+        3.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 23.731609431057336,
+        "core": 18.14341085254364,
+        "shell": 5.588198578513698,
+        "attenuation": 0.368675229960897
+      },
+      "reference": {
+        "outer": 23.73160943105745,
+        "core": 18.14341085254398,
+        "shell": 5.58819857851347,
+        "attenuation": 0.36867522996089064
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 6.38378239159465e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-37-56",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        5.25,
+        407,
+        -1.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 18.69421926721975,
+        "core": 11.59158403375443,
+        "shell": 7.102635233465321,
+        "attenuation": 0.3768380816086483
+      },
+      "reference": {
+        "outer": 18.69421926722009,
+        "core": 11.591584033754543,
+        "shell": 7.1026352334655485,
+        "attenuation": 0.3768380816086583
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 9.992007221626409e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-39-65",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        27.75,
+        407,
+        -6.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 27.641833649944942,
+        "core": 23.464187272853792,
+        "shell": 4.1776463770911505,
+        "attenuation": 0.3548193532664764
+      },
+      "reference": {
+        "outer": 27.641833649945056,
+        "core": 23.464187272853678,
+        "shell": 4.177646377091378,
+        "attenuation": 0.3548193532664845
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 8.104628079763643e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-41-78",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        60.25,
+        407,
+        -11.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 29.897889569731433,
+        "core": 25.174093747887696,
+        "shell": 4.723795821843737,
+        "attenuation": 0.39034458285685103
+      },
+      "reference": {
+        "outer": 29.89788956973132,
+        "core": 25.17409374788747,
+        "shell": 4.723795821843851,
+        "attenuation": 0.3903445828568538
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.7755575615628914e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-44-65",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        27.75,
+        407,
+        -19.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 21.318689668885327,
+        "core": 15.287795695957925,
+        "shell": 6.030893972927402,
+        "attenuation": 0.3635381244847595
+      },
+      "reference": {
+        "outer": 21.318689668885554,
+        "core": 15.287795695958152,
+        "shell": 6.030893972927402,
+        "attenuation": 0.3635381244847613
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 1.8318679906315083e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-46-90",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        90.25,
+        407,
+        -24.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 15.58562697320906,
+        "core": 5.026720442141709,
+        "shell": 10.55890653106735,
+        "attenuation": 0.4625700247798277
+      },
+      "reference": {
+        "outer": 15.585626973208946,
+        "core": 5.026720442141482,
+        "shell": 10.558906531067464,
+        "attenuation": 0.46257002477983045
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.7200464103316335e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-50-68",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        35.25,
+        407,
+        -34.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 18.195871000639613,
+        "core": 9.392360350830245,
+        "shell": 8.803510649809368,
+        "attenuation": 0.42727930879901665
+      },
+      "reference": {
+        "outer": 18.195871000639613,
+        "core": 9.392360350830131,
+        "shell": 8.803510649809482,
+        "attenuation": 0.4272793087990203
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.6637359812630166e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-53-86",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        80.25,
+        407,
+        -41.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 7.4086861436784375,
+        "core": 0,
+        "shell": 7.4086861436784375,
+        "attenuation": 0.2963474457471375
+      },
+      "reference": {
+        "outer": 7.40868614367821,
+        "core": 0.0,
+        "shell": 7.40868614367821,
+        "attenuation": 0.2963474457471284
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-58-79",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        62.75,
+        407,
+        -54.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 25.64394661216693,
+        "core": 21.182468631110396,
+        "shell": 4.461477981056532,
+        "attenuation": 0.3479188682911445
+      },
+      "reference": {
+        "outer": 25.6439466121667,
+        "core": 21.182468631110396,
+        "shell": 4.461477981056305,
+        "attenuation": 0.3479188682911354
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-62-75",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        52.75,
+        407,
+        -64.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 29.106281102012986,
+        "core": 24.274161327045476,
+        "shell": 4.832119774967509,
+        "attenuation": 0.3874780816150642
+      },
+      "reference": {
+        "outer": 29.106281102012986,
+        "core": 24.274161327045363,
+        "shell": 4.832119774967623,
+        "attenuation": 0.3874780816150678
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.608224830031759e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-66-71",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        42.75,
+        407,
+        -74.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 29.320459126946616,
+        "core": 19.05816518893971,
+        "shell": 10.262293938006906,
+        "attenuation": 0.5629570790317939
+      },
+      "reference": {
+        "outer": 29.320459126946275,
+        "core": 19.05816518893971,
+        "shell": 10.262293938006565,
+        "attenuation": 0.5629570790317803
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3655743202889425e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-70-83",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        72.75,
+        407,
+        -84.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 13.343757089463224,
+        "core": 0,
+        "shell": 13.343757089463224,
+        "attenuation": 0.5337502835785289
+      },
+      "reference": {
+        "outer": 13.34375708946368,
+        "core": 0.0,
+        "shell": 13.34375708946368,
+        "attenuation": 0.5337502835785471
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.8207657603852567e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-75-80",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        65.25,
+        407,
+        -96.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 23.88624947109804,
+        "core": 19.07059612183309,
+        "shell": 4.815653349264949,
+        "attenuation": 0.34519090294526267
+      },
+      "reference": {
+        "outer": 23.88624947109838,
+        "core": 19.070596121832978,
+        "shell": 4.8156533492654034,
+        "attenuation": 0.34519090294528
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.7319479184152442e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-80-78",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        60.25,
+        407,
+        -109.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 26.862993212787956,
+        "core": 22.67096436658437,
+        "shell": 4.192028846203584,
+        "attenuation": 0.3490488687808183
+      },
+      "reference": {
+        "outer": 26.862993212787842,
+        "core": 22.670964366584712,
+        "shell": 4.192028846203129,
+        "attenuation": 0.3490488687808029
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.5432100042289676e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-85-76",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        55.25,
+        407,
+        -121.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 27.97651094469427,
+        "core": 23.961299911124456,
+        "shell": 4.015211033569813,
+        "attenuation": 0.3522988406317882
+      },
+      "reference": {
+        "outer": 27.976510944694382,
+        "core": 23.96129991112457,
+        "shell": 4.015211033569813,
+        "attenuation": 0.35229884063178907
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-90-73",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        47.75,
+        407,
+        -134.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 26.53059557313304,
+        "core": 22.269761660965855,
+        "shell": 4.260833912167186,
+        "attenuation": 0.3485914497744143
+      },
+      "reference": {
+        "outer": 26.530595573133155,
+        "core": 22.26976166096574,
+        "shell": 4.2608339121674135,
+        "attenuation": 0.34859144977442247
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 8.1601392309949e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-95-71",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        42.75,
+        407,
+        -146.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 23.211761265751647,
+        "core": 18.2013740822473,
+        "shell": 5.010387183504349,
+        "attenuation": 0.3460264799981524
+      },
+      "reference": {
+        "outer": 23.211761265751534,
+        "core": 18.201374082246957,
+        "shell": 5.010387183504577,
+        "attenuation": 0.3460264799981587
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 6.328271240363392e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-100-69",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        37.75,
+        407,
+        -159.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 16.83595959988895,
+        "core": 8.7194462901125,
+        "shell": 8.116513309776451,
+        "attenuation": 0.39441610271195804
+      },
+      "reference": {
+        "outer": 16.83595959988895,
+        "core": 8.719446290112842,
+        "shell": 8.11651330977611,
+        "attenuation": 0.39441610271194716
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.0880185641326534e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-104-83",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        72.75,
+        407,
+        -169.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 13.389886612814507,
+        "core": 0,
+        "shell": 13.389886612814507,
+        "attenuation": 0.5355954645125803
+      },
+      "reference": {
+        "outer": 13.389886612814621,
+        "core": 0.0,
+        "shell": 13.389886612814621,
+        "attenuation": 0.5355954645125849
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-109-81",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        67.75,
+        407,
+        -181.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 21.590596160505243,
+        "core": 16.045589235721536,
+        "shell": 5.545006924783706,
+        "attenuation": 0.35016499087712055
+      },
+      "reference": {
+        "outer": 21.59059616050547,
+        "core": 16.045589235721536,
+        "shell": 5.545006924783934,
+        "attenuation": 0.3501649908771296
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.048317650695026e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-114-79",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        62.75,
+        407,
+        -194.25
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 25.7835817838843,
+        "core": 21.29776481367469,
+        "shell": 4.485816970209612,
+        "attenuation": 0.349814797317782
+      },
+      "reference": {
+        "outer": 25.7835817838843,
+        "core": 21.297764813674917,
+        "shell": 4.485816970209385,
+        "attenuation": 0.3498147973177747
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 7.271960811294775e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-0-128-119-81",
+      "source": [
+        24,
+        -793,
+        -68
+      ],
+      "detector": [
+        67.75,
+        407,
+        -206.75
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 1.3092192729117187,
+        "core": 0,
+        "shell": 1.3092192729117187,
+        "attenuation": 0.05236877091646875
+      },
+      "reference": {
+        "outer": 1.3092192729117187,
+        "core": 0.0,
+        "shell": 1.3092192729117187,
+        "attenuation": 0.05236877091646875
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-0-0",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -310.8422845852117,
+        316.1131292647845,
+        11.61832728995472
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-127-127",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        17.8311001064786,
+        357.2778704885629,
+        -291.5182265521835
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-36-59",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -165.0244268154243,
+        350.8938719662504,
+        -74.31014466529706
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 6.72390089904593,
+        "core": 0,
+        "shell": 6.72390089904593,
+        "attenuation": 0.2689560359618372
+      },
+      "reference": {
+        "outer": 6.72390089904593,
+        "core": 0.0,
+        "shell": 6.72390089904593,
+        "attenuation": 0.2689560359618372
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-40-64",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -152.38335270399068,
+        353.195268690529,
+        -83.85775266032502
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 34.40166100833369,
+        "core": 28.821716815310424,
+        "shell": 5.579944193023266,
+        "attenuation": 0.453771502243414
+      },
+      "reference": {
+        "outer": 34.40166100833369,
+        "core": 28.82171681531065,
+        "shell": 5.579944193023039,
+        "attenuation": 0.4537715022434068
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 7.216449660063518e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-43-65",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -149.19772744962492,
+        352.1579252692282,
+        -91.01845865659601
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 40.652464909307696,
+        "core": 36.05906456243838,
+        "shell": 4.593400346869316,
+        "attenuation": 0.4722085303742797
+      },
+      "reference": {
+        "outer": 40.652464909307696,
+        "core": 36.05906456243849,
+        "shell": 4.593400346869203,
+        "attenuation": 0.472208530374276
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.6637359812630166e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-46-57",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -166.61451054539933,
+        342.07675687316834,
+        -98.17916465286699
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 40.3836895050423,
+        "core": 35.77958029648789,
+        "shell": 4.604109208554405,
+        "attenuation": 0.47040101071407936
+      },
+      "reference": {
+        "outer": 40.383689505042184,
+        "core": 35.77958029648789,
+        "shell": 4.604109208554291,
+        "attenuation": 0.4704010107140748
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-48-72",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -131.6795174478212,
+        355.78832325580635,
+        -102.95296865038097
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 33.783068867759084,
+        "core": 28.111415667603524,
+        "shell": 5.671653200155561,
+        "attenuation": 0.45175745334705064
+      },
+      "reference": {
+        "outer": 33.78306886775886,
+        "core": 28.111415667603637,
+        "shell": 5.67165320015522,
+        "attenuation": 0.4517574533470379
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.27675647831893e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-51-57",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -165.12039592703792,
+        338.67306876826717,
+        -110.11367464665196
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 41.04803388864616,
+        "core": 36.528432976199724,
+        "shell": 4.519600912446435,
+        "attenuation": 0.4730115003074552
+      },
+      "reference": {
+        "outer": 41.04803388864639,
+        "core": 36.528432976200065,
+        "shell": 4.519600912446322,
+        "attenuation": 0.4730115003074534
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-53-67",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -141.63118524620432,
+        347.3602879427057,
+        -114.88747864416595
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 41.59181778547577,
+        "core": 37.09817964208344,
+        "shell": 4.493638143392332,
+        "attenuation": 0.47653096287236074
+      },
+      "reference": {
+        "outer": 41.59181778547554,
+        "core": 37.09817964208355,
+        "shell": 4.4936381433919905,
+        "attenuation": 0.4765309628723481
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.2656542480726785e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-55-63",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -150.19016533225536,
+        341.97933493418566,
+        -119.66128264167993
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 41.22957296082052,
+        "core": 36.76041274909517,
+        "shell": 4.469160211725352,
+        "attenuation": 0.47284971046177543
+      },
+      "reference": {
+        "outer": 41.22957296082052,
+        "core": 36.760412749094826,
+        "shell": 4.469160211725693,
+        "attenuation": 0.47284971046178637
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.0935696792557792e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-56-96",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -74.34917845806929,
+        374.45928888732215,
+        -122.04818464043693
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 22.306232507149048,
+        "core": 16.80663272149127,
+        "shell": 5.499599785657779,
+        "attenuation": 0.35443705319824126
+      },
+      "reference": {
+        "outer": 22.306232507148707,
+        "core": 16.80663272149104,
+        "shell": 5.499599785657665,
+        "attenuation": 0.35443705319823493
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 6.328271240363392e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-58-66",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -142.42622711119182,
+        342.9517303961647,
+        -126.82198863795091
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 32.99366322128981,
+        "core": 27.308882317236453,
+        "shell": 5.684780904053355,
+        "attenuation": 0.4458622947000258
+      },
+      "reference": {
+        "outer": 32.99366322128958,
+        "core": 27.308882317236566,
+        "shell": 5.684780904053014,
+        "attenuation": 0.4458622947000131
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.2712053631958042e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-59-85",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -98.63343100389038,
+        361.36351216634256,
+        -129.2088906367079
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 16.407718729719477,
+        "core": 6.257261004681368,
+        "shell": 10.150457725038109,
+        "attenuation": 0.4560763970389753
+      },
+      "reference": {
+        "outer": 16.40771872971959,
+        "core": 6.257261004681595,
+        "shell": 10.150457725037995,
+        "attenuation": 0.45607639703897257
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.7200464103316335e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-60-104",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -54.84063489658895,
+        379.7752939365205,
+        -131.5957926354649
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 10.060620434312,
+        "core": 0,
+        "shell": 10.060620434312,
+        "attenuation": 0.40242481737248
+      },
+      "reference": {
+        "outer": 10.060620434311772,
+        "core": 0.0,
+        "shell": 10.060620434311772,
+        "attenuation": 0.40242481737247093
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.048317650695026e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-62-79",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -111.47190113296696,
+        353.2920826535625,
+        -136.3695966329789
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 28.014673109459068,
+        "core": 23.946358957254915,
+        "shell": 4.068314152204152,
+        "attenuation": 0.35430343774620543
+      },
+      "reference": {
+        "outer": 28.01467310945918,
+        "core": 23.946358957255143,
+        "shell": 4.068314152204039,
+        "attenuation": 0.3543034377462027
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.7200464103316335e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-64-71",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -129.18750715241362,
+        343.89165187848283,
+        -141.14340063049286
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 19.198260347855694,
+        "core": 12.63196375043617,
+        "shell": 6.566296597419523,
+        "attenuation": 0.3637075739002703
+      },
+      "reference": {
+        "outer": 19.198260347855467,
+        "core": 12.631963750436057,
+        "shell": 6.566296597419409,
+        "attenuation": 0.3637075739002648
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 5.495603971894525e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-65-103",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -55.635676761576455,
+        375.3667363899794,
+        -143.53030262924986
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 18.351939548589712,
+        "core": 10.126540760276384,
+        "shell": 8.225398788313328,
+        "attenuation": 0.4100282776147442
+      },
+      "reference": {
+        "outer": 18.3519395485896,
+        "core": 10.126540760276612,
+        "shell": 8.225398788312987,
+        "attenuation": 0.4100282776147324
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.1823875212257917e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-67-104",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -52.74887443088299,
+        375.01013058965884,
+        -148.30410662676385
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 13.029559679426711,
+        "core": 0,
+        "shell": 13.029559679426711,
+        "attenuation": 0.5211823871770684
+      },
+      "reference": {
+        "outer": 13.029559679426711,
+        "core": 0.0,
+        "shell": 13.029559679426711,
+        "attenuation": 0.5211823871770684
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-70-80",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -106.79216126023982,
+        348.8510511273606,
+        -155.46481262303485
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 23.36512556296657,
+        "core": 18.138413976161928,
+        "shell": 5.22671158680464,
+        "attenuation": 0.35417577528148103
+      },
+      "reference": {
+        "outer": 23.36512556296634,
+        "core": 18.13841397616204,
+        "shell": 5.226711586804299,
+        "attenuation": 0.3541757752814683
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.2712053631958042e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-72-92",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -78.72463761270842,
+        359.5480091850789,
+        -160.23861662054884
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 34.48265246820176,
+        "core": 30.07145812200713,
+        "shell": 4.411194346194634,
+        "attenuation": 0.4170194388238424
+      },
+      "reference": {
+        "outer": 34.48265246820165,
+        "core": 30.071458122006902,
+        "shell": 4.411194346194748,
+        "attenuation": 0.4170194388238451
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.7200464103316335e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-75-82",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -100.7197336751806,
+        347.45710190573925,
+        -167.3993226168198
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 20.61684858493402,
+        "core": 12.847288954576356,
+        "shell": 7.769559630357662,
+        "attenuation": 0.41356069685091734
+      },
+      "reference": {
+        "outer": 20.616848584933564,
+        "core": 12.847288954576811,
+        "shell": 7.769559630356753,
+        "attenuation": 0.4135606968508846
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 9.094947017729282e-13,
+      "attenuationError": 3.275157922644212e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-78-81",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -102.11242138751267,
+        344.41001960115864,
+        -174.5600286130908
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 6.326644171438602,
+        "core": 0,
+        "shell": 6.326644171438602,
+        "attenuation": 0.25306576685754406
+      },
+      "reference": {
+        "outer": 6.326644171439284,
+        "core": 0.0,
+        "shell": 6.326644171439284,
+        "attenuation": 0.2530657668575714
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 6.821210263296962e-13,
+      "attenuationError": 2.731148640577885e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-81-91",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -78.32438778300678,
+        352.416501154617,
+        -181.72073460936178
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 32.58461425549194,
+        "core": 25.439206137807332,
+        "shell": 7.14540811768461,
+        "attenuation": 0.4893299738098431
+      },
+      "reference": {
+        "outer": 32.584614255491715,
+        "core": 25.439206137807332,
+        "shell": 7.145408117684383,
+        "attenuation": 0.489329973809834
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-85-91",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -77.12909608831767,
+        349.6935506706961,
+        -191.26834260438974
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 32.2921583943006,
+        "core": 25.767629092636525,
+        "shell": 6.524529301664074,
+        "attenuation": 0.4671222048076552
+      },
+      "reference": {
+        "outer": 32.292158394301055,
+        "core": 25.76762909263664,
+        "shell": 6.5245293016644155,
+        "attenuation": 0.46712220480766975
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.454392162258955e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-89-96",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -64.48802197688404,
+        351.99494739497464,
+        -200.8159505994177
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 17.397161397680634,
+        "core": 8.130651031368643,
+        "shell": 9.26651036631199,
+        "attenuation": 0.43570562290342874
+      },
+      "reference": {
+        "outer": 17.397161397680748,
+        "core": 8.130651031368757,
+        "shell": 9.26651036631199,
+        "attenuation": 0.4357056229034297
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 9.43689570931383e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-94-84",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -90.46378515870947,
+        336.5328259903947,
+        -212.7504605932027
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 22.841580163176218,
+        "core": 16.863132772393442,
+        "shell": 5.978447390782776,
+        "attenuation": 0.3740429578104586
+      },
+      "reference": {
+        "outer": 22.84158016317633,
+        "core": 16.863132772393556,
+        "shell": 5.978447390782776,
+        "attenuation": 0.3740429578104595
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-98-89",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -77.82271104727583,
+        338.83422271467333,
+        -222.29806858823065
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 30.028952320028907,
+        "core": 25.713783394322263,
+        "shell": 4.315168925706644,
+        "attenuation": 0.37831702418284385
+      },
+      "reference": {
+        "outer": 30.028952320029134,
+        "core": 25.713783394322604,
+        "shell": 4.31516892570653,
+        "attenuation": 0.3783170241828421
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-102-94",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -65.1816369358422,
+        341.1356194389519,
+        -231.84567658325864
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 24.084297568713055,
+        "core": 18.425587527747666,
+        "shell": 5.6587100409653885,
+        "attenuation": 0.37375310186059685
+      },
+      "reference": {
+        "outer": 24.08429756871294,
+        "core": 18.425587527747552,
+        "shell": 5.6587100409653885,
+        "attenuation": 0.37375310186059596
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-106-96",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -59.40803227445527,
+        340.4224078383108,
+        -241.39328457828663
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 15.580525544011948,
+        "core": 0,
+        "shell": 15.580525544011948,
+        "attenuation": 0.6232210217604779
+      },
+      "reference": {
+        "outer": 15.580525544011948,
+        "core": 0.0,
+        "shell": 15.580525544011948,
+        "attenuation": 0.6232210217604779
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-110-96",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -58.21274057976615,
+        337.69945735438984,
+        -250.94089257331458
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 15.067173483901001,
+        "core": 0,
+        "shell": 15.067173483901001,
+        "attenuation": 0.6026869393560401
+      },
+      "reference": {
+        "outer": 15.06717348390066,
+        "core": 0.0,
+        "shell": 15.06717348390066,
+        "attenuation": 0.6026869393560265
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3655743202889425e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-115-81",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -91.0559732116383,
+        319.22272762489024,
+        -262.87540256709957
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 5.458141400704108,
+        "core": 0,
+        "shell": 5.458141400704108,
+        "attenuation": 0.2183256560281643
+      },
+      "reference": {
+        "outer": 5.458141400704903,
+        "core": 0.0,
+        "shell": 5.458141400704903,
+        "attenuation": 0.21832565602819615
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 7.958078640513122e-13,
+      "attenuationError": 3.1835645231126364e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-119-86",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -78.41489910020465,
+        321.52412434916886,
+        -272.4230105621275
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 28.575030138097645,
+        "core": 23.87827847041649,
+        "shell": 4.696751667681156,
+        "attenuation": 0.37889629447057815
+      },
+      "reference": {
+        "outer": 28.57503013809753,
+        "core": 23.878278470416262,
+        "shell": 4.696751667681269,
+        "attenuation": 0.37889629447058093
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.7755575615628914e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-123-91",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -65.77382498877101,
+        323.8255210734475,
+        -281.9706185571555
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 29.462535161881874,
+        "core": 24.86407924320804,
+        "shell": 4.598455918673835,
+        "attenuation": 0.3828508706926177
+      },
+      "reference": {
+        "outer": 29.46253516188176,
+        "core": 24.864079243208153,
+        "shell": 4.598455918673608,
+        "attenuation": 0.38285087069260954
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 8.1601392309949e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-1-128-127-96",
+      "source": [
+        314.01118447873307,
+        -712.3909997533474,
+        216.89989926222876
+      ],
+      "detector": [
+        -53.132750877337386,
+        326.126917797726,
+        -291.5182265521835
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 12.476134182724877,
+        "core": 0,
+        "shell": 12.476134182724877,
+        "attenuation": 0.49904536730899507
+      },
+      "reference": {
+        "outer": 12.47613418272499,
+        "core": 0.0,
+        "shell": 12.47613418272499,
+        "attenuation": 0.4990453673089996
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-0-0",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -67.4819629191891,
+        -272.80262513292837,
+        326.80601318324045
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-127-127",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -413.4768042878631,
+        -179.14736525285448,
+        56.38271159282283
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-44-26",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -154.336347522242,
+        -270.9299922127026,
+        233.11605042750523
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 5.116608351441528,
+        "core": 0,
+        "shell": 5.116608351441528,
+        "attenuation": 0.2046643340576611
+      },
+      "reference": {
+        "outer": 5.116608351441641,
+        "core": 0.0,
+        "shell": 5.116608351441641,
+        "attenuation": 0.20466433405766565
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-47-48",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -197.3616225751524,
+        -236.44420128673545,
+        226.72809842143235
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 25.37349837345357,
+        "core": 17.080345741992232,
+        "shell": 8.29315263146134,
+        "attenuation": 0.4683688711943914
+      },
+      "reference": {
+        "outer": 25.37349837345323,
+        "core": 17.080345741992232,
+        "shell": 8.293152631460998,
+        "attenuation": 0.46836887119437776
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3655743202889425e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-49-51",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -204.64468489575881,
+        -233.27071204371828,
+        222.46946375071713
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 33.90245770451145,
+        "core": 28.244998396830738,
+        "shell": 5.6574593076807105,
+        "attenuation": 0.4522583594818743
+      },
+      "reference": {
+        "outer": 33.90245770451145,
+        "core": 28.244998396830965,
+        "shell": 5.657459307680483,
+        "attenuation": 0.45225835948186704
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 7.271960811294775e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-51-43",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -191.7501759425361,
+        -248.78185866789283,
+        218.21082908000187
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 31.962480787107893,
+        "core": 24.707409018988642,
+        "shell": 7.255071768119251,
+        "attenuation": 0.4878621428766792
+      },
+      "reference": {
+        "outer": 31.962480787107893,
+        "core": 24.707409018988983,
+        "shell": 7.25507176811891,
+        "attenuation": 0.4878621428766683
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.0880185641326534e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-53-29",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -167.84971902177023,
+        -274.48462485599015,
+        213.95219440928665
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 32.69761059466464,
+        "core": 28.279699717249628,
+        "shell": 4.417910877415011,
+        "attenuation": 0.40295403283459746
+      },
+      "reference": {
+        "outer": 32.6976105946643,
+        "core": 28.27969971724974,
+        "shell": 4.417910877414556,
+        "attenuation": 0.4029540328345802
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.7263968032921184e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-54-56",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -218.26652904413177,
+        -229.58349708780986,
+        211.82287707392902
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 38.90181668710113,
+        "core": 34.06105662285779,
+        "shell": 4.840760064243341,
+        "attenuation": 0.46611885555259597
+      },
+      "reference": {
+        "outer": 38.90181668710102,
+        "core": 34.06105662285745,
+        "shell": 4.840760064243568,
+        "attenuation": 0.46611885555260235
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 6.38378239159465e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-56-40",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -190.69742280085157,
+        -258.68346979721474,
+        207.5642424032138
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 63.90435568394105,
+        "core": 50.60908212693403,
+        "shell": 13.295273557007022,
+        "attenuation": 0.9366835992957532
+      },
+      "reference": {
+        "outer": 63.9043556839415,
+        "core": 50.60908212693414,
+        "shell": 13.295273557007363,
+        "attenuation": 0.9366835992957677
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.454392162258955e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-58-22",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -159.45966723505694,
+        -291.1806490279272,
+        203.30560773249854
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 25.099537723914864,
+        "core": 17.896671066070212,
+        "shell": 7.202866657844652,
+        "attenuation": 0.4312880348423478
+      },
+      "reference": {
+        "outer": 25.099537723914978,
+        "core": 17.896671066069985,
+        "shell": 7.202866657844993,
+        "attenuation": 0.4312880348423596
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.1823875212257917e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-59-49",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -209.8764772574185,
+        -246.27952125974693,
+        201.17629039714092
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 56.349735409746586,
+        "core": 50.10564870928363,
+        "shell": 6.244086700462958,
+        "attenuation": 0.6506086576927874
+      },
+      "reference": {
+        "outer": 56.34973540974704,
+        "core": 50.10564870928397,
+        "shell": 6.244086700463072,
+        "attenuation": 0.6506086576927946
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 7.216449660063518e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-61-29",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -174.9700723691095,
+        -282.17390701176697,
+        196.9176557264257
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 36.10542153910001,
+        "core": 30.897715709393083,
+        "shell": 5.207705829706924,
+        "attenuation": 0.45548995886342164
+      },
+      "reference": {
+        "outer": 36.10542153910001,
+        "core": 30.897715709393196,
+        "shell": 5.207705829706811,
+        "attenuation": 0.45548995886341803
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.608224830031759e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-62-55",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -223.55255773021383,
+        -238.97138250424052,
+        194.78833839106807
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 40.909892399432465,
+        "core": 36.05253230036169,
+        "shell": 4.857360099070775,
+        "attenuation": 0.4827146623657245
+      },
+      "reference": {
+        "outer": 40.90989239943235,
+        "core": 36.05253230036192,
+        "shell": 4.8573600990704335,
+        "attenuation": 0.4827146623657127
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.1823875212257917e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-64-38",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -194.14912682567643,
+        -269.7699584742992,
+        190.52970372035284
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 58.38874843118947,
+        "core": 48.766555790234634,
+        "shell": 9.622192640954836,
+        "attenuation": 0.7750201519600706
+      },
+      "reference": {
+        "outer": 58.38874843118981,
+        "core": 48.76655579023429,
+        "shell": 9.622192640955518,
+        "attenuation": 0.775020151960095
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 6.821210263296962e-13,
+      "attenuationError": 2.4424906541753444e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-66-24",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -170.2486699049106,
+        -295.4727246623965,
+        186.2710690496376
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 24.7728010785861,
+        "core": 18.550097801274205,
+        "shell": 6.2227032773118935,
+        "attenuation": 0.3973089135026694
+      },
+      "reference": {
+        "outer": 24.772801078586554,
+        "core": 18.55009780127409,
+        "shell": 6.222703277312462,
+        "attenuation": 0.3973089135026912
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080801e-13,
+      "attenuationError": 2.1815882433884326e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-67-54",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -226.1684539110437,
+        -245.47578711225484,
+        184.14175171427996
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 31.711634635532505,
+        "core": 25.45913158528583,
+        "shell": 6.252503050246673,
+        "attenuation": 0.4537731746921536
+      },
+      "reference": {
+        "outer": 31.711634635532505,
+        "core": 25.459131585285945,
+        "shell": 6.25250305024656,
+        "attenuation": 0.45377317469214995
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.6637359812630166e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-69-48",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -216.94259428033536,
+        -257.5897272151218,
+        179.88311704356474
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 27.721146990863076,
+        "core": 17.82018336647434,
+        "shell": 9.900963624388737,
+        "attenuation": 0.5386000119073442
+      },
+      "reference": {
+        "outer": 27.72114699086285,
+        "core": 17.820183366474225,
+        "shell": 9.900963624388623,
+        "attenuation": 0.5386000119073387
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 5.440092820663267e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-71-53",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -227.89430592345613,
+        -251.01903145079706,
+        175.62448237284949
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 7.730299729920148,
+        "core": 0,
+        "shell": 7.730299729920148,
+        "attenuation": 0.3092119891968059
+      },
+      "reference": {
+        "outer": 7.7302997299195795,
+        "core": 0.0,
+        "shell": 7.7302997299195795,
+        "attenuation": 0.30921198919678317
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080801e-13,
+      "attenuationError": 2.275957200481571e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-75-37",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -202.10528801701074,
+        -282.0413246991462,
+        167.107213031419
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 31.215339386857067,
+        "core": 25.205289981074202,
+        "shell": 6.0100494057828655,
+        "attenuation": 0.44204429607990825
+      },
+      "reference": {
+        "outer": 31.21533938685741,
+        "core": 25.20528998107409,
+        "shell": 6.01004940578332,
+        "attenuation": 0.4420442960799255
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.7263968032921184e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-78-29",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -190.1008232322054,
+        -298.5136315927928,
+        160.71926102534616
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 28.25443278901787,
+        "core": 22.823375088450007,
+        "shell": 5.431057700567862,
+        "attenuation": 0.3998293087303145
+      },
+      "reference": {
+        "outer": 28.254432789017756,
+        "core": 22.823375088450234,
+        "shell": 5.431057700567521,
+        "attenuation": 0.39982930873030276
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.176836406102666e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-80-44",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -219.3957814878981,
+        -274.95690322193013,
+        156.46062635463093
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 17.459799098279063,
+        "core": 13.175198474735112,
+        "shell": 4.284600623543952,
+        "attenuation": 0.276785612739639
+      },
+      "reference": {
+        "outer": 17.45979909827929,
+        "core": 13.175198474734998,
+        "shell": 4.284600623544293,
+        "attenuation": 0.2767856127396517
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.2712053631958042e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-83-30",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -196.38536873554966,
+        -301.62082967949954,
+        150.07267434855805
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 30.0527758853392,
+        "core": 25.081542147143068,
+        "shell": 4.971233738196133,
+        "attenuation": 0.39950168670498987
+      },
+      "reference": {
+        "outer": 30.0527758853392,
+        "core": 25.081542147143068,
+        "shell": 4.971233738196133,
+        "attenuation": 0.39950168670498987
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-86-25",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -189.8838779345159,
+        -312.99732679118483,
+        143.6847223424852
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 14.73736815858922,
+        "core": 0,
+        "shell": 14.73736815858922,
+        "attenuation": 0.5894947263435688
+      },
+      "reference": {
+        "outer": 14.73736815858922,
+        "core": 0.0,
+        "shell": 14.73736815858922,
+        "attenuation": 0.5894947263435688
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-89-39",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -218.23455569736882,
+        -292.1003619504481,
+        137.29677033641235
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 23.52177919153121,
+        "core": 16.779587023034082,
+        "shell": 6.742192168497127,
+        "attenuation": 0.4039243829241578
+      },
+      "reference": {
+        "outer": 23.52177919153155,
+        "core": 16.77958702303397,
+        "shell": 6.742192168497581,
+        "attenuation": 0.40392438292417504
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.7263968032921184e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-93-38",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -219.96040770978124,
+        -297.6436062889903,
+        128.77950099498187
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 25.88876981165322,
+        "core": 20.077181264005503,
+        "shell": 5.811588547647716,
+        "attenuation": 0.39308099201795266
+      },
+      "reference": {
+        "outer": 25.888769811653333,
+        "core": 20.077181264005503,
+        "shell": 5.81158854764783,
+        "attenuation": 0.3930809920179572
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-97-36",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -219.8519350609365,
+        -304.8854538881863,
+        120.2622316535514
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 29.300824474112574,
+        "core": 24.369892114140043,
+        "shell": 4.93093235997253,
+        "attenuation": 0.3921964313120216
+      },
+      "reference": {
+        "outer": 29.300824474112574,
+        "core": 24.369892114140157,
+        "shell": 4.930932359972417,
+        "attenuation": 0.3921964313120179
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.6637359812630166e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-101-35",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -221.57778707334893,
+        -310.4286982267285,
+        111.74496231212092
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 30.18893944861543,
+        "core": 25.472271749254332,
+        "shell": 4.716667699361096,
+        "attenuation": 0.3924448819684785
+      },
+      "reference": {
+        "outer": 30.188939448615315,
+        "core": 25.472271749254332,
+        "shell": 4.716667699360983,
+        "attenuation": 0.39244488196847394
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-105-33",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -221.4693144245042,
+        -317.67054582592453,
+        103.22769297069044
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 31.204869697619074,
+        "core": 26.71161231024712,
+        "shell": 4.493257387371955,
+        "attenuation": 0.39342319397685516
+      },
+      "reference": {
+        "outer": 31.204869697619188,
+        "core": 26.711612310247233,
+        "shell": 4.493257387371955,
+        "attenuation": 0.3934231939768561
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 9.43689570931383e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-109-28",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -215.85786779188786,
+        -330.0082032070819,
+        94.71042362925996
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 27.893057035170045,
+        "core": 22.78745254425769,
+        "shell": 5.105604490912356,
+        "attenuation": 0.38652379999055575
+      },
+      "reference": {
+        "outer": 27.893057035170045,
+        "core": 22.787452544257576,
+        "shell": 5.105604490912469,
+        "attenuation": 0.3865237999905594
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.6637359812630166e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-112-41",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -242.37422089348354,
+        -310.80984162699895,
+        88.32247162318711
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 8.009681010143822,
+        "core": 0,
+        "shell": 8.009681010143822,
+        "attenuation": 0.3203872404057529
+      },
+      "reference": {
+        "outer": 8.009681010143595,
+        "core": 0.0,
+        "shell": 8.009681010143595,
+        "attenuation": 0.3203872404057438
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-116-36",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -236.76277426086725,
+        -323.14749900815633,
+        79.80520228175664
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 27.770300508372316,
+        "core": 22.719606016823718,
+        "shell": 5.050694491548597,
+        "attenuation": 0.38378462779653366
+      },
+      "reference": {
+        "outer": 27.770300508372202,
+        "core": 22.71960601682406,
+        "shell": 5.050694491548143,
+        "attenuation": 0.3837846277965182
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.5487611193520934e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-120-30",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -229.31700296699373,
+        -337.18375964996756,
+        71.28793294032616
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 30.318584217082844,
+        "core": 25.81536333985423,
+        "shell": 4.503220877228614,
+        "attenuation": 0.3866517418079784
+      },
+      "reference": {
+        "outer": 30.31858421708273,
+        "core": 25.815363339854116,
+        "shell": 4.503220877228614,
+        "attenuation": 0.3866517418079775
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-124-25",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -223.7055563343774,
+        -349.52141703112494,
+        62.77066359889568
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 22.059166944464323,
+        "core": 15.396378731812206,
+        "shell": 6.662788212652117,
+        "attenuation": 0.3896825583605823
+      },
+      "reference": {
+        "outer": 22.059166944464096,
+        "core": 15.396378731812433,
+        "shell": 6.662788212651662,
+        "attenuation": 0.389682558360566
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.63202784619898e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-2-128-127-40",
+      "source": [
+        453.9587672070522,
+        523.9499903857829,
+        -437.1887247760633
+      ],
+      "detector": [
+        -253.8905587584875,
+        -326.92584892973434,
+        56.38271159282283
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 13.16132728429261,
+        "core": 0,
+        "shell": 13.16132728429261,
+        "attenuation": 0.5264530913717045
+      },
+      "reference": {
+        "outer": 13.161327284292838,
+        "core": 0.0,
+        "shell": 13.161327284292838,
+        "attenuation": 0.5264530913717136
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-0-0",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        384.0737322743032,
+        251.7743696491178,
+        -166.78928348415184
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-127-127",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        248.28414113900297,
+        -98.41930011812369,
+        -412.8341586477288
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-32-68",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        367.18600913305534,
+        75.22025483035331,
+        -228.78484258048618
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 2.9131767770426222,
+        "core": 0,
+        "shell": 2.9131767770426222,
+        "attenuation": 0.11652707108170489
+      },
+      "reference": {
+        "outer": 2.9131767770429633,
+        "core": 0.0,
+        "shell": 2.9131767770429633,
+        "attenuation": 0.11652707108171853
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3641865415081611e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-36-68",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        360.9839519517238,
+        74.00345958784297,
+        -236.53428746752797
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 23.63329323323478,
+        "core": 18.14259611698742,
+        "shell": 5.490697116247361,
+        "attenuation": 0.3647686535857938
+      },
+      "reference": {
+        "outer": 23.633293233234667,
+        "core": 18.142596116987534,
+        "shell": 5.490697116247134,
+        "attenuation": 0.36476865358578564
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 8.1601392309949e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-39-67",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        355.85110414941033,
+        75.54409481594082,
+        -242.34637113280934
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 42.478541301026894,
+        "core": 21.896547202366833,
+        "shell": 20.58199409866006,
+        "attenuation": 0.9984521415653371
+      },
+      "reference": {
+        "outer": 42.478541301026894,
+        "core": 21.896547202367174,
+        "shell": 20.58199409865972,
+        "attenuation": 0.9984521415653262
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.0880185641326534e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-41-78",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        358.0444296382071,
+        47.950148934898905,
+        -246.22109357633025
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 48.17765842080337,
+        "core": 31.146682251881316,
+        "shell": 17.030976168922052,
+        "attenuation": 0.9304125047719326
+      },
+      "reference": {
+        "outer": 48.17765842080314,
+        "core": 31.146682251881202,
+        "shell": 17.03097616892194,
+        "attenuation": 0.9304125047719272
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 5.440092820663267e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-43-82",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        356.8686207128004,
+        37.528824673721275,
+        -250.09581601985113
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 21.77455285515316,
+        "core": 11.090685496440756,
+        "shell": 10.683867358712405,
+        "attenuation": 0.5160801783200223
+      },
+      "reference": {
+        "outer": 21.774552855153274,
+        "core": 11.090685496440756,
+        "shell": 10.683867358712519,
+        "attenuation": 0.5160801783200268
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-45-80",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        352.8049822895051,
+        41.82689037242733,
+        -253.97053846337204
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 33.688401063022525,
+        "core": 27.724661352342764,
+        "shell": 5.963739710679761,
+        "attenuation": 0.46034687924593254
+      },
+      "reference": {
+        "outer": 33.688401063022866,
+        "core": 27.72466135234299,
+        "shell": 5.963739710679874,
+        "attenuation": 0.4603468792459389
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 6.38378239159465e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-47-74",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        346.8161242009507,
+        55.93788271105583,
+        -257.8452609068929
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 103.30230679893805,
+        "core": 99.01461147689986,
+        "shell": 4.287695322038189,
+        "attenuation": 0.9636247046967265
+      },
+      "reference": {
+        "outer": 103.30230679893828,
+        "core": 99.01461147689997,
+        "shell": 4.287695322038303,
+        "attenuation": 0.963624704696732
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 5.551115123125783e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-49-66",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        339.8646562797668,
+        74.95533836964556,
+        -261.7199833504138
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 99.25223779846453,
+        "core": 94.21419249070982,
+        "shell": 5.0380453077547145,
+        "attenuation": 0.9552353522358672
+      },
+      "reference": {
+        "outer": 99.25223779846465,
+        "core": 94.21419249071005,
+        "shell": 5.038045307754601,
+        "attenuation": 0.9552353522358644
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.7755575615628914e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-50-85",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        347.4589353944145,
+        28.039738019386316,
+        -263.6573445721743
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 22.631421381905056,
+        "core": 12.620490843589664,
+        "shell": 10.010930538315392,
+        "attenuation": 0.501401148281333
+      },
+      "reference": {
+        "outer": 22.631421381904715,
+        "core": 12.620490843589778,
+        "shell": 10.010930538314938,
+        "attenuation": 0.5014011482813158
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.7208456881689926e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-52-76",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        340.02616255691584,
+        49.510425337956654,
+        -267.5320670156952
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 100.49161983260342,
+        "core": 95.32446896199065,
+        "shell": 5.1671508706127725,
+        "attenuation": 0.9692817865204361
+      },
+      "reference": {
+        "outer": 100.49161983260353,
+        "core": 95.32446896199065,
+        "shell": 5.167150870612886,
+        "attenuation": 0.9692817865204406
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-54-68",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        333.07469463573193,
+        68.52788099654639,
+        -271.40678945921604
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 101.59077948749439,
+        "core": 96.76855439679309,
+        "shell": 4.822225090701295,
+        "attenuation": 0.9670374388023966
+      },
+      "reference": {
+        "outer": 101.5907794874945,
+        "core": 96.7685543967932,
+        "shell": 4.822225090701295,
+        "attenuation": 0.9670374388023975
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-56-59",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        325.6419217982332,
+        89.99856831511673,
+        -275.28151190273695
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 6.945328477298403,
+        "core": 0,
+        "shell": 6.945328477298403,
+        "attenuation": 0.27781313909193617
+      },
+      "reference": {
+        "outer": 6.945328477298403,
+        "core": 0.0,
+        "shell": 6.945328477298403,
+        "attenuation": 0.27781313909193617
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-57-79",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        333.7175058291957,
+        40.62973630487688,
+        -277.2188731244974
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 39.68069788297123,
+        "core": 32.63367472901837,
+        "shell": 7.047023153952864,
+        "attenuation": 0.5429503239902616
+      },
+      "reference": {
+        "outer": 39.680697882971344,
+        "core": 32.63367472901837,
+        "shell": 7.047023153952978,
+        "attenuation": 0.542950323990266
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.440892098500626e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-59-76",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        329.1725624895857,
+        47.38103366356354,
+        -281.0935955680183
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 91.06459112641824,
+        "core": 52.36084612497939,
+        "shell": 38.70374500143885,
+        "attenuation": 1.967036569057389
+      },
+      "reference": {
+        "outer": 91.06459112641835,
+        "core": 52.3608461249795,
+        "shell": 38.70374500143885,
+        "attenuation": 1.9670365690573899
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-61-76",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        326.07153389891994,
+        46.77263604230836,
+        -284.9683180115392
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 59.09971595124341,
+        "core": 42.10758584248799,
+        "shell": 16.99213010875542,
+        "attenuation": 1.0165458910901206
+      },
+      "reference": {
+        "outer": 59.09971595124375,
+        "core": 42.10758584248788,
+        "shell": 16.992130108755873,
+        "attenuation": 1.016545891090138
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.7319479184152442e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-63-78",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        323.9331151408837,
+        41.257775101091966,
+        -288.84304045506013
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 21.420787258067435,
+        "core": 10.370615508124388,
+        "shell": 11.050171749943047,
+        "attenuation": 0.524971794062717
+      },
+      "reference": {
+        "outer": 21.420787258067435,
+        "core": 10.370615508124729,
+        "shell": 11.050171749942706,
+        "attenuation": 0.5249717940627061
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.0880185641326534e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-66-58",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        309.65547392858963,
+        89.40981186882146,
+        -294.65512412034144
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 12.784263961476654,
+        "core": 6.367028771856781,
+        "shell": 6.417235189619873,
+        "attenuation": 0.3076256377596492
+      },
+      "reference": {
+        "outer": 12.784263961476881,
+        "core": 6.36702877185644,
+        "shell": 6.417235189620442,
+        "attenuation": 0.30762563775966917
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080801e-13,
+      "attenuationError": 1.9984014443252818e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-68-59",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        307.0357502542386,
+        86.34818258758567,
+        -298.52984656386235
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 16.835652232985126,
+        "core": 12.596466976590705,
+        "shell": 4.239185256394421,
+        "attenuation": 0.2703391460685025
+      },
+      "reference": {
+        "outer": 16.835652232985126,
+        "core": 12.596466976590705,
+        "shell": 4.239185256394421,
+        "attenuation": 0.2703391460685025
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-70-58",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        303.45341674725813,
+        88.1930166263111,
+        -302.40456900738326
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 16.43468545221117,
+        "core": 12.293676054887328,
+        "shell": 4.141009397323842,
+        "attenuation": 0.2639897843320523
+      },
+      "reference": {
+        "outer": 16.43468545221117,
+        "core": 12.293676054886873,
+        "shell": 4.1410093973242965,
+        "attenuation": 0.2639897843320669
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.459943277382081e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-72-60",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        301.3149979892219,
+        82.67815568509471,
+        -306.27929145090417
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 13.473571739762065,
+        "core": 7.7877093488675655,
+        "shell": 5.685862390894499,
+        "attenuation": 0.2897361704267205
+      },
+      "reference": {
+        "outer": 13.473571739762178,
+        "core": 7.787709348867679,
+        "shell": 5.685862390894499,
+        "attenuation": 0.2897361704267214
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-74-66",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        301.10179889644473,
+        67.35036810395586,
+        -310.154013894425
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 32.148100458135445,
+        "core": 25.949464603913952,
+        "shell": 6.198635854221493,
+        "attenuation": 0.45554115100017134
+      },
+      "reference": {
+        "outer": 32.14810045813556,
+        "core": 25.949464603913952,
+        "shell": 6.198635854221607,
+        "attenuation": 0.4555411510001759
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-77-65",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        295.96895109413134,
+        68.8910033320537,
+        -315.9660975597064
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 29.229782606206868,
+        "core": 22.142364564144373,
+        "shell": 7.087418042062495,
+        "attenuation": 0.46063563819565484
+      },
+      "reference": {
+        "outer": 29.229782606207095,
+        "core": 22.14236456414426,
+        "shell": 7.087418042062836,
+        "attenuation": 0.46063563819566755
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.2712053631958042e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-80-65",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        291.3174082081327,
+        67.97840690017094,
+        -321.77818122498775
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 29.418968180597062,
+        "core": 22.30058271103701,
+        "shell": 7.118385469560053,
+        "attenuation": 0.4631400804706982
+      },
+      "reference": {
+        "outer": 29.41896818059695,
+        "core": 22.300582711037123,
+        "shell": 7.118385469559826,
+        "attenuation": 0.46314008047069005
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 8.1601392309949e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-83-64",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        286.1845604058193,
+        69.51904212826878,
+        -327.59026489026905
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 25.11588054421179,
+        "core": 16.143242798100232,
+        "shell": 8.972637746111559,
+        "attenuation": 0.4880514522292642
+      },
+      "reference": {
+        "outer": 25.11588054421145,
+        "core": 16.143242798100005,
+        "shell": 8.972637746111445,
+        "attenuation": 0.48805145222925783
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 6.38378239159465e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-86-63",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        281.05171260350585,
+        71.05967735636663,
+        -333.4023485555504
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 18.555815605723183,
+        "core": 0,
+        "shell": 18.555815605723183,
+        "attenuation": 0.7422326242289273
+      },
+      "reference": {
+        "outer": 18.555815605723524,
+        "core": 0.0,
+        "shell": 18.555815605723524,
+        "attenuation": 0.742232624228941
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3655743202889425e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-89-64",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        276.881474633822,
+        67.69384926450326,
+        -339.2144322208318
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 25.427340829064065,
+        "core": 16.370194957144577,
+        "shell": 9.057145871919488,
+        "attenuation": 0.4932473945339361
+      },
+      "reference": {
+        "outer": 25.427340829063496,
+        "core": 16.370194957144463,
+        "shell": 9.057145871919033,
+        "attenuation": 0.4932473945339171
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080801e-13,
+      "attenuationError": 1.9040324872321435e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-92-66",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        273.1925415804529,
+        61.87478951265928,
+        -345.02651588611315
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 33.43386864660965,
+        "core": 27.096551675298997,
+        "shell": 6.337316971310656,
+        "attenuation": 0.4702650922548183
+      },
+      "reference": {
+        "outer": 33.433868646609994,
+        "core": 27.096551675298997,
+        "shell": 6.337316971310997,
+        "attenuation": 0.47026509225483193
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3655743202889425e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-95-68",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        269.50360852708377,
+        56.055729760815275,
+        -350.83859955139445
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 37.36428904226375,
+        "core": 31.75175783605505,
+        "shell": 5.6125312062087005,
+        "attenuation": 0.47851531093678845
+      },
+      "reference": {
+        "outer": 37.36428904226398,
+        "core": 31.75175783605448,
+        "shell": 5.612531206209496,
+        "attenuation": 0.4785153109368157
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 7.958078640513122e-13,
+      "attenuationError": 2.7255975254547593e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-98-71",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        266.2959803900294,
+        47.78343834899068,
+        -356.6506832166758
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 37.751422838421036,
+        "core": 32.09108841381271,
+        "shell": 5.6603344246083225,
+        "attenuation": 0.48314208429483463
+      },
+      "reference": {
+        "outer": 37.751422838421036,
+        "core": 32.09108841381271,
+        "shell": 5.6603344246083225,
+        "attenuation": 0.48314208429483463
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-101-73",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        262.60704733666034,
+        41.96437859714669,
+        -362.4627668819572
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 28.163214287635356,
+        "core": 22.066146888999242,
+        "shell": 6.0970673986361135,
+        "attenuation": 0.4204118710574385
+      },
+      "reference": {
+        "outer": 28.163214287635583,
+        "core": 22.066146888999356,
+        "shell": 6.097067398636227,
+        "attenuation": 0.42041187105744393
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 5.440092820663267e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-105-63",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        251.5919409921811,
+        65.27989995444247,
+        -370.21221176899894
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 5.346726860821946,
+        "core": 0,
+        "shell": 5.346726860821946,
+        "attenuation": 0.21386907443287784
+      },
+      "reference": {
+        "outer": 5.3467268608224,
+        "core": 0.0,
+        "shell": 5.3467268608224,
+        "attenuation": 0.21386907443289602
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.8179902028236938e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-3-128-109-70",
+      "source": [
+        -596.3578734133062,
+        -102.35506953099413,
+        468.6234421318807
+      ],
+      "detector": [
+        248.759018225053,
+        46.890483092067825,
+        -377.96165665604076
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0.2848112851717133,
+        "core": 0,
+        "shell": 0.2848112851717133,
+        "attenuation": 0.011392451406868532
+      },
+      "reference": {
+        "outer": 0.28481128517194065,
+        "core": 0.0,
+        "shell": 0.28481128517194065,
+        "attenuation": 0.011392451406877627
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.0951551845464e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-0-0",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -149.9873494301834,
+        -7.718528984779283,
+        295.1905741653203
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-127-127",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -79.03533072386854,
+        392.57787323872594,
+        104.55715262435207
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0,
+        "core": 0,
+        "shell": 0,
+        "attenuation": 0
+      },
+      "reference": {
+        "outer": 0.0,
+        "core": 0.0,
+        "shell": 0.0,
+        "attenuation": 0.0
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-19-67",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -49.22078446944725,
+        131.36853449530946,
+        266.6706134623408
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 3.1928037121505213,
+        "core": 0,
+        "shell": 3.1928037121505213,
+        "attenuation": 0.12771214848602086
+      },
+      "reference": {
+        "outer": 3.19280371215018,
+        "core": 0.0,
+        "shell": 3.19280371215018,
+        "attenuation": 0.1277121484860072
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3655743202889425e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-23-62",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -63.889518222683655,
+        129.12625766614133,
+        260.66641120908196
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 12.019100360022435,
+        "core": 0,
+        "shell": 12.019100360022435,
+        "attenuation": 0.4807640144008974
+      },
+      "reference": {
+        "outer": 12.019100360022662,
+        "core": 0.0,
+        "shell": 12.019100360022662,
+        "attenuation": 0.4807640144009065
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-25-42",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -104.0916909400805,
+        99.13004627826626,
+        257.6643100824525
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 31.47221332334118,
+        "core": 25.27131904071814,
+        "shell": 6.2008942826230395,
+        "attenuation": 0.4502063236306667
+      },
+      "reference": {
+        "outer": 31.472213323341407,
+        "core": 25.27131904071814,
+        "shell": 6.200894282623267,
+        "attenuation": 0.4502063236306758
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-26-69",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -54.700844949704106,
+        145.1820948707154,
+        256.1632595191378
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 39.6676873111187,
+        "core": 34.35019320676906,
+        "shell": 5.317494104349635,
+        "attenuation": 0.4875013098281379
+      },
+      "reference": {
+        "outer": 39.66768731111904,
+        "core": 34.350193206768836,
+        "shell": 5.317494104350203,
+        "attenuation": 0.48750130982815887
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080801e-13,
+      "attenuationError": 2.098321516541546e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-28-38",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -115.56278133844746,
+        97.03583761391458,
+        253.1611583925084
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 37.569905535719954,
+        "core": 32.58889096273401,
+        "shell": 4.981014572985941,
+        "attenuation": 0.4599517106213098
+      },
+      "reference": {
+        "outer": 37.56990553572007,
+        "core": 32.588890962733785,
+        "shell": 4.9810145729862825,
+        "attenuation": 0.45995171062132156
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.176836406102666e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-29-43",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -107.49146269076422,
+        106.78779446851217,
+        251.6601078291937
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 42.53311901295524,
+        "core": 37.774302290745254,
+        "shell": 4.7588167222099855,
+        "attenuation": 0.49254708721436147
+      },
+      "reference": {
+        "outer": 42.53311901295547,
+        "core": 37.77430229074514,
+        "shell": 4.758816722210327,
+        "attenuation": 0.4925470872143742
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.2712053631958042e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-30-49",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -97.54198370932217,
+        118.18975549301211,
+        250.15905726587897
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 47.81704416012224,
+        "core": 40.99839948914598,
+        "shell": 6.818644670976255,
+        "attenuation": 0.6007329827522181
+      },
+      "reference": {
+        "outer": 47.81704416012212,
+        "core": 40.998399489146095,
+        "shell": 6.8186446709760276,
+        "attenuation": 0.6007329827522099
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 8.215650382226158e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-31-53",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -91.34882539539768,
+        126.29170817770736,
+        248.65800670256425
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 47.29795902289936,
+        "core": 29.14761227325505,
+        "shell": 18.150346749644314,
+        "attenuation": 0.9591947681718129
+      },
+      "reference": {
+        "outer": 47.29795902289948,
+        "core": 29.147612273255277,
+        "shell": 18.1503467496442,
+        "attenuation": 0.9591947681718103
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.6645352591003757e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-32-58",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -83.27750674771443,
+        136.04366503230494,
+        247.15695613924956
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 40.15643646845945,
+        "core": 32.68003976937041,
+        "shell": 7.476396699089037,
+        "attenuation": 0.5604961861185247
+      },
+      "reference": {
+        "outer": 40.15643646845933,
+        "core": 32.680039769370524,
+        "shell": 7.476396699088809,
+        "attenuation": 0.5604961861185166
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 8.104628079763643e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-33-62",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -77.08434843378996,
+        144.1456177170002,
+        245.65590557593484
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 40.5651661849638,
+        "core": 34.25293378714662,
+        "shell": 6.3122323978171835,
+        "attenuation": 0.5265127662098603
+      },
+      "reference": {
+        "outer": 40.5651661849638,
+        "core": 34.252933787146844,
+        "shell": 6.312232397816956,
+        "attenuation": 0.526512766209853
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 7.327471962526033e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-34-66",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -70.89119011986546,
+        152.24757040169547,
+        244.15485501262015
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 39.747110619600335,
+        "core": 33.616999236898096,
+        "shell": 6.130111382702239,
+        "attenuation": 0.5141404492032743
+      },
+      "reference": {
+        "outer": 39.74711061960022,
+        "core": 33.61699923689798,
+        "shell": 6.130111382702239,
+        "attenuation": 0.5141404492032734
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-35-71",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -62.81987147218221,
+        161.99952725629308,
+        242.65380444930543
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 31.713645905387807,
+        "core": 25.342622439293223,
+        "shell": 6.371023466094584,
+        "attenuation": 0.45758191815812915
+      },
+      "reference": {
+        "outer": 31.71364590538792,
+        "core": 25.342622439292995,
+        "shell": 6.371023466094925,
+        "attenuation": 0.457581918158141
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.1823875212257917e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-36-75",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -56.62671315825773,
+        170.10147994098833,
+        241.1527538859907
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 11.081305450646369,
+        "core": 0,
+        "shell": 11.081305450646369,
+        "attenuation": 0.44325221802585474
+      },
+      "reference": {
+        "outer": 11.081305450646596,
+        "core": 0.0,
+        "shell": 11.081305450646596,
+        "attenuation": 0.44325221802586384
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-38-37",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -130.63577188331254,
+        110.40519349487113,
+        238.1506527593613
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 39.16238807043396,
+        "core": 34.39961494711247,
+        "shell": 4.7627731233214945,
+        "attenuation": 0.46570784450975955
+      },
+      "reference": {
+        "outer": 39.16238807043419,
+        "core": 34.39961494711247,
+        "shell": 4.762773123321722,
+        "attenuation": 0.46570784450976865
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.103828801926284e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-39-44",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -118.80813256811173,
+        123.4571586892734,
+        236.64960219604657
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 43.40462262963706,
+        "core": 38.044808994029154,
+        "shell": 5.359813635607907,
+        "attenuation": 0.5187510173765495
+      },
+      "reference": {
+        "outer": 43.40462262963683,
+        "core": 38.04480899402938,
+        "shell": 5.359813635607452,
+        "attenuation": 0.5187510173765331
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.6431300764452317e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-40-53",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -103.22417258539335,
+        139.80913222348033,
+        235.14855163273188
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 32.82474296769351,
+        "core": 23.30682100012325,
+        "shell": 9.51792196757026,
+        "attenuation": 0.5671714467037964
+      },
+      "reference": {
+        "outer": 32.82474296769351,
+        "core": 23.306821000123364,
+        "shell": 9.517921967570146,
+        "attenuation": 0.5671714467037927
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.6637359812630166e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-41-64",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -83.88389193515742,
+        159.461114097492,
+        233.64750106941716
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 53.155679698287145,
+        "core": 46.46289349077017,
+        "shell": 6.692786207516974,
+        "attenuation": 0.6394145962268404
+      },
+      "reference": {
+        "outer": 53.155679698286804,
+        "core": 46.462893490770284,
+        "shell": 6.692786207516519,
+        "attenuation": 0.6394145962268231
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.7319479184152442e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-43-37",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -137.2331869888657,
+        117.91487352030057,
+        230.64539994278775
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 24.194225466761395,
+        "core": 15.277022381215147,
+        "shell": 8.917203085546248,
+        "attenuation": 0.4789043024715711
+      },
+      "reference": {
+        "outer": 24.19422546676094,
+        "core": 15.277022381214806,
+        "shell": 8.917203085546134,
+        "attenuation": 0.4789043024715638
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 7.327471962526033e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-44-65",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -85.96418066473055,
+        165.61692628265203,
+        229.14434937947303
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 52.22494716277231,
+        "core": 44.02744839446734,
+        "shell": 8.197498768304968,
+        "attenuation": 0.6801195378879374
+      },
+      "reference": {
+        "outer": 52.22494716277265,
+        "core": 44.027448394467456,
+        "shell": 8.197498768305195,
+        "attenuation": 0.6801195378879474
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 9.992007221626409e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-47-57",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -104.94791239813266,
+        156.92270093869095,
+        224.6411976895289
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 27.44906446243158,
+        "core": 10.966912223862437,
+        "shell": 16.482152238569142,
+        "attenuation": 0.7470213873336652
+      },
+      "reference": {
+        "outer": 27.449064462431693,
+        "core": 10.966912223861755,
+        "shell": 16.482152238569938,
+        "attenuation": 0.7470213873336916
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 7.958078640513122e-13,
+      "attenuationError": 2.6423307986078726e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-50-60",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -103.2718804601882,
+        166.37852146365563,
+        220.13804599958476
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 48.43730793956672,
+        "core": 36.98058904006268,
+        "shell": 11.45671889950404,
+        "attenuation": 0.7541134683006631
+      },
+      "reference": {
+        "outer": 48.43730793956672,
+        "core": 36.980589040062796,
+        "shell": 11.456718899503926,
+        "attenuation": 0.7541134683006594
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 3.6637359812630166e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-53-64",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -99.71768818848497,
+        177.48434615852267,
+        215.63489430964063
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 63.74378437359178,
+        "core": 55.84212420083577,
+        "shell": 7.90166017275601,
+        "attenuation": 0.7628034005169266
+      },
+      "reference": {
+        "outer": 63.743784373591666,
+        "core": 55.84212420083554,
+        "shell": 7.901660172756124,
+        "attenuation": 0.7628034005169293
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 2.6645352591003757e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-56-67",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -98.04165625054054,
+        186.94016668348735,
+        211.1317426196965
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 56.34149639517,
+        "core": 42.48773771990204,
+        "shell": 13.853758675267954,
+        "attenuation": 0.8940522487699345
+      },
+      "reference": {
+        "outer": 56.341496395170225,
+        "core": 42.487737719901816,
+        "shell": 13.85375867526841,
+        "attenuation": 0.8940522487699509
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 4.547473508864641e-13,
+      "attenuationError": 1.6431300764452317e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-59-70",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -96.36562431259608,
+        196.39598720845203,
+        206.62859092975236
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 30.272796903710173,
+        "core": 18.017237883496023,
+        "shell": 12.25555902021415,
+        "attenuation": 0.6343602638765342
+      },
+      "reference": {
+        "outer": 30.27279690371006,
+        "core": 18.01723788349591,
+        "shell": 12.25555902021415,
+        "attenuation": 0.6343602638765333
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-63-57",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -126.05964073590272,
+        180.95367702006516,
+        200.62438867649354
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 28.520487048146038,
+        "core": 15.363244835479918,
+        "shell": 13.15724221266612,
+        "attenuation": 0.6491956471904842
+      },
+      "reference": {
+        "outer": 28.52048704814638,
+        "core": 15.36324483547969,
+        "shell": 13.157242212666688,
+        "attenuation": 0.6491956471905052
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080801e-13,
+      "attenuationError": 2.098321516541546e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-66-57",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -130.01808979923462,
+        185.4594850353228,
+        196.1212369865494
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 28.67757316691143,
+        "core": 15.933488921139997,
+        "shell": 12.744084245771433,
+        "attenuation": 0.6372312811999773
+      },
+      "reference": {
+        "outer": 28.67757316691143,
+        "core": 15.933488921140224,
+        "shell": 12.744084245771205,
+        "attenuation": 0.6372312811999701
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 7.216449660063518e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-69-58",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -132.09837852880773,
+        191.61529722048283,
+        191.61808529660527
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 34.40345007131282,
+        "core": 24.984883124212388,
+        "shell": 9.41856694710043,
+        "attenuation": 0.5766217428777163
+      },
+      "reference": {
+        "outer": 34.403450071312704,
+        "core": 24.984883124212274,
+        "shell": 9.41856694710043,
+        "attenuation": 0.5766217428777154
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-72-58",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -136.0568275921396,
+        196.1211052357405,
+        187.11493360666114
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 34.32733826854701,
+        "core": 25.080039414369708,
+        "shell": 9.247298854177302,
+        "attenuation": 0.5705322694820497
+      },
+      "reference": {
+        "outer": 34.32733826854735,
+        "core": 25.08003941436982,
+        "shell": 9.24729885417753,
+        "attenuation": 0.5705322694820598
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.0103029524088925e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-75-56",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -143.77159732298904,
+        197.32690491119345,
+        182.611781916717
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 20.942973895258888,
+        "core": 0,
+        "shell": 20.942973895258888,
+        "attenuation": 0.8377189558103555
+      },
+      "reference": {
+        "outer": 20.942973895259,
+        "core": 0.0,
+        "shell": 20.942973895259,
+        "attenuation": 0.83771895581036
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.1368683772161603e-13,
+      "attenuationError": 4.551914400963142e-15,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-77-72",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -116.35999802506986,
+        226.7308436398027,
+        179.6096807900876
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 8.873545949496702,
+        "core": 0,
+        "shell": 8.873545949496702,
+        "attenuation": 0.35494183797986806
+      },
+      "reference": {
+        "outer": 8.873545949497043,
+        "core": 0.0,
+        "shell": 8.873545949497043,
+        "attenuation": 0.3549418379798817
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.3655743202889425e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-80-70",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -124.0747677559193,
+        227.93664331525568,
+        175.10652910014346
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 9.60554985593376,
+        "core": 1.181202835821864,
+        "shell": 8.424347020111895,
+        "attenuation": 0.3464235034910507
+      },
+      "reference": {
+        "outer": 9.60554985593376,
+        "core": 1.181202835822205,
+        "shell": 8.424347020111554,
+        "attenuation": 0.3464235034910398
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 3.410605131648481e-13,
+      "attenuationError": 1.0935696792557792e-14,
+      "pass": true
+    },
+    {
+      "name": "pose-4-128-85-64",
+      "source": [
+        361.02268015405195,
+        -348.85934425394663,
+        -759.7477267896724
+      ],
+      "detector": [
+        -141.94114486402512,
+        225.54629832127108,
+        167.60127628356992
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0.18735946900642375,
+        "core": 0,
+        "shell": 0.18735946900642375,
+        "attenuation": 0.007494378760256951
+      },
+      "reference": {
+        "outer": 0.18735946900619638,
+        "core": 0.0,
+        "shell": 0.18735946900619638,
+        "attenuation": 0.0074943787602478554
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.2737367544323206e-13,
+      "attenuationError": 9.0951551845464e-15,
+      "pass": true
+    },
+    {
+      "name": "sliver-centroid-axial",
+      "source": [
+        47.00970713333333,
+        -1.1999936533333333,
+        -300
+      ],
+      "detector": [
+        47.00970713333333,
+        -1.1999936533333333,
+        100
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 136.45125214762348,
+        "core": 13.684730580923087,
+        "shell": 122.76652156670039,
+        "attenuation": 5.020138707315401
+      },
+      "reference": {
+        "outer": 136.4512521476235,
+        "core": 13.684730580923116,
+        "shell": 122.76652156670039,
+        "attenuation": 5.020138707315401
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 2.842170943040401e-14,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "sliver-vertex-0",
+      "source": [
+        45.41341019,
+        -1.20017052,
+        -300
+      ],
+      "detector": [
+        45.41341019,
+        -1.20017052,
+        100
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 135.8615053926386,
+        "core": 15.005510080709541,
+        "shell": 120.85599531192906,
+        "attenuation": 4.954283893122839
+      },
+      "reference": {
+        "outer": 135.8615053926386,
+        "core": 15.005510080709485,
+        "shell": 120.85599531192912,
+        "attenuation": 4.954283893122841
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080802e-14,
+      "attenuationError": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "name": "sliver-vertex-1",
+      "source": [
+        48.61571121,
+        -1.19981039,
+        -300
+      ],
+      "detector": [
+        48.61571121,
+        -1.19981039,
+        100
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 138.5099248278326,
+        "core": 12.294078906247705,
+        "shell": 126.2158459215849,
+        "attenuation": 5.1469864681133775
+      },
+      "reference": {
+        "outer": 138.5099248278326,
+        "core": 12.294078906247762,
+        "shell": 126.21584592158484,
+        "attenuation": 5.146986468113377
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080802e-14,
+      "attenuationError": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "name": "sliver-vertex-2",
+      "source": [
+        47,
+        -1.20000005,
+        -300
+      ],
+      "detector": [
+        47,
+        -1.20000005,
+        100
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 136.44721324645707,
+        "core": 13.690965469913152,
+        "shell": 122.75624777654392,
+        "attenuation": 5.019777634821062
+      },
+      "reference": {
+        "outer": 136.44721324645712,
+        "core": 13.690965469913152,
+        "shell": 122.75624777654397,
+        "attenuation": 5.019777634821064
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 5.684341886080802e-14,
+      "attenuationError": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "name": "sliver-centroid-near-parallel",
+      "source": [
+        -52.99029286666667,
+        -1.1999936533333333,
+        -160.000001
+      ],
+      "detector": [
+        147.00970713333334,
+        -1.1999936533333333,
+        -159.999999
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 0.04478982808680598,
+        "core": 0,
+        "shell": 0.04478982808680598,
+        "attenuation": 0.0017915931234722393
+      },
+      "reference": {
+        "outer": 0.044789828086820194,
+        "core": 0.0,
+        "shell": 0.044789828086820194,
+        "attenuation": 0.0017915931234728077
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 1.4210854715202004e-14,
+      "attenuationError": 5.683387788169014e-16,
+      "pass": true
+    },
+    {
+      "name": "sliver-coplanar-explicit-invalid",
+      "source": [
+        -52.99029286666667,
+        -1.1999936533333333,
+        -160
+      ],
+      "detector": [
+        147.00970713333334,
+        -1.1999936533333333,
+        -160
+      ],
+      "candidate": {
+        "valid": false,
+        "outer": "NaN",
+        "core": "NaN",
+        "shell": "NaN",
+        "attenuation": "NaN",
+        "reason": "coplanar/near-parallel boundary unresolved",
+        "face": 13959,
+        "boundary": "outer"
+      },
+      "referenceUnresolved": "coplanar boundary plane",
+      "pass": true
+    },
+    {
+      "name": "cap-finite-short-shell",
+      "source": [
+        44,
+        12,
+        -161
+      ],
+      "detector": [
+        44,
+        12,
+        -159
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 1,
+        "core": 0,
+        "shell": 1,
+        "attenuation": 0.04
+      },
+      "reference": {
+        "outer": 1.0,
+        "core": 0.0,
+        "shell": 1.0,
+        "attenuation": 0.04
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    },
+    {
+      "name": "cap-finite-inside-core",
+      "source": [
+        44,
+        12,
+        -155
+      ],
+      "detector": [
+        44,
+        12,
+        -150
+      ],
+      "candidate": {
+        "valid": true,
+        "outer": 5,
+        "core": 5,
+        "shell": 0,
+        "attenuation": 0.04
+      },
+      "reference": {
+        "outer": 5.0,
+        "core": 5.0,
+        "shell": 0.0,
+        "attenuation": 0.04
+      },
+      "candidateValid": true,
+      "maxLengthErrorMm": 0.0,
+      "attenuationError": 0.0,
+      "pass": true
+    }
+  ]
+}

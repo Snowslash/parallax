@@ -1,0 +1,63 @@
+/* Application composition only. Shared chrome, tokens, fonts, focus and shells
+   come byte-for-byte from the pinned estate contract; never override them here. */
+[hidden] { display: none !important; }
+.skip-link { position: fixed; top: -100px; left: 14px; z-index: 30; padding: 12px; background: var(--card); color: var(--foreground); }
+.skip-link:focus { top: 8px; }
+.project-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; padding-block: 8px; border-bottom: 1px solid var(--estate-rule); font-size: 0.95rem; }
+.project-nav a { display: inline-flex; align-items: center; color: var(--muted-foreground); text-decoration: none; }
+.project-nav a[aria-current="page"] { color: var(--foreground); text-decoration: underline; text-decoration-color: var(--estate-focus); text-decoration-thickness: 2px; }
+.project-nav a:hover { color: var(--foreground); text-decoration: underline; }
+.project-nav .project-name { color: var(--foreground); font-weight: 700; margin-right: auto; }
+.page-intro { padding-block: var(--estate-space-6); }
+.page-intro p { max-width: 72ch; margin: 12px 0 0; color: var(--muted-foreground); }
+.home-intro { display: grid; grid-template-columns: minmax(0,1fr) 288px; gap: var(--estate-space-8); align-items: center; padding-block: var(--estate-space-8); }
+.home-intro p { max-width: 55ch; margin: 20px 0; }
+.home-intro .opening { font-size: 1.2rem; }
+.home-intro .clinical-boundary { font-size: 0.95rem; color: var(--muted-foreground); margin-bottom: 0; }
+.home-specimen { margin: 0; }
+.home-specimen img { display: block; width: 100%; height: auto; background: #000; }
+.home-specimen figcaption { margin-top: 10px; color: var(--muted-foreground); font-size: 0.9rem; }
+.mode-register { border-top: 1px solid var(--estate-rule); }
+.mode-row { display: grid; grid-template-columns: 250px minmax(0,1fr); gap: var(--estate-space-7); padding-block: var(--estate-space-6); border-bottom: 1px solid var(--estate-rule); }
+.mode-row h2 a { display: inline-flex; align-items: center; }
+.mode-row p { margin: 0; max-width: 70ch; }
+.mode-row p + p { margin-top: 10px; color: var(--muted-foreground); font-size: 0.9rem; }
+.publication-warning { margin: 0 0 24px; padding: 16px 20px; }
+.publication-warning p { margin: 0; }
+.publication-warning p + p { margin-top: 6px; }
+.privacy-note { margin-block: 24px; color: var(--muted-foreground); font-size: 0.9rem; }
+.project-footer { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding-block: 12px 24px; border-top: 1px solid var(--estate-rule); color: var(--muted-foreground); font-size: 0.85rem; }
+.project-footer a { display: inline-flex; align-items: center; }
+.prose { max-width: 78ch; padding-block: 32px; }
+.prose h2 { margin-top: 32px; }
+.prose p { margin-block: 16px; }
+.prose a { color: var(--estate-link); }
+.lab details { margin-block: 24px; border-block: 1px solid var(--estate-rule); }
+.lab summary { cursor: pointer; min-height: 44px; padding-block: 12px; }
+.lab details p, .lab details pre { max-width: 110ch; color: var(--muted-foreground); font-size: 0.9rem; }
+.lab details p { margin-block: 12px; }
+.lab pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Finite, optional motion on text and controls only. Palette changes stay
+   immediate; neither projection images nor acquisition surfaces crossfade. */
+@keyframes arrive { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+@keyframes disclose { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: no-preference) {
+  .home-copy, .page-intro { animation: arrive 320ms ease-out both; }
+  .explanation-panel, details[open] > p { animation: disclose 220ms ease-out; }
+  .action-arrow { display: inline-block; transition: transform 160ms ease-out; }
+  a:hover .action-arrow { transform: translateX(3px); }
+  .lab button:not(.handle):active:not(:disabled) { transform: translateY(1px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-copy, .page-intro, .explanation-panel, details[open] > p { animation: none; }
+  .action-arrow { transition: none; }
+}
+@media (max-width: 760px) {
+  .project-nav { gap: 0 18px; }
+  .project-nav .project-name { flex-basis: 100%; }
+  .home-intro { grid-template-columns: minmax(0,1fr); gap: 28px; padding-block: 32px; }
+  .home-specimen { max-width: 256px; }
+  .mode-row { grid-template-columns: minmax(0,1fr); gap: 8px; padding-block: 24px; }
+  .page-intro { padding-block: 24px; }
+}

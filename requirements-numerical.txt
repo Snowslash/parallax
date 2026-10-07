@@ -1,0 +1,2 @@
+# Optional offline reproduction only; no Python dependency for the browser demos.
+numpy==2.5.0
