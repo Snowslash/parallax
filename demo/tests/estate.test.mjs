@@ -75,7 +75,7 @@ test('motion is bounded UI feedback, reduced-motion aware and never applied to p
 });
 test('model limitations are retained on the linked about page without detail panels',()=>{
   const about=read('licences.html');
-  assert.match(about,/PARTIAL/);assert.match(about,/250 ms/);assert.match(about,/not anatomically validated/i);
+  assert.match(about,/authored inner core/);assert.match(about,/not a recovered tissue segmentation/);assert.match(about,/not anatomically validated/i);
   assert.match(about,/Not for clinical use/i);
   for(const name of ['guided.html','beam3d.html','mesh-spike.html'])assert.doesNotMatch(read(name),/<details[\s>]/);
 });

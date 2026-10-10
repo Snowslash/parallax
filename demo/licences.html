@@ -22,15 +22,15 @@
 <p>Images use idealised attenuation without scatter, soft tissue, spectrum, blur or detector noise. Pixel edges can shimmer. The rig does not model machine travel or collisions. One view, or a pair that looks reassuring, is not a general test of containment.</p>
 <p>Responses reset when you refresh. Only your colour-theme preference is saved. There are no accounts, uploads or analytics.</p>
 <h2 class="estate-section-title">Original work</h2>
-<p>Code, documentation and model assets use the <a href="LICENSE.txt">MIT licence</a>.</p>
+<p>Original code, documentation and procedural teaching assets use the <a href="LICENSE.txt">MIT licence</a>. The imported femur and its derived core are excluded.</p>
 <h2 class="estate-section-title">Three.js</h2>
 <p>The 3D scenes use Three.js 0.186.0: <a href="vendor/three-r186/LICENSE">MIT licence</a> · <a href="vendor/three-r186/provenance.json">version record</a>.</p>
 <h2 class="estate-section-title">Estate theme &amp; fonts</h2>
 <p>The shared Sangeev.me theme is <a href="vendor/estate-ui/provenance.json">@sangeev/estate-ui 2.0.0-alpha.7</a>, under its <a href="vendor/estate-ui/LICENSE">MIT licence</a>. <a href="vendor/estate-ui/LICENSES/OFL-Literata.txt">Literata</a> and <a href="vendor/estate-ui/LICENSES/OFL-Atkinson-Hyperlegible-Next.txt">Atkinson Hyperlegible Next</a> are bundled under their SIL Open Font Licences. All runtime assets are served locally; no font service or CDN is used.</p>
 <h2 class="estate-section-title">Models</h2>
-<p>The cylinder and wire are mathematical shapes. The femur, <code>ftv-proximal-femur-left-v001</code>, was generated from sphere/capsule fields using marching tetrahedra, not scans or downloaded anatomy. Its original triangles and artificial distal cap are unchanged.</p>
-<p>The source package reproduces projections from these exports. It includes model hashes and instructions, but not the Windows/Blender authoring workspace.</p>
-<p>The femur renderer passed the recorded numerical checks but missed the 256² / 250 ms interaction target: a <strong>PARTIAL</strong> result. It remains an experiment.</p>
+<p>The cylinder and wire are mathematical shapes. Femur uses the whole BodyParts3D left-femur surface with an authored inner core, not a recovered tissue segmentation. Its two image models use the same view and fixed intensity mapping. It remains experimental.</p>
+<p>BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Redistribution relies on the <a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html">current publisher grant</a>, not MIT. The original OBJ comments retain the older CC Attribution-Share Alike 2.1 Japan notice: see <a href="mesh-spike/bp3d-cortex-v001/LICENSE.md">attribution, changes and licence discrepancy</a> and <a href="mesh-spike/bp3d-cortex-v001/PROVENANCE.json">model provenance</a>.</p>
+<p>The source package reproduces projections from the supplied meshes and keeps the earlier procedural model’s numerical evidence separately. Neither model has anatomical or clinical approval.</p>
 </main>
 <footer class="project-footer"><a href="licences.html">About &amp; licences</a></footer>
 </div>

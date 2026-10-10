@@ -16,6 +16,12 @@ Literata and Atkinson Hyperlegible Next retain their verbatim SIL Open Font Lice
 
 Numerical reproduction uses NumPy installed separately into the developer's own environment; it is not bundled. The pinned requirement is not a runtime requirement for the browser. Consult the installed NumPy distribution for its BSD licence and notices.
 
+## BodyParts3D femur and derived core
+
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+
+`demo/mesh-spike/bp3d-cortex-v001/` contains the imported whole-femur outer surface and authored inward-offset core. These are not MIT assets. Redistribution relies on the [current publisher CC BY 4.0 grant](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html). The unchanged historical OBJ notice says CC Attribution-Share Alike 2.1 Japan; the publisher README also retains an old summary link despite its current CC BY 4.0 text. See [licence interpretation and changes](docs/BODYPARTS3D-LICENCE.md) and [exact provenance](docs/model-provenance.json). The served asset directory carries `LICENSE.md` and `PROVENANCE.json` so anatomy attribution accompanies a demo-only distribution.
+
 ## Original synthetic data
 
-The primitive images, fixtures and frozen procedural bone exports are original synthetic project assets, under the root MIT licence. The authoring provenance reports no external anatomy, donor scan, downloaded model or texture. Blender was an authoring tool, not a redistributed application or a browser dependency. Model generation source is outside this package; see `docs/MODEL.md`.
+The primitive images, fixtures and frozen procedural bone exports are original synthetic project assets, under the root MIT licence. That historical procedural model’s authoring provenance reports no external anatomy, donor scan, downloaded model or texture; this does not describe the current Femur assets. Blender was an authoring tool, not a redistributed application or a browser dependency. Model generation source is outside this package; see `docs/MODEL.md`.

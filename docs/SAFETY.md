@@ -12,9 +12,9 @@ Parallax is a synthetic teaching prototype, not a medical device, diagnostic aid
 
 ## Model boundary
 
-All objects and coefficients are synthetic. There is no patient data, image import, real fluoroscopy, soft tissue, energy spectrum, scatter, noise or calibrated radiology. Point-sampled detector pixels can alias or shimmer. Three.js scenes are explanatory surface renderings, not the attenuation computation.
+The cylinder/wire, core boundary and attenuation coefficients are authored teaching approximations; the current femur outer surface is imported BodyParts3D anatomy. There are no patient inputs, image imports, real fluoroscopy, soft tissue, energy spectrum, scatter, noise or calibrated radiology. Point-sampled detector pixels can alias or shimmer. Three.js scenes are explanatory surface renderings, not the attenuation computation.
 
-The bone model is a simplified procedural shape whose proportions have not been anatomically validated. A negative field isovalue does not guarantee uniform cortical thickness. The artificial distal cap remains real material in the computation. Out-of-field cropping is not auto-corrected.
+The current femur retains the whole BodyParts3D source bone with an illustrative inward-offset core, not a recovered tissue segmentation. Source physical-mm calibration and anatomical orientation have not been independently verified. Requested normal offsets are not measured cortical thickness. The old procedural model’s negative isovalue and artificial distal cap apply only to historical v001 reproduction. Out-of-field cropping is not auto-corrected.
 
 Conservative mesh intersection degeneracies can reject a frame. The UI retains the last valid image with its original pose; it must not imply that an old image belongs to a newly requested pose. Zero unresolved pixels in sampled frames does not prove all continuous poses are valid.
 

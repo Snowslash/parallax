@@ -1,5 +1,5 @@
 import * as THREE from '../vendor/three-r186/three.module.js';
-import {meshCamera} from './geometry.mjs';
+import {meshCamera} from './geometry.mjs?bp3d-cortex-v001';
 const V=a=>new THREE.Vector3(...a),rad=d=>d*Math.PI/180;
 function line(points,color,opacity=1){return new THREE.Line(new THREE.BufferGeometry().setFromPoints(points.map(V)),new THREE.LineBasicMaterial({color,transparent:opacity<1,opacity}));}
 function label(text,color){
@@ -21,7 +21,7 @@ export class MeshView{
     this.rig.add(line([...corners,corners[0]],0x6cc2d0));for(const p of corners)this.rig.add(line([[0,-800,0],p],0xd3aa72,.28));
     this.rig.add(line([[0,-800,0],[0,400,0]],0xedd6a1,.65));
     for(const [text,position,color] of [['SOURCE',[0,-855,0],'#edc588'],['DETECTOR',[0,465,0],'#8ecfdc']]){const s=label(text,color);s.position.copy(V(position));this.rig.add(s);}
-    for(const [text,point,color] of [['+X lateral',[110,0,0],0xe59b93],['+Y posterior',[0,110,0],0xa7ca8a],['+Z superior',[0,0,110],0x94bcea]]){
+    for(const [text,point,color] of [['+X source',[110,0,0],0xe59b93],['+Y source',[0,110,0],0xa7ca8a],['+Z source',[0,0,110],0x94bcea]]){
       this.scene.add(line([[0,0,0],point],color,.65));const s=label(text,'#b9d0d0');s.position.copy(V(point));s.scale.set(70,13,1);this.scene.add(s);
     }
     this.camera=new THREE.PerspectiveCamera(45,1,1,7000);this.camera.up.set(0,0,1);
@@ -36,7 +36,7 @@ export class MeshView{
   draw(){
     if(!this.width||!this.height)return;
     const {yaw,elevation,zoom}=this.observer,a=rad(yaw),e=rad(elevation),d=V([Math.sin(a)*Math.cos(e),-Math.cos(a)*Math.cos(e),Math.sin(e)]);
-    const target=V([24,7,-68]);this.camera.position.copy(d.clone().multiplyScalar(2000/(zoom*Math.min(1,this.camera.aspect)))).add(target);this.camera.lookAt(target);
+    const target=V([0,0,0]);this.camera.position.copy(d.clone().multiplyScalar(2000/(zoom*Math.min(1,this.camera.aspect)))).add(target);this.camera.lookAt(target);
     this.renderer.setScissorTest(false);this.renderer.setViewport(0,0,this.width,this.height);this.renderer.render(this.scene,this.camera);
     // Explicit observer-only inset. The numerical asset and acquisition are unchanged.
     const size=Math.min(175,this.width*.43);this.closeCamera.position.copy(d.multiplyScalar(320)).add(target);this.closeCamera.lookAt(target);

@@ -1,0 +1,12 @@
+{
+  "asset_sha256": "c941760d62e6e42546202830e1322812bae3f5de325320a3295ed10c63c2956f",
+  "source_origin": [
+    91.10159999999999,
+    -80.8791,
+    744.239
+  ],
+  "transform": "preview_xyz = source_xyz - source_origin; translation only, no saved mesh change",
+  "reason": "Centre on proximal region; whole femur retained; no fitted anatomical landmark",
+  "detector_field_mm": 320,
+  "mu_uniform_per_mm": 0.02
+}

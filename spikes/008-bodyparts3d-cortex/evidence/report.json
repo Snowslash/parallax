@@ -1,0 +1,728 @@
+{
+  "node": "v22.23.3",
+  "outerSha256": "c941760d62e6e42546202830e1322812bae3f5de325320a3295ed10c63c2956f",
+  "coreSha256": "d142649bab1ecce717f1c58c50f2043fcba2a5bf20e6e399103deec21888c04c",
+  "outerTriangles": 3204,
+  "coreTriangles": 3204,
+  "sourceOrigin": [
+    91.10159999999999,
+    -80.8791,
+    744.239
+  ],
+  "coefficients": {
+    "shell": 0.04,
+    "core": 0.008,
+    "uniform": 0.02
+  },
+  "camera": {
+    "detectorFieldMm": 320,
+    "sourcePivotMm": 800,
+    "sourceDetectorMm": 1200
+  },
+  "mapping": "round(255*(1-exp(-A)))",
+  "rawConvention": "row-major, top to bottom; pixel centres; physical path lengths mm; floats encoded little-endian float64; RGBA uint8",
+  "timingScope": "Offline Node, one warmup for each method and three alternating-order repetitions per pose/size; not physical-device interaction latency",
+  "frames": [
+    {
+      "tag": "128-0",
+      "size": 128,
+      "pose": {
+        "orbit": 0,
+        "tilt": 0,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "128-0-outer.f64le",
+          "bytes": 131072,
+          "sha256": "c3b4817042434663ce7b185db654c06bdc3e43de75acaff73a10dc99fc4eb32d"
+        },
+        "core": {
+          "path": "128-0-core.f64le",
+          "bytes": 131072,
+          "sha256": "eb5d2333604b4d86e6cf6ca687480a1d69433491b69a884d2f9e9bf02c700828"
+        },
+        "shell": {
+          "path": "128-0-shell.f64le",
+          "bytes": 131072,
+          "sha256": "997d602bdc6ad2cc4c3ba9b45722b2204a8abab1f9b872828ee4641c3b8ad197"
+        },
+        "attenuation": {
+          "path": "128-0-attenuation.f64le",
+          "bytes": 131072,
+          "sha256": "91fcafd21e61bc5b79c3d0f1b7663700c94a54f5b3cba249957b331db3beae50"
+        },
+        "uniformAttenuation": {
+          "path": "128-0-uniformAttenuation.f64le",
+          "bytes": 131072,
+          "sha256": "948ba9ec28853d71b3bbb87b82cc6e603cd080646791c55322299f318b73c7ad"
+        },
+        "layered": {
+          "path": "128-0-layered.rgba8",
+          "bytes": 65536,
+          "sha256": "3cb91a8a5a29a3e7338f4527346e6b38b27a77b8c6aec30a4ac7e421a164a278"
+        },
+        "uniform": {
+          "path": "128-0-uniform.rgba8",
+          "bytes": 65536,
+          "sha256": "a3ebc5f8bc23f7427534ec24db8f6d37a0de67e4e951644b0c058a3b9741efcf"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 17.89311099240922,
+      "maxCoreLengthMm": 44.24515326959863,
+      "nonzeroOuterRays": 2862,
+      "maxGreyDifference": 66,
+      "meanAbsoluteGreyDifference": 6.1182861328125,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          34.89299700000004,
+          31.546602000000007,
+          27.213420999999983
+        ],
+        "uniform": [
+          16.403320000000008,
+          15.088347999999996,
+          16.733608000000004
+        ]
+      }
+    },
+    {
+      "tag": "128-1",
+      "size": 128,
+      "pose": {
+        "orbit": 23.7,
+        "tilt": -17.3,
+        "x": 7,
+        "y": -13,
+        "z": -21
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "128-1-outer.f64le",
+          "bytes": 131072,
+          "sha256": "7b0dd2a0cf114ef3ceabd3cdf4295d65309c3cd7ccb4e0cc5b854464eb29f6fc"
+        },
+        "core": {
+          "path": "128-1-core.f64le",
+          "bytes": 131072,
+          "sha256": "70f452f91f77607b51614a1676a01839b5f268ec986b43f34e32386c0f476a42"
+        },
+        "shell": {
+          "path": "128-1-shell.f64le",
+          "bytes": 131072,
+          "sha256": "176557a51eeba05220d0131fb6ccbbc246412043481b932017a690aa9e63a406"
+        },
+        "attenuation": {
+          "path": "128-1-attenuation.f64le",
+          "bytes": 131072,
+          "sha256": "48605596d86960fcb2c483c19565650b4df117677cd36ffb4f741259a99085cd"
+        },
+        "uniformAttenuation": {
+          "path": "128-1-uniformAttenuation.f64le",
+          "bytes": 131072,
+          "sha256": "4229f283bc4348023171b8138dc9ae0d46e54a410be101aaaf60c3e6e9b93553"
+        },
+        "layered": {
+          "path": "128-1-layered.rgba8",
+          "bytes": 65536,
+          "sha256": "5c7b2b2168baedbfdc9250efccbaf65b3f965c5a82e78e8345bd144b3bc76858"
+        },
+        "uniform": {
+          "path": "128-1-uniform.rgba8",
+          "bytes": 65536,
+          "sha256": "a7b5d5e855727a34a71452f26f8e63c39f936812468d21bfd37573c2ac419868"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 19.740668296247122,
+      "maxCoreLengthMm": 44.67702865765625,
+      "nonzeroOuterRays": 2999,
+      "maxGreyDifference": 67,
+      "meanAbsoluteGreyDifference": 6.3836669921875,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          37.958027000000016,
+          34.09993900000006,
+          34.699138999999946
+        ],
+        "uniform": [
+          22.484055000000012,
+          19.78308800000002,
+          21.046039999999948
+        ]
+      }
+    },
+    {
+      "tag": "128-2",
+      "size": 128,
+      "pose": {
+        "orbit": 137.2,
+        "tilt": 31.6,
+        "x": -9,
+        "y": 24,
+        "z": -18
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "128-2-outer.f64le",
+          "bytes": 131072,
+          "sha256": "0d2109b501fea8cb0ddf235487ca9e2ec352ddcefc67d97d4bcfb77faf7a06ca"
+        },
+        "core": {
+          "path": "128-2-core.f64le",
+          "bytes": 131072,
+          "sha256": "0da86a093d36955b929d2a5659eb1238dda024fef06428498bd1cd2267f3d3f4"
+        },
+        "shell": {
+          "path": "128-2-shell.f64le",
+          "bytes": 131072,
+          "sha256": "d85477ef70d0d7052cf717019def24bd351430fbbfad4ba003374598bd3a6f51"
+        },
+        "attenuation": {
+          "path": "128-2-attenuation.f64le",
+          "bytes": 131072,
+          "sha256": "248c7242a42cd8eb509171e4b4e5694373aca626fbcf21acef63615c2cf87321"
+        },
+        "uniformAttenuation": {
+          "path": "128-2-uniformAttenuation.f64le",
+          "bytes": 131072,
+          "sha256": "5b5f2dea7a7e4e9da6b52c7776339b0948cc0c3f9b6e524a4a0c8fdc3889bf87"
+        },
+        "layered": {
+          "path": "128-2-layered.rgba8",
+          "bytes": 65536,
+          "sha256": "d057eb24401fba5302bdafad510316da88dbe993acec6da0da47beebe0a9b969"
+        },
+        "uniform": {
+          "path": "128-2-uniform.rgba8",
+          "bytes": 65536,
+          "sha256": "2a6628ba65a4ad171ae5577933bde15eb2c624531b92b45d939cc825199a8e89"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 20.814553509077655,
+      "maxCoreLengthMm": 78.24155431900544,
+      "nonzeroOuterRays": 2596,
+      "maxGreyDifference": 75,
+      "meanAbsoluteGreyDifference": 5.645263671875,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          40.69400100000007,
+          43.26381900000001,
+          40.94853499999999
+        ],
+        "uniform": [
+          23.712792000000036,
+          24.85501499999998,
+          22.478113000000008
+        ]
+      }
+    },
+    {
+      "tag": "128-3",
+      "size": 128,
+      "pose": {
+        "orbit": 281.1,
+        "tilt": -39.2,
+        "x": 12,
+        "y": 17,
+        "z": -37
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "128-3-outer.f64le",
+          "bytes": 131072,
+          "sha256": "66836ba6b155173758a6e320025e3c3644eaea023d0eca3659796e202bc74afe"
+        },
+        "core": {
+          "path": "128-3-core.f64le",
+          "bytes": 131072,
+          "sha256": "690ba0c0a33eb0cc250ac459501f71f32148e0ad3485cd27df15b231fe092975"
+        },
+        "shell": {
+          "path": "128-3-shell.f64le",
+          "bytes": 131072,
+          "sha256": "a24cc84f011f08a207e997df912a820bbf5c3069007fa324f45ac733dbea5462"
+        },
+        "attenuation": {
+          "path": "128-3-attenuation.f64le",
+          "bytes": 131072,
+          "sha256": "5580167eb897897740189f750c9b22e73cdf73fea1a144fe676d734f8ae14670"
+        },
+        "uniformAttenuation": {
+          "path": "128-3-uniformAttenuation.f64le",
+          "bytes": 131072,
+          "sha256": "9878133ad49e4749305b345ea8e82c9307b56b8a20b8f373a586db5d25a0a791"
+        },
+        "layered": {
+          "path": "128-3-layered.rgba8",
+          "bytes": 65536,
+          "sha256": "8154668895bf1dc88c22bfaf0fb9dbd9d080ecc1806c6349e64005bb4f4e3cf2"
+        },
+        "uniform": {
+          "path": "128-3-uniform.rgba8",
+          "bytes": 65536,
+          "sha256": "75f242cda9fa9185bca18a135e42d07f90630a65b249fbd2db27468ab886f04e"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 28.571284004411837,
+      "maxCoreLengthMm": 91.69798418785729,
+      "nonzeroOuterRays": 2429,
+      "maxGreyDifference": 76,
+      "meanAbsoluteGreyDifference": 5.40478515625,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          45.440759999999955,
+          36.78503599999999,
+          35.796416000000136
+        ],
+        "uniform": [
+          21.386618,
+          20.61250599999994,
+          22.389845999999807
+        ]
+      }
+    },
+    {
+      "tag": "128-4",
+      "size": 128,
+      "pose": {
+        "orbit": 90,
+        "tilt": 55,
+        "x": -30,
+        "y": 45,
+        "z": 35
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "128-4-outer.f64le",
+          "bytes": 131072,
+          "sha256": "ff8ed271732b612a3024b695562645d853d3e7936216af16f21817da31790c0c"
+        },
+        "core": {
+          "path": "128-4-core.f64le",
+          "bytes": 131072,
+          "sha256": "4542ffd262a3cdec93ff9a7ba33a4bb10cbc87ee3cc4db2ec4bc9141370805ee"
+        },
+        "shell": {
+          "path": "128-4-shell.f64le",
+          "bytes": 131072,
+          "sha256": "5a70efd63a265f472e6e61a7b60cd9130ec977f21cc2277b7cf69afc8708aa8c"
+        },
+        "attenuation": {
+          "path": "128-4-attenuation.f64le",
+          "bytes": 131072,
+          "sha256": "03e2cd5dc90dc838785c7b7214ab568414a42409386099e1ed217771a181c4ba"
+        },
+        "uniformAttenuation": {
+          "path": "128-4-uniformAttenuation.f64le",
+          "bytes": 131072,
+          "sha256": "336b1b5f3d7213a323e0fc40191a3f73efc8324015d7cb87b9b91b302594f514"
+        },
+        "layered": {
+          "path": "128-4-layered.rgba8",
+          "bytes": 65536,
+          "sha256": "d21218bc7fcd0cf36c300542cfaf48fe138a7361d5a60a6c52652a91e4ca31f9"
+        },
+        "uniform": {
+          "path": "128-4-uniform.rgba8",
+          "bytes": 65536,
+          "sha256": "b56bb0655d89dbaf66d58b53388654fc8313fb0afd9c1051ba543f2cec8f26f1"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 39.829316403973166,
+      "maxCoreLengthMm": 113.18343949151472,
+      "nonzeroOuterRays": 2557,
+      "maxGreyDifference": 73,
+      "meanAbsoluteGreyDifference": 5.41253662109375,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          37.13586299999997,
+          40.972530000000006,
+          49.37970100000007
+        ],
+        "uniform": [
+          20.907867000000124,
+          23.878337999999985,
+          23.66871900000001
+        ]
+      }
+    },
+    {
+      "tag": "256-0",
+      "size": 256,
+      "pose": {
+        "orbit": 0,
+        "tilt": 0,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "256-0-outer.f64le",
+          "bytes": 524288,
+          "sha256": "e9d2f5a6e3c0863e6382609f9d26fb39b4fec266a14129d706a504016cd0df06"
+        },
+        "core": {
+          "path": "256-0-core.f64le",
+          "bytes": 524288,
+          "sha256": "ae87341aa5aae07035fb5b5ff35c4ae250d377ef62e2dfa4f4a3c310a772777c"
+        },
+        "shell": {
+          "path": "256-0-shell.f64le",
+          "bytes": 524288,
+          "sha256": "e8d90c11174141adf09f977e9be26fef8a16e5b7d85ddbe318e0264ffaed42d6"
+        },
+        "attenuation": {
+          "path": "256-0-attenuation.f64le",
+          "bytes": 524288,
+          "sha256": "8ca33e8c03cddf20293ddfb2545efc128279dba16677d27f57e2fcdf59290cc4"
+        },
+        "uniformAttenuation": {
+          "path": "256-0-uniformAttenuation.f64le",
+          "bytes": 524288,
+          "sha256": "099e53745a9c17a3d47ad889b615dccdada5189340cfdd0549a996fcc74877c8"
+        },
+        "layered": {
+          "path": "256-0-layered.rgba8",
+          "bytes": 262144,
+          "sha256": "01d5b9c23b34764fcddcdc599abde1a848147b73dcbe60a328b8034c364b565d"
+        },
+        "uniform": {
+          "path": "256-0-uniform.rgba8",
+          "bytes": 262144,
+          "sha256": "eb744e4432ead67d611763249f7b08ce703bfbefcf1e0d8e57a31bb3c1ed3c0c"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 21.659011199215684,
+      "maxCoreLengthMm": 44.22930974642031,
+      "nonzeroOuterRays": 11444,
+      "maxGreyDifference": 66,
+      "meanAbsoluteGreyDifference": 6.1243133544921875,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          111.11242900000002,
+          114.46434399999998,
+          103.56374099999994
+        ],
+        "uniform": [
+          61.57708099999991,
+          60.95113100000003,
+          63.099787000000106
+        ]
+      }
+    },
+    {
+      "tag": "256-1",
+      "size": 256,
+      "pose": {
+        "orbit": 23.7,
+        "tilt": -17.3,
+        "x": 7,
+        "y": -13,
+        "z": -21
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "256-1-outer.f64le",
+          "bytes": 524288,
+          "sha256": "e8fdc790c8c8d97782ca4fe545d40721e0bddd838fff378707082776ebf768d8"
+        },
+        "core": {
+          "path": "256-1-core.f64le",
+          "bytes": 524288,
+          "sha256": "0a161ccbdda61261eb8f77f236b4cc408ec09d071493fde6cde44061390522bd"
+        },
+        "shell": {
+          "path": "256-1-shell.f64le",
+          "bytes": 524288,
+          "sha256": "b5636049c9862b655db3372114f51ca8d0e3e8dc51236f6c1c3e0fe0d40310f0"
+        },
+        "attenuation": {
+          "path": "256-1-attenuation.f64le",
+          "bytes": 524288,
+          "sha256": "97d4128410207b48726c6fe6173a4c284067740a7d14b22f1c0ddef82c506796"
+        },
+        "uniformAttenuation": {
+          "path": "256-1-uniformAttenuation.f64le",
+          "bytes": 524288,
+          "sha256": "4a9017b1b7045bd13cea402fceaf0a8a309e3161514bc67ae46d853a01fe23bc"
+        },
+        "layered": {
+          "path": "256-1-layered.rgba8",
+          "bytes": 262144,
+          "sha256": "110580b34503822acb93a431cf0f09cef478425845a5347e974098a5d10901d9"
+        },
+        "uniform": {
+          "path": "256-1-uniform.rgba8",
+          "bytes": 262144,
+          "sha256": "cd1859fd0185aa43f05ee854d045cb45e8910e13a74efc3d9cc90f4991e80e4f"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 22.060346522669192,
+      "maxCoreLengthMm": 44.67961322071494,
+      "nonzeroOuterRays": 12015,
+      "maxGreyDifference": 67,
+      "meanAbsoluteGreyDifference": 6.4097900390625,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          132.73483499999975,
+          137.56129499999997,
+          132.15276799999992
+        ],
+        "uniform": [
+          75.6692549999998,
+          77.12669700000015,
+          77.59420599999976
+        ]
+      }
+    },
+    {
+      "tag": "256-2",
+      "size": 256,
+      "pose": {
+        "orbit": 137.2,
+        "tilt": 31.6,
+        "x": -9,
+        "y": 24,
+        "z": -18
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "256-2-outer.f64le",
+          "bytes": 524288,
+          "sha256": "c661ea0c5d79128f1729ee5532831aa3ef71facd0e1442095c648d9eaa013166"
+        },
+        "core": {
+          "path": "256-2-core.f64le",
+          "bytes": 524288,
+          "sha256": "05384087d67e52c8affab21b66ae4b331409a2a76efe1e5ca806b4ad4751408a"
+        },
+        "shell": {
+          "path": "256-2-shell.f64le",
+          "bytes": 524288,
+          "sha256": "7f79efdefe31d6a68c00d760fd3f2cb754949804a091610cc826727a556ceb32"
+        },
+        "attenuation": {
+          "path": "256-2-attenuation.f64le",
+          "bytes": 524288,
+          "sha256": "45bce46102979619b8d41c5323c13e0516d15992979d734f4ccf6c1bb4fce01a"
+        },
+        "uniformAttenuation": {
+          "path": "256-2-uniformAttenuation.f64le",
+          "bytes": 524288,
+          "sha256": "835189434659397153e64cfc275cb57766f6ca0972e62ac9139b28e84d49c868"
+        },
+        "layered": {
+          "path": "256-2-layered.rgba8",
+          "bytes": 262144,
+          "sha256": "fb719bc9bb59c6468b7458b39c8fe9814554a60634e70553eaabe0aa34fc87a5"
+        },
+        "uniform": {
+          "path": "256-2-uniform.rgba8",
+          "bytes": 262144,
+          "sha256": "538235ab48f7eaf04613f874aa5da7175cbf5db4b4e8c01d50374825ca3ea1ae"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 31.282361144507263,
+      "maxCoreLengthMm": 78.21337223422722,
+      "nonzeroOuterRays": 10332,
+      "maxGreyDifference": 75,
+      "meanAbsoluteGreyDifference": 5.633544921875,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          220.9435199999998,
+          140.16394500000024,
+          139.72036199999957
+        ],
+        "uniform": [
+          105.17493599999989,
+          85.22398800000019,
+          81.05609999999979
+        ]
+      }
+    },
+    {
+      "tag": "256-3",
+      "size": 256,
+      "pose": {
+        "orbit": 281.1,
+        "tilt": -39.2,
+        "x": 12,
+        "y": 17,
+        "z": -37
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "256-3-outer.f64le",
+          "bytes": 524288,
+          "sha256": "b99210cbbde516b70d337e6db34d0f634691d7d07d5f964c0c861343429c5d31"
+        },
+        "core": {
+          "path": "256-3-core.f64le",
+          "bytes": 524288,
+          "sha256": "9a940e206918f5464c86153e29e77f234cdfccd05849dbab418a43d36e5431b5"
+        },
+        "shell": {
+          "path": "256-3-shell.f64le",
+          "bytes": 524288,
+          "sha256": "4b207f1696f681d0d4de208e2d3ddaf190de6ee8ce3f594f2329545e23465735"
+        },
+        "attenuation": {
+          "path": "256-3-attenuation.f64le",
+          "bytes": 524288,
+          "sha256": "d043b55a20d12739e862051740161dc715062d7de6d8f5182905cfecab3f5bd2"
+        },
+        "uniformAttenuation": {
+          "path": "256-3-uniformAttenuation.f64le",
+          "bytes": 524288,
+          "sha256": "abfcf870c27b44300cfb6c1e37880108d14f41fc99307d717eb734b008325567"
+        },
+        "layered": {
+          "path": "256-3-layered.rgba8",
+          "bytes": 262144,
+          "sha256": "52fc0294872a31d6f49e15a44156ba6010747fd3a0c44c09f0b9747b5a8e191d"
+        },
+        "uniform": {
+          "path": "256-3-uniform.rgba8",
+          "bytes": 262144,
+          "sha256": "622d51f26bcc934ad50a1c2fa2c7eadd8b970360e9479bb028e6e98f699a6abc"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 30.685002517544035,
+      "maxCoreLengthMm": 91.74870386196574,
+      "nonzeroOuterRays": 9685,
+      "maxGreyDifference": 76,
+      "meanAbsoluteGreyDifference": 5.3957061767578125,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          136.3002460000007,
+          137.68976899999961,
+          139.9316230000004
+        ],
+        "uniform": [
+          89.14193999999952,
+          79.29726599999958,
+          84.12069999999949
+        ]
+      }
+    },
+    {
+      "tag": "256-4",
+      "size": 256,
+      "pose": {
+        "orbit": 90,
+        "tilt": 55,
+        "x": -30,
+        "y": 45,
+        "z": 35
+      },
+      "invalidCount": 0,
+      "invalidRays": [],
+      "uniformInvalidCount": 0,
+      "files": {
+        "outer": {
+          "path": "256-4-outer.f64le",
+          "bytes": 524288,
+          "sha256": "3e9bce6b84dc0603c77de2683d05c1b08b7c7792f7505ab7bccd92527b80d454"
+        },
+        "core": {
+          "path": "256-4-core.f64le",
+          "bytes": 524288,
+          "sha256": "26ee827045009f0f5a06d4f78d195f8c23401182378ff7ca0dcb83781876afe7"
+        },
+        "shell": {
+          "path": "256-4-shell.f64le",
+          "bytes": 524288,
+          "sha256": "fc780ebdc7cbd76fa45d56164fefbe7d6d00721d8e47e1cf4967da0a55a972a4"
+        },
+        "attenuation": {
+          "path": "256-4-attenuation.f64le",
+          "bytes": 524288,
+          "sha256": "6f8d519ee472ec483e2f2de1bda830795de0f481264ac20546909c1170103664"
+        },
+        "uniformAttenuation": {
+          "path": "256-4-uniformAttenuation.f64le",
+          "bytes": 524288,
+          "sha256": "1c74d41bece239038121348d5c3eaffa4fa97b560b264170d8efd13bf87ca0aa"
+        },
+        "layered": {
+          "path": "256-4-layered.rgba8",
+          "bytes": 262144,
+          "sha256": "6baede8591c93b47179f12a6b76e26414fe74d73a9249b977739485be688380c"
+        },
+        "uniform": {
+          "path": "256-4-uniform.rgba8",
+          "bytes": 262144,
+          "sha256": "7bbc33aa8bb7a106d9018baf3fb0a5408737af42ad84a419aae15133ec5b663e"
+        }
+      },
+      "status": "valid",
+      "maxShellLengthMm": 43.14894419475729,
+      "maxCoreLengthMm": 113.29831827423118,
+      "nonzeroOuterRays": 10215,
+      "maxGreyDifference": 73,
+      "meanAbsoluteGreyDifference": 5.4066162109375,
+      "uniformBytesIdentical": true,
+      "timingMs": {
+        "paired": [
+          137.322811,
+          138.6116320000001,
+          145.12319799999932
+        ],
+        "uniform": [
+          81.94837699999971,
+          81.54064299999936,
+          89.65399399999933
+        ]
+      }
+    }
+  ],
+  "status": "PASS: sampled geometry and matched-image contracts"
+}

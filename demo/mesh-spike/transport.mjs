@@ -8,7 +8,7 @@ export function createWorkerRenderer({WorkerClass=globalThis.Worker,timeoutMs=30
   function render(job){
     if(active)return Promise.reject(new Error('Worker already busy'));
     return new Promise((resolve,reject)=>{
-      try{worker??=new WorkerClass(new URL('./worker.mjs',import.meta.url),{type:'module'});}catch(error){reject(error);return;}
+      try{worker??=new WorkerClass(new URL('./worker.mjs?bp3d-cortex-v001',import.meta.url),{type:'module'});}catch(error){reject(error);return;}
       active={resolve,reject,timer:setTimeout(()=>stop('Mesh worker timed out. Retry rendering.'),timeoutMs)};
       worker.onerror=event=>{event.preventDefault?.();stop(event.message||'Mesh worker crashed');};
       worker.onmessageerror=()=>stop('Mesh worker response unreadable');

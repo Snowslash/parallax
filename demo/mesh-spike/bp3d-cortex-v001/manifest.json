@@ -1,0 +1,10 @@
+{
+  "outer": {
+    "file": "femur.obj",
+    "sha256": "c941760d62e6e42546202830e1322812bae3f5de325320a3295ed10c63c2956f"
+  },
+  "core": {
+    "file": "core.obj",
+    "sha256": "d142649bab1ecce717f1c58c50f2043fcba2a5bf20e6e399103deec21888c04c"
+  }
+}

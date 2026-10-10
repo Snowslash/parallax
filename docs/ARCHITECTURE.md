@@ -67,7 +67,7 @@ Before accepting a result, the controller checks pose and image dimensions. A fr
 
 ## Femur: mesh integration and worker lifecycle
 
-[`mesh-spike/geometry.mjs`](../demo/mesh-spike/geometry.mjs) exposes `parseOBJ`, `buildMesh`, `integrateRay`, `meshCamera` and `renderMeshProjection`.
+[`mesh-spike/geometry.mjs`](../demo/mesh-spike/geometry.mjs) wraps the strict generic functions in [`integrator.mjs`](../demo/mesh-spike/integrator.mjs) for the current BodyParts3D pair. The generic integrator also supports historical v001 reproduction; its numerical functions retain their original behaviour.
 
 The worker loads two triangle meshes, verifies their SHA-256 hashes, parses them and builds a median-split triangle bounding-volume hierarchy for each. These structures are cached for the worker's lifetime. [`worker.mjs`](../demo/mesh-spike/worker.mjs) sends a copy of the outer surface to the explanatory scene; that Three.js surface is not used for ray integration. See [model data](MODEL.md) for asset coordinates and topology.
 
@@ -76,9 +76,11 @@ For each detector ray, the numerical path is:
 1. Traverse each mesh's hierarchy to find triangle crossings along the line.
 2. Sort and group crossing events, distinguish entry from exit, and clip the resulting intervals to the finite source–detector segment.
 3. Require every core interval to lie within an outer interval. Compute `shellLength = outerLength − coreLength`.
-4. Compute `attenuation = 0.04 × shellLength + 0.008 × coreLength`, with lengths in mm. Core material is counted once.
+4. Compute layered `attenuation = 0.04 × shellLength + 0.008 × coreLength` and uniform `attenuation = 0.02 × outerLength`, with lengths in numeric mm. Core material is counted once. Both images share the same detector rays and fixed mapping.
 
-The initial pivot is `[24,7,-68]` mm. `meshCamera` uses the same rig transform as Explore but a 320 mm square field. The page offers 128² and 256² sampling without automatic resolution changes.
+The **Image model** selector switches the cached Cortex + core / Uniform images from the same accepted acquisition; it does not change pose or request another render. A pair is rejected as a unit if any ray is unresolved.
+
+Both meshes retain source axes and are translated at load time by subtracting `[91.10159999999999,-80.8791,744.239]`; no rotation, scale or crop is applied. Source units are treated numerically as mm, not independently calibrated. Initial acquisition is zero orbit, tilt and XYZ translation. `meshCamera` uses the same rig transform as Explore but a 320 mm square field. The page offers 128² and 256² sampling without automatic resolution changes. The pivot `[24,7,-68]` belongs only to historical procedural v001 reproduction.
 
 Coplanar/near-parallel boundaries, mixed-sign or coincident crossings and inconsistent nesting can produce unresolved rays. There is no ray perturbation or silent mesh repair. `renderMeshProjection` returns `invalidCount` and diagnostics; both the worker and [`MeshController`](../demo/mesh-spike/controller.mjs) reject a frame unless `invalidCount === 0`.
 

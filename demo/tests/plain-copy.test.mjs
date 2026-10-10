@@ -31,7 +31,7 @@ test('working pages link to one about page instead of repeating disclaimers',()=
   const about=read('licences.html');
   assert.equal((about.match(/Not for clinical use/gi)||[]).length,1);
   assert.match(about,/not anatomically validated/i);
-  assert.match(about,/PARTIAL/);assert.match(about,/250 ms/);
+  assert.match(about,/authored inner core/);assert.match(about,/current publisher grant/);
 });
 test('all challenge prompts and takeaways are short and concrete',()=>{
   for(const c of lesson.cases){

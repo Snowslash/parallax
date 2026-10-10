@@ -81,7 +81,7 @@ def main():
     samples=json.loads((here/'outputs/actual-ray-samples.json').read_text())
     meshes={}
     for name in ('outer','core'):
-        path=here.parent.parent/'demo/mesh-spike/assets'/f'{name}.obj'
+        path=here/'assets'/f'{name}.obj'
         actual_hash=hashlib.sha256(path.read_bytes()).hexdigest()
         if actual_hash != samples['assets'][name]['sha256']:
             raise ValueError('asset identity mismatch')

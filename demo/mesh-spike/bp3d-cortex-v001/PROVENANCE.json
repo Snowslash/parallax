@@ -1,0 +1,54 @@
+{
+  "candidate_id": "bp3d-cortex-v001",
+  "licence": "CC BY 4.0",
+  "anatomically_validated": false,
+  "source": {
+    "publisher": "BodyParts3D / The Database Center for Life Science",
+    "release": "4.0",
+    "concept_id": "FMA24475",
+    "element_id": "FJ3259",
+    "archive_url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_BP3D_4.0_obj_99.zip",
+    "member": "partof_BP3D_4.0_obj_99/FJ3259.obj",
+    "original_obj_sha256": "4b919097be4820784d199838c69b1fe10afba703f0d6680a3ecab58460fb6549"
+  },
+  "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "publisher_licence_url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "historical_notice": "Original OBJ comments retain CC Attribution-Share Alike 2.1 Japan. Current publisher licence and README text specify CC BY 4.0; README also retains an old BY-SA summary link. This distribution relies on the current publisher grant, not MIT or legal certification.",
+  "outer_changes": "Exact welding merges coincident vertex indices only; triangle geometry and whole bone retained. No rotation, scale, crop, smoothing or decimation.",
+  "core_method": "Authored inward area-weighted vertex-normal offsets; u=(z-zmin)/(zmax-zmin); displacement=0.75*(1+2*sin(pi*u)^2). Unchanged connectivity; no fairing. Not tissue segmentation or measured physiology.",
+  "units": "Source coordinates treated numerically as mm; physical calibration not independently verified.",
+  "axes": "Source axes retained; anatomical orientation not independently verified.",
+  "runtime_transform": {
+    "operation": "source minus offset",
+    "offset": [
+      91.10159999999999,
+      -80.8791,
+      744.239
+    ],
+    "rotation": "none",
+    "scale": 1,
+    "crop": "none"
+  },
+  "mesh_counts": {
+    "outer": {
+      "exported_vertices": 1604,
+      "exported_triangles": 3204
+    },
+    "core": {
+      "exported_vertices": 1604,
+      "exported_triangles": 3204
+    }
+  },
+  "assets": {
+    "demo/mesh-spike/bp3d-cortex-v001/femur.obj": "c941760d62e6e42546202830e1322812bae3f5de325320a3295ed10c63c2956f",
+    "demo/mesh-spike/bp3d-cortex-v001/core.obj": "d142649bab1ecce717f1c58c50f2043fcba2a5bf20e6e399103deec21888c04c"
+  },
+  "legacy_metadata": "legacy-model-provenance.json",
+  "limitations": [
+    "Authored core, not recovered source tissue",
+    "Bounded floating-point geometry checks, not exact proof",
+    "No clinical, anatomical or learner approval",
+    "Historical evidence/bone-*.json describes procedural v001 only"
+  ]
+}

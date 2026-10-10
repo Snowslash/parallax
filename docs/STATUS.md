@@ -2,9 +2,11 @@
 
 ## Coverage
 
-The guided and 3D Explore tests cover acquisition geometry, state transitions and image correspondence. The Femur experiment has an overall **PARTIAL** verdict: numerical and state checks passed for the sampled configurations, but 256² rendering missed the 250 ms settled-input target.
+The guided and 3D Explore tests cover acquisition geometry, state transitions and image correspondence. Current Femur uses the BodyParts3D outer surface and authored core described in [model data](MODEL.md). It remains experimental: bounded geometric and paired-projection checks do not establish anatomical validity, radiographic realism or learning effectiveness. Current-model analytic and exact matched-projection integration tests are separate from the historical evidence below.
 
-## Femur numerical results — 6 October 2026
+The historical procedural v001 experiment had a **PARTIAL** verdict: numerical and state checks passed for the sampled configurations, but 256² rendering missed the 250 ms settled-input target. Neither its timings nor its independent actual-mesh comparisons are measurements of the current model. No new public-release performance result is asserted here.
+
+## Historical procedural v001 numerical results — 6 October 2026
 
 The linked evidence records its inputs, source hashes and test configuration. These are recorded measurements, not a fresh benchmark of the reader's machine. Use the [reproduction commands](REPRODUCING.md) to generate new results.
 

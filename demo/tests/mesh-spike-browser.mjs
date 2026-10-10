@@ -1,15 +1,23 @@
 // Real same-origin DOM/worker/WebGL checks; accepts a narrow iframe document.
 const delay=(w,n)=>new Promise(r=>w.setTimeout(r,n));
 export async function imageAgreement(){
-  const cases=[{orbit:0,tilt:0,x:24,y:7,z:-68},{orbit:23.7,tilt:-17.3,x:7,y:-13,z:-21},{orbit:41.3,tilt:53.1,x:44,y:12,z:-120}],out=[];
-  const canvas=document.querySelector('#mesh-projection');
-  for(const pose of cases){
-    for(const [id,value]of Object.entries(pose)){const e=document.getElementById(id);e.value=value;e.dispatchEvent(new Event('input',{bubbles:true}));}
-    const end=Date.now()+10000;while(document.body.dataset.pending==='true'){if(Date.now()>end)throw new Error('agreement timeout');await delay(window,10);}
-    const rgba=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;
-    const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',rgba)),v=>v.toString(16).padStart(2,'0')).join('');
-    out.push({pose:JSON.parse(canvas.dataset.pose),size:canvas.width,rgbaSHA256:hash,invalidCount:Number(canvas.dataset.invalidCount)});
-  }return out;
+  const report=await (await fetch('../spikes/008-bodyparts3d-cortex/evidence/report.json')).json(),out=[];
+  const canvas=document.querySelector('#mesh-projection'),input=(id,value)=>{const e=document.getElementById(id);e.value=value;e.dispatchEvent(new Event('input',{bubbles:true}));};
+  for(const expected of report.frames){
+    input('resolution',expected.size);for(const [id,value]of Object.entries(expected.pose))input(id,value);
+    const end=Date.now()+60000;while(document.body.dataset.pending==='true'){if(Date.now()>end)throw new Error('agreement timeout');await delay(window,10);}
+    if(document.body.dataset.error==='true')throw new Error(document.querySelector('#mesh-status').textContent);
+    const frame=canvas.dataset.frame,pose=canvas.dataset.pose;
+    for(const mode of ['layered','uniform']){
+      input('material-mode',mode);
+      const rgba=canvas.getContext('2d',{willReadFrequently:true}).getImageData(0,0,canvas.width,canvas.height).data;
+      const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',rgba)),v=>v.toString(16).padStart(2,'0')).join('');
+      const actual=JSON.parse(canvas.dataset.pose),matchingPose=Object.entries(expected.pose).every(([k,v])=>actual[k]===v);
+      const pass=matchingPose&&canvas.width===expected.size&&hash===expected.files[mode].sha256&&canvas.dataset.frame===frame&&canvas.dataset.pose===pose&&canvas.dataset.invalidCount==='0';
+      out.push({tag:expected.tag,mode,pose:actual,size:canvas.width,rgbaSHA256:hash,expectedSHA256:expected.files[mode].sha256,pass});
+    }
+  }
+  input('material-mode','layered');return out;
 }
 export async function run(doc=document){
   const w=doc.defaultView,$=s=>doc.querySelector(s),checks=[],errors=[];
@@ -19,7 +27,10 @@ export async function run(doc=document){
   const input=(id,value)=>{const e=$('#'+id);e.value=value;e.dispatchEvent(new w.Event('input',{bubbles:true}));};
   const settle=async()=>{const end=Date.now()+60000;while(doc.body.dataset.pending!=='false'||!$('#mesh-projection').dataset.pose){if(doc.body.dataset.error==='true'||Date.now()>end)throw new Error($('#mesh-status').textContent);await delay(w,10);}};
   const pose=()=>JSON.parse($('#mesh-projection').dataset.pose),image=()=>$('#mesh-projection').toDataURL();
-  await settle();$('#reset-beam').click();await settle();const home=image();
+  await settle();input('material-mode','layered');$('#reset-beam').click();await settle();const home=image();
+  const homeFrame=$('#mesh-projection').dataset.frame,homePose=$('#mesh-projection').dataset.pose;
+  input('material-mode','uniform');check('same-frame material switch changes only presentation',image()!==home&&$('#mesh-projection').dataset.frame===homeFrame&&$('#mesh-projection').dataset.pose===homePose&&doc.body.dataset.pending==='false');
+  input('material-mode','layered');check('layered pixels restore exactly without acquisition',image()===home&&$('#mesh-projection').dataset.frame===homeFrame);
   check('bone-only page and real explanatory WebGL',doc.body.dataset.scene==='ready'&&!$('#commit')&&!$('#pin-current'));
   input('orbit',37.4);input('tilt',19.2);input('x',30);input('y',-23);input('z',-57);await settle();
   check('all acquisition axes reach matching image',pose().orbit===37.4&&pose().tilt===19.2&&pose().x===30&&pose().y===-23&&pose().z===-57&&image()!==home);
@@ -64,7 +75,7 @@ export async function coldLoads(count=5,doc=document){
 export async function workerFailure(){
   const {MeshController}=await import('../mesh-spike/controller.mjs'),{createWorkerRenderer}=await import('../mesh-spike/transport.mjs');
   let worker;class CapturedWorker{constructor(url,options){worker=new Worker(url,options);return worker;}}
-  const t=createWorkerRenderer({WorkerClass:CapturedWorker,timeoutMs:2000}),c=new MeshController(t.render,()=>{}),home={orbit:0,tilt:0,x:24,y:7,z:-68};
+  const t=createWorkerRenderer({WorkerClass:CapturedWorker,timeoutMs:2000}),c=new MeshController(t.render,()=>{}),home={orbit:0,tilt:0,x:0,y:0,z:0};
   const settle=async()=>{const end=Date.now()+10000;while(c.state.pending){if(Date.now()>end)throw new Error('fault-check timeout');await delay(window,20);}};
   c.stage(home,128);await settle();const held=c.state.frame;if(!held)throw new Error(c.state.error);
   worker.terminate();c.stage({...home,orbit:31.2},128);await settle();
@@ -81,7 +92,7 @@ export async function measure(size,doc=document){
   function raf(t){if(!running)return;rafGaps.push(t-last);last=t;w.requestAnimationFrame(raf);}w.requestAnimationFrame(raf);
   const timer=w.setInterval(()=>{const t=w.performance.now();timerGaps.push(t-lastTimer);lastTimer=t;},16);
   for(let i=-2;i<20;i++){
-    const j=i+2,pose={orbit:(j*17.3+11.7)%360,tilt:(j%7-3)*8.1,x:24+(j%3-1)*9.2,y:7+(j%5-2)*11.3,z:-68+(j%4-1.5)*6.4};
+    const j=i+2,pose={orbit:(j*17.3+11.7)%360,tilt:(j%7-3)*8.1,x:(j%3-1)*9.2,y:(j%5-2)*11.3,z:(j%4-1.5)*6.4};
     const start=w.performance.now();for(const [id,v]of Object.entries(pose))input(id,v);await settle();
     if(i>=0)samples.push({pose:JSON.parse($('#mesh-projection').dataset.pose),latencyMs:w.performance.now()-start,workerMs:Number($('#mesh-projection').dataset.renderMs),frame:Number($('#mesh-projection').dataset.frame)});
   }

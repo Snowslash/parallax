@@ -39,7 +39,8 @@ The pinned NumPy release requires Python >=3.12. The numerical checks have been 
 | `spikes/001-projection-geometry/` | Primitive ray integration and projection checks |
 | `spikes/002-guided-lessons/` | Guided-case generation and cached-image evidence |
 | `spikes/004-3d-beam/` | Independent checks of 3D acquisition geometry |
-| `spikes/005-mesh-projection/` | Mesh fixtures, raw-frame export and independent oracle |
+| `spikes/005-mesh-projection/` | Historical procedural v001 assets, mesh fixtures, raw-frame export and independent oracle |
+| `spikes/008-bodyparts3d-cortex/` | Current model framing and recorded paired-image/raw-array hash references |
 | `evidence/` | Recorded numerical and browser measurements |
 | `scripts/check.py` | Integrity, link and test runner |
 | `MANIFEST.json` | File inventory and SHA-256 snapshot |
@@ -75,6 +76,8 @@ python -B scripts/check-pages-routing.py --base http://127.0.0.1:9315
 The check validates crawl-file MIME types and bodies, parses the landing-only sitemap, checks true 404s, clean URLs and query-preserving aliases, and compares every other published demo resource against local bytes. It accepts loopback URLs only. This is local emulation, not proof of deployed Cloudflare behaviour; deployment and live acceptance are separate gates.
 
 ## Independent numerical checks
+
+The `spikes/005-mesh-projection/` commands below reproduce **historical procedural v001**, using `assets/outer.obj` and `assets/core.obj` there and the strict generic integrator. They do not reproduce the current BodyParts3D model. The unchanged `evidence/bone-*.json` files retain the old asset hashes and measurements. Current-model analytic and exact matched-projection integration tests run with the Node suite; distinguish those checks from the historical independent Python oracle. See [model identity](model-provenance.json).
 
 ```sh
 python scripts/check.py --numerical
@@ -116,7 +119,7 @@ await (await import('./tests/beam-browser.mjs')).run()
 await (await import('./tests/mesh-spike-browser.mjs')).run()
 ```
 
-`mesh-spike-browser.mjs` also exports `workerFailure()`, `imageAgreement()`, `measure(128)`, `measure(256)` and `coldLoads()`. Save the returned objects with the browser, viewport and hardware details when comparing performance.
+`mesh-spike-browser.mjs` also exports `workerFailure()`, `imageAgreement()`, `measure(128)`, `measure(256)` and `coldLoads()`. For `imageAgreement()`, serve the repository root instead of only `demo/` and open `/demo/mesh-spike.html`: that check reads the reference report under `spikes/008-bodyparts3d-cortex/`. The report retains original raw-array identities; the Node suite regenerates and hashes those arrays in memory rather than shipping the original raw buffers. Save returned objects with browser, viewport and hardware details when comparing performance.
 
 For layout, theme, font and contrast checks on any page:
 

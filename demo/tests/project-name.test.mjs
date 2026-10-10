@@ -12,8 +12,8 @@ const pages=['index.html','lab.html','guided.html','beam3d.html','mesh-spike.htm
 // Frozen input headers and the source-bound historical generator are evidence,
 // not active branding. Existing provenance tests bind their unchanged hashes.
 const historicalInputs=new Set([
-  'demo/mesh-spike/assets/outer.obj',
-  'demo/mesh-spike/assets/core.obj',
+  'spikes/005-mesh-projection/assets/outer.obj',
+  'spikes/005-mesh-projection/assets/core.obj',
   'spikes/001-projection-geometry/run.py',
 ]);
 
@@ -31,7 +31,8 @@ test('public README, safety and original-work notices use Parallax',()=>{
   assert.match(read('README.md'),/^# Parallax\n/);
   assert.match(read('docs/SAFETY.md'),/Parallax is a synthetic teaching prototype/);
   assert.match(read('LICENSE'),/Copyright \(c\) 2026 Parallax contributors/);
-  assert.equal(read('LICENSE'),read('demo/LICENSE.txt'));
+  assert.ok(read('demo/LICENSE.txt').endsWith(read('LICENSE')));
+  assert.match(read('demo/LICENSE.txt'),/does not cover the BodyParts3D/);
 });
 
 test('the package has no stale project branding outside frozen historical inputs',()=>{

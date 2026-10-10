@@ -31,4 +31,4 @@ For teaching and exploration, not clinical use. See [limitations](docs/SAFETY.md
 
 ## Licence
 
-[MIT](LICENSE). Bundled libraries and fonts retain [their own licences](THIRD_PARTY_NOTICES.md).
+Original code and procedural teaching assets: [MIT](LICENSE). The BodyParts3D-derived femur and authored core use the publisher’s CC BY 4.0 grant, not MIT; see [anatomy attribution and the retained historical licence notice](docs/BODYPARTS3D-LICENCE.md). Bundled libraries and fonts retain [their own licences](THIRD_PARTY_NOTICES.md).

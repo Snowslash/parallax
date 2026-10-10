@@ -43,16 +43,16 @@ test('guided gates, equal image pair and unique IDs are retained',()=>{
 test('3D tools and mesh worker safety remain distinct',()=>{
   const html=read('beam3d.html');for(const id of ['rig-scene','tool-angle','tool-position','tool-look','orbit','tilt','x','y','z','reset-beam','reset-observer','pin-current','projection','reference-image','render-status'])assert.ok(html.includes(`id="${id}"`),id);
   assert.match(html,/wire.*visible/i);assert.match(html,/worker-src 'self'/);
-  const mesh=read('mesh-spike.html');assert.match(mesh,/href="licences.html"/);assert.match(read('licences.html'),/PARTIAL/);assert.match(read('licences.html'),/not anatomically validated/);assert.match(mesh,/worker-src 'self'/);assert.doesNotMatch(mesh,/id="commit"|id="pin-current"/);
+  const mesh=read('mesh-spike.html');assert.match(mesh,/href="licences.html"/);assert.match(read('licences.html'),/authored inner core/);assert.match(read('licences.html'),/not anatomically validated/);assert.match(mesh,/worker-src 'self'/);assert.doesNotMatch(mesh,/id="commit"|id="pin-current"/);
 });
 test('locally pinned Three.js retains exact licence and module provenance',()=>{
   const base=new URL('vendor/three-r186/',demo),manifest=JSON.parse(read('provenance.json',base));assert.equal(manifest.version,'0.186.0');assert.equal(manifest.licence,'MIT');
   for(const [name,entry]of Object.entries(manifest.assets))assert.equal(createHash('sha256').update(readFileSync(new URL(name,base))).digest('hex'),entry.sha256);
   assert.match(read('LICENSE',root),/MIT License/);assert.match(read('licences.html'),/vendor\/three-r186\/LICENSE/);
 });
-test('frozen model identity and published cached frames are bound to provenance',()=>{
+test('current model identity and published cached frames are bound to provenance',()=>{
   const manifest=JSON.parse(read('model-provenance.json',new URL('docs/',root)));
-  assert.equal(manifest.licence,'MIT');assert.equal(manifest.anatomically_validated,false);
+  assert.equal(manifest.licence,'CC BY 4.0');assert.equal(manifest.anatomically_validated,false);
   for(const [path,hash]of Object.entries(manifest.assets))assert.equal(createHash('sha256').update(readFileSync(new URL(path,root))).digest('hex'),hash);
   const lesson=JSON.parse(read('assets/v2/lesson.json'));
   for(const c of lesson.cases)for(const f of c.frames)assert.equal(createHash('sha256').update(readFileSync(new URL(f.image,demo))).digest('hex'),f.sha256);

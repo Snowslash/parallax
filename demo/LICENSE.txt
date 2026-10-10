@@ -1,3 +1,12 @@
+Scope: original Parallax code, documentation and procedural teaching assets.
+This MIT grant does not cover the BodyParts3D-derived femur or core in
+mesh-spike/bp3d-cortex-v001/. Those assets rely on the publisher's
+CC BY 4.0 grant; see LICENSE.md and PROVENANCE.json in that directory.
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+Historical OBJ comments retain CC Attribution-Share Alike 2.1 Japan;
+the accompanying anatomy notice explains the discrepancy. Bundled libraries
+and fonts retain their own licences, linked from licences.html.
+
 MIT License
 
 Copyright (c) 2026 Parallax contributors

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="publication.css?v=estate-1">
 
 <link rel="stylesheet" href="lab.css?v=estate-3">
-<script type="module" src="mesh-spike/app.mjs?v=copy-1"></script>
+<script type="module" src="mesh-spike/app.mjs?v=bp3d-cortex-1"></script>
 </head>
 <body data-page="bone" data-pending="true" data-error="false">
 <a class="skip-link" href="#lesson">Skip to the lab</a>
@@ -21,14 +21,14 @@
 <main id="lesson">
 <header class="page-intro"><h1 class="estate-page-title estate-page-title--app">Femur</h1><p>Move the rig to see how the image changes.</p></header>
 <div class="workbench">
-<section class="image-panel" aria-labelledby="image-title"><h2 id="image-title">Projection</h2><figure><canvas id="mesh-projection" width="256" height="256" role="img" aria-label="Waiting for first bone projection"></canvas><figcaption><strong id="displayed-size">No image yet</strong><br><span id="displayed-pose">Waiting for first image</span></figcaption></figure><p class="readout">Requested pose</p><p id="requested-pose">Initialising</p><p id="mesh-status" role="status">Loading the model…</p><button id="retry" hidden>Retry</button><p class="quiet">Fixed field &amp; contrast. Brighter means more attenuation.</p></section>
+<section class="image-panel" aria-labelledby="image-title"><h2 id="image-title">Projection</h2><label for="material-mode">Image model</label> <select id="material-mode"><option value="layered">Cortex + core</option><option value="uniform">Uniform</option></select><figure><canvas id="mesh-projection" width="256" height="256" role="img" aria-label="Waiting for first bone projection"></canvas><figcaption><strong id="displayed-size">No image yet</strong><br><span id="displayed-pose">Waiting for first image</span></figcaption></figure><p class="readout">Requested pose</p><p id="requested-pose">Initialising</p><p id="mesh-status" role="status">Loading the model…</p><button id="retry" hidden>Retry</button><p class="quiet">Same view, fixed field &amp; contrast. Brighter means more attenuation.</p></section>
 <section aria-labelledby="rig-title"><h2 id="rig-title">Rig and femur</h2><div class="scene-wrap"><canvas id="mesh-scene" role="img" aria-label="3D femur, source, beam and detector"></canvas><span class="inset-label">Femur close-up · observer only</span></div><p id="scene-note">Looking around does not change the projection.</p>
 <fieldset><legend>Move the rig</legend>
 <label for="orbit">Orbit <output id="orbit-value"></output></label><input id="orbit" type="range" min="0" max="359.9" step="0.1" value="0">
 <label for="tilt">Angulation <output id="tilt-value"></output></label><input id="tilt" type="range" min="-60" max="60" step="0.1" value="0">
-<label for="x">X · lateral (mm) <output id="x-value"></output></label><input id="x" type="range" min="-120" max="120" step="0.1" value="24">
-<label for="y">Y · posterior (mm) <output id="y-value"></output></label><input id="y" type="range" min="-200" max="200" step="0.1" value="7">
-<label for="z">Z · superior (mm) <output id="z-value"></output></label><input id="z" type="range" min="-120" max="120" step="0.1" value="-68">
+<label for="x">Source X (mm) <output id="x-value"></output></label><input id="x" type="range" min="-120" max="120" step="0.1" value="0">
+<label for="y">Source Y (mm) <output id="y-value"></output></label><input id="y" type="range" min="-200" max="200" step="0.1" value="0">
+<label for="z">Source Z (mm) <output id="z-value"></output></label><input id="z" type="range" min="-120" max="120" step="0.1" value="0">
 <label for="resolution">Detector sampling</label><select id="resolution"><option value="128">128 × 128</option><option value="256" selected>256 × 256</option></select><button id="reset-beam">Reset beam</button><p id="distance"></p>
 </fieldset>
 <fieldset><legend>Look around · observer only</legend><label for="observer-yaw">Observer yaw</label><input id="observer-yaw" type="range" min="-180" max="180" step="1" value="-35"><label for="observer-elevation">Observer elevation</label><input id="observer-elevation" type="range" min="-70" max="70" step="1" value="22"><label for="observer-zoom">Overview zoom</label><input id="observer-zoom" type="range" min="0.7" max="1.6" step="0.1" value="1"><button id="reset-observer">Reset observer</button></fieldset>

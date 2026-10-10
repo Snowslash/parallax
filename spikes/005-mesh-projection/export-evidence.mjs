@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {deflateSync} from 'node:zlib';
 import {performance} from 'node:perf_hooks';
-import {parseOBJ,buildMesh,integrateRay,renderMeshProjection,DEFAULT_MESH_POSE,FOV_MM,MU_SHELL,MU_CORE,NUMERICS} from '../../demo/mesh-spike/geometry.mjs';
+import {parseOBJ,buildMesh,integrateRay,renderMeshProjection,DEFAULT_MESH_POSE,FOV_MM,MU_SHELL,MU_CORE,NUMERICS} from '../../demo/mesh-spike/integrator.mjs';
 import {boxOBJ,OUTER,CORE,POSES,referenceCamera,materialReference,TOLERANCES} from './fixtures.mjs';
 export function encodePNG(width,height,pixels){
   const chunk=(type,data)=>{const b=Buffer.alloc(data.length+12);b.writeUInt32BE(data.length);b.write(type,4);data.copy(b,8);let crc=0xffffffff;for(const byte of b.subarray(4,-4)){crc^=byte;for(let k=0;k<8;k++)crc=(crc>>>1)^((crc&1)?0xedb88320:0);}b.writeUInt32BE((crc^0xffffffff)>>>0,b.length-4);return b;};
@@ -32,7 +32,7 @@ const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 export function exportEvidence(){
   const out=fileURLToPath(new URL('./outputs/',import.meta.url));mkdirSync(out,{recursive:true});
   const meshes={},assets={},buildTimings={};
-  for(const name of ['outer','core']){const bytes=readFileSync(new URL(`../../demo/mesh-spike/assets/${name}.obj`,import.meta.url));assets[name]={sha256:hash(bytes),bytes:bytes.length};const begin=performance.now(),parsed=parseOBJ(bytes.toString('utf8')),parsedAt=performance.now();meshes[name]=buildMesh(parsed);buildTimings[name]={parseMs:parsedAt-begin,buildMs:performance.now()-parsedAt};}
+  for(const name of ['outer','core']){const bytes=readFileSync(new URL(`./assets/${name}.obj`,import.meta.url));assets[name]={sha256:hash(bytes),bytes:bytes.length};const begin=performance.now(),parsed=parseOBJ(bytes.toString('utf8')),parsedAt=performance.now();meshes[name]=buildMesh(parsed);buildTimings[name]={parseMs:parsedAt-begin,buildMs:performance.now()-parsedAt};}
   const expected={outer:'1367defee70c21312f504b42d07d2e2208e0ec2d2aa309bcb0ed3eace32fda4d',core:'05a504a797ef08d37aef092dba0de1c187b9a7a43d94c808489e35bb9abc8a99'};
   for(const k of Object.keys(expected))if(assets[k].sha256!==expected[k])throw new Error(`Frozen ${k} hash mismatch`);
   const common={candidate:'ftv-proximal-femur-left-v001',assets,units:'mm',assetToWorld:'identity',axes:{x:'subject left/lateral',y:'posterior',z:'superior'},FOV_MM,MU_SHELL,MU_CORE,mapping:'round(255*(1-exp(-attenuation)))',sourcePivotMm:800,sddMm:1200,rawFormat:'row-major Float64 little-endian; row increases down, column right; pixel centres',invalidPolicy:'NaN raw values, magenta RGBA, full invalidRays list; no invalid frame acceptance',numerics:NUMERICS};
