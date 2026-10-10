@@ -22,7 +22,16 @@ test('HTML links, resources and local module imports resolve inside the package'
     if(!/\.(?:html|mjs|js)$/.test(u.pathname))continue;
     const text=readFileSync(u,'utf8');
     const refs=u.pathname.endsWith('.html')?[...text.matchAll(/(?:href|src)="([^"]+)"/g)].map(m=>m[1]):[...text.matchAll(/(?:from\s*|import\s*\(|new URL\s*\()\s*['"](\.[^'"`$]+)['"]/g)].map(m=>m[1]);
-    for(const ref of refs){if(/^(?:data:|https?:|#)/.test(ref))continue;const target=new URL(ref,u);target.search='';target.hash='';assert.ok(target.href.startsWith(root.href),ref);assert.ok(existsSync(target),`${u.pathname}: ${ref}`);}
+    for(const ref of refs){
+      if(/^(?:data:|https?:|#)/.test(ref))continue;
+      // Root-relative references resolve against the served demo, not the host filesystem.
+      let target=new URL(ref.startsWith('/')?'./'+ref.slice(1):ref,ref.startsWith('/')?demo:u);
+      target.search='';target.hash='';
+      assert.ok(target.href.startsWith(root.href),ref);
+      if(u.pathname.endsWith('.html')&&target.pathname.endsWith('/'))target=new URL('index.html',target);
+      else if(!existsSync(target)&&u.pathname.endsWith('.html'))target=new URL(target.href+'.html');
+      assert.ok(existsSync(target),`${u.pathname}: ${ref}`);
+    }
   }
 });
 test('guided gates, equal image pair and unique IDs are retained',()=>{

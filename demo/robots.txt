@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://parallax.sangeev.me/sitemap.xml

@@ -60,6 +60,20 @@ python scripts/check.py --skip-snapshot
 
 This skips the snapshot comparison, not the link, asset or functional tests. Geometry changes still need new independent numerical evidence.
 
+## Cloudflare Pages routing checks
+
+Cloudflare Pages serves `demo/` without a build. Its native clean-URL handling maps `/lab`, `/guided`, `/beam3d`, `/mesh-spike` and `/licences` to their HTML documents; `.html` aliases redirect to those routes and `/index.html` redirects to `/`. Keep the top-level `404.html`: it disables Pages' implicit homepage fallback for unknown paths, including missing assets. Its links and resources are root-relative so nested missing URLs work.
+
+`robots.txt` allows crawling and points to the XML sitemap. The sitemap lists only the landing root. This is not a noindex policy for lab or experimental pages; their indexing policy has not been changed.
+
+Python's simple HTTP server remains suitable for app use through `.html` links, but does not emulate Pages clean URLs. With an already available Wrangler installation, start a **local** Pages preview on loopback, using a compatibility date supported by its cached workerd binary, then run:
+
+```sh
+python -B scripts/check-pages-routing.py --base http://127.0.0.1:9315
+```
+
+The check validates crawl-file MIME types and bodies, parses the landing-only sitemap, checks true 404s, clean URLs and query-preserving aliases, and compares every other published demo resource against local bytes. It accepts loopback URLs only. This is local emulation, not proof of deployed Cloudflare behaviour; deployment and live acceptance are separate gates.
+
 ## Independent numerical checks
 
 ```sh
