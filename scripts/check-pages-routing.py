@@ -32,11 +32,19 @@ def main():
         with response:
             body = response.read()
             row = {'path': path, 'status': response.status, 'type': response.headers.get_content_type(), 'location': response.headers.get('Location')}
+            headers = response.headers
         errors = []
         if row['status'] != status: errors.append(f'expected status {status}')
         if file is not None and body != (args.root/'demo'/file).read_bytes(): errors.append('body differs from '+file)
         if content_type and row['type'] != content_type: errors.append('expected type '+content_type)
         if location and row['location'] != location: errors.append('expected redirect '+location)
+        if row['status'] in {200, 404}:
+            for name, expected in [('X-Frame-Options', 'DENY'), ('X-Content-Type-Options', 'nosniff'), ('Referrer-Policy', 'no-referrer')]:
+                if headers.get(name) != expected: errors.append('missing or incorrect '+name)
+            csp = headers.get('Content-Security-Policy', '')
+            for directive in ["script-src 'self'", "worker-src 'self'", "connect-src 'self'", "frame-ancestors 'none'"]:
+                if directive not in csp.split('; '): errors.append('missing CSP '+directive)
+            if headers.get('Access-Control-Allow-Origin') is not None: errors.append('unexpected CORS header')
         row.update(sha256=hashlib.sha256(body).hexdigest(), errors=errors)
         rows.append(row)
         failures.extend(path+': '+error for error in errors)
@@ -61,7 +69,7 @@ def main():
         get('/'+name+'.html?probe=1', 308, location='/'+name+'?probe=1')
     manifest = json.loads((args.root/'MANIFEST.json').read_text())['files']
     for name in sorted(manifest):
-        if name.startswith('demo/') and not name.endswith('.html'):
+        if name.startswith('demo/') and not name.endswith('.html') and not Path(name).name.startswith('_'):
             get('/'+name[5:], 200, file=name[5:])
     print(json.dumps({'requests': len(rows), 'failures': failures, 'responses': rows}, indent=2))
     return bool(failures)

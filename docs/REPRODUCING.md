@@ -63,7 +63,9 @@ This skips the snapshot comparison, not the link, asset or functional tests. Geo
 
 ## Cloudflare Pages routing checks
 
-Cloudflare Pages serves `demo/` without a build. Its native clean-URL handling maps `/lab`, `/guided`, `/beam3d`, `/mesh-spike` and `/licences` to their HTML documents; `.html` aliases redirect to those routes and `/index.html` redirects to `/`. Keep the top-level `404.html`: it disables Pages' implicit homepage fallback for unknown paths, including missing assets. Its links and resources are root-relative so nested missing URLs work.
+Cloudflare Pages serves `demo/` without a build. `demo/_headers` adds the response CSP, framing and browser-permission restrictions, and removes the default wildcard CORS header. Same-origin workers, model fetches and self-hosted assets remain allowed. These headers are applied by Pages, not Python's simple HTTP server.
+
+Pages' native clean-URL handling maps `/lab`, `/guided`, `/beam3d`, `/mesh-spike` and `/licences` to their HTML documents; `.html` aliases redirect to those routes and `/index.html` redirects to `/`. Keep the top-level `404.html`: it disables Pages' implicit homepage fallback for unknown paths, including missing assets. Its links and resources are root-relative so nested missing URLs work.
 
 `robots.txt` allows crawling and points to the XML sitemap. The sitemap lists only the landing root. This is not a noindex policy for lab or experimental pages; their indexing policy has not been changed.
 
