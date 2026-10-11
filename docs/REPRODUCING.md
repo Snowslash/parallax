@@ -65,7 +65,7 @@ This skips the snapshot comparison, not the link, asset or functional tests. Geo
 
 Cloudflare Pages serves `demo/` without a build. `demo/_headers` adds the response CSP, framing and browser-permission restrictions, and removes the default wildcard CORS header. Same-origin workers, model fetches and self-hosted assets remain allowed. These headers are applied by Pages, not Python's simple HTTP server.
 
-Pages' native clean-URL handling maps `/lab`, `/guided`, `/beam3d`, `/mesh-spike` and `/licences` to their HTML documents; `.html` aliases redirect to those routes and `/index.html` redirects to `/`. Keep the top-level `404.html`: it disables Pages' implicit homepage fallback for unknown paths, including missing assets. Its links and resources are root-relative so nested missing URLs work.
+Pages' native clean-URL handling maps `/lab`, `/explore`, `/lessons`, `/guided`, `/beam3d`, `/mesh-spike`, `/femur-lesson` and `/licences` to their HTML documents; `.html` aliases redirect to those routes and `/index.html` redirects to `/`. Keep the top-level `404.html`: it disables Pages' implicit homepage fallback for unknown paths, including missing assets. Its links and resources are root-relative so nested missing URLs work.
 
 `robots.txt` allows crawling and points to the XML sitemap. The sitemap lists only the landing root. This is not a noindex policy for lab or experimental pages; their indexing policy has not been changed.
 
@@ -109,6 +109,8 @@ This rewrites `demo/assets/v2/` and the guided numerical outputs. It also regene
 The Femur OBJ files are inputs rather than generated outputs of this repository. Their authoring method, coordinates and hashes are documented in [model data](MODEL.md).
 
 ## Browser checks
+
+For the new femur lesson, acquire and save its model-defined AP and lateral, use optional pointer or keyboard calipers, enter an answer and reason, then commit. Verify duplicate AP or off-reference/off-frame acquisitions cannot unlock the answer, observer changes leave the images unchanged and restarting/changing case clears the saved pair and hides the whole 3D wire. [The lesson contract](FEMUR-LESSON.md) explains why its measurement is a proxy rather than clinical TAD.
 
 With the app served as above, open each page and run its module in DevTools:
 

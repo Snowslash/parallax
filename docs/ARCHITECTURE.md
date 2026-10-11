@@ -10,7 +10,9 @@ Parallax is a static HTML/CSS/ES-module application. The guided lesson displays 
 
 Each page owns its in-memory state. Shared styling and the persisted theme preference are described in [Estate UI integration](ESTATE-UI.md).
 
-`demo/index.html` is the public project page. Its Open lab action leads to `demo/lab.html`, the mode chooser. The existing `guided.html`, `beam3d.html` and `mesh-spike.html` URLs remain direct entrypoints; neither introductory page loads a lab renderer.
+`demo/index.html` links to [Explore](../demo/explore.html) and [Lessons](../demo/lessons.html). Both hubs use the explicit two-entry [catalogue](../demo/catalogue.mjs): Femur and Projection fundamentals. The static page renderer reads its JSON-compatible data and emits labelled experience regions with ordinary links, so selection works without JavaScript. Each region links to both its explorer and lesson. There are no placeholder anatomy choices.
+
+Shared project navigation is Parallax / Explore / Lessons. Explorer subpages highlight Explore; lesson subpages highlight Lessons. The legacy `lab.html` entry still offers both hubs. Existing `guided.html`, `beam3d.html` and `mesh-spike.html` URLs are unchanged; `femur-lesson.html` is the separate preset-wire lesson. Hubs load no lab renderer. The free femur explorer remains wire-free; the new lesson uses model-defined AP/lateral references, a judgement and reason, then a 3D reveal, not a clinical safety score.
 
 ## Guided lesson: state and cached images
 

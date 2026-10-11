@@ -4,13 +4,14 @@ An interactive lab for learning how X-ray views relate to 3D geometry.
 
 Built for junior trauma & orthopaedics trainees. Choose another view, compare projections and explore the geometry behind the image.
 
-[Project page](https://parallax.sangeev.me/) · [Open lab](https://parallax.sangeev.me/lab.html)
+[Project page](https://parallax.sangeev.me/) · [Explore](demo/explore.html) · [Lessons](demo/lessons.html)
 
-## Explore
+## Choose an experience
 
-- **Guided lesson:** Work through three wire-position challenges, then compare your answer with the 3D view.
-- **3D Explore:** Move the beam and compare projections while looking around the scene independently.
-- **Femur:** Explore projections of a model femur. This mode is experimental.
+- **Femur:** Explore the model without a wire, or compare AP/lateral views of a preset wire in the lesson. Record a judgement and reason before revealing the wire. Model-defined views are not validated clinical projections.
+- **Projection fundamentals:** Move the beam freely in 3D Explore, or work through three wire-position challenges in the Guided lesson.
+
+Both hubs offer the same two experiences. Existing `lab.html`, `mesh-spike.html`, `beam3d.html` and `guided.html` links remain available.
 
 ## Run locally
 

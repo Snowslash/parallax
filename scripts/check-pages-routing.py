@@ -64,7 +64,7 @@ def main():
     get('/', 200, file='index.html', content_type='text/html')
     for alias in ['/index.html', '/index']:
         get(alias+'?probe=1', 308, location='/?probe=1')
-    for name in ['lab', 'guided', 'beam3d', 'mesh-spike', 'licences']:
+    for name in ['lab', 'explore', 'lessons', 'guided', 'beam3d', 'mesh-spike', 'femur-lesson', 'licences']:
         get('/'+name, 200, file=name+'.html', content_type='text/html')
         get('/'+name+'.html?probe=1', 308, location='/'+name+'?probe=1')
     manifest = json.loads((args.root/'MANIFEST.json').read_text())['files']

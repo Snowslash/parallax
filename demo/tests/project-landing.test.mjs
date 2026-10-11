@@ -12,15 +12,15 @@ test('project composition references only tokens defined by the pinned estate pa
   assert.doesNotMatch(css,/--estate-[a-z0-9-]+\s*:/,'do not override shared tokens');
 });
 
-test('the project page explains Parallax before opening the separate lab',()=>{
+test('the project page explains Parallax before the Explore and Lessons hubs',()=>{
   const html=read('index.html');
   assert.match(html,/data-page="project"/);
   assert.match(html,/<h1\b[^>]*>Parallax<\/h1>/);
-  assert.match(html,/id="open-lab"[^>]*href="lab.html"/);
-  assert.match(html,/Open lab/);
+  assert.match(html,/id="open-lab"[^>]*href="explore.html"/);
+  assert.match(html,/href="lessons.html"/);
   assert.match(html,/href="https:\/\/github.com\/Snowslash\/parallax"[^>]*aria-label="Source on GitHub"/);
   assert.match(html,/href="https:\/\/sangeev.me\/#projects"/);
-  for(const label of ['Guided lesson','3D Explore','Femur'])assert.ok(html.includes(label),label);
+  for(const label of ['Explore','Lessons','femur'])assert.ok(html.includes(label),label);
   assert.doesNotMatch(html,/<script[^>]*type="module"|Start the guided lesson|id="lesson"|<canvas/);
   assert.match(html,/href="licences.html"/);
 });
@@ -34,14 +34,14 @@ test('the project screenshot has local assets, dimensions and useful alternative
   assert.ok(existsSync(new URL(image[1],demo)),'screenshot must be distributed');
 });
 
-test('the lab chooser preserves all three existing application routes',()=>{
+test('the legacy lab chooser leads to both hubs and existing applications remain available',()=>{
   assert.ok(existsSync(new URL('lab.html',demo)),'separate lab chooser');
   const html=read('lab.html');
   for(const page of ['guided.html','beam3d.html','mesh-spike.html']){
-    assert.ok(html.includes(`href="${page}"`),page);
     assert.ok(existsSync(new URL(page,demo)),page);
   }
-  assert.match(html,/id="start"[^>]*href="guided.html"/);
+  for(const page of ['explore.html','lessons.html'])assert.match(html,new RegExp(`href="${page}"`));
+  for(const page of ['guided.html','beam3d.html','mesh-spike.html','femur-lesson.html'])assert.ok(read('lessons.html').includes(`href="${page}"`),page);
   assert.match(html,/href="index.html"/);
   assert.match(html,/href="licences.html"/);
 });

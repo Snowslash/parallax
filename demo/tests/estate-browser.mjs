@@ -37,7 +37,7 @@ export async function audit(doc=document){
   if($('#start'))check('primary lesson action is in first viewport',rect($('#start')).bottom<=w.innerHeight,rect($('#start')));
   if($('#open-lab')){
     const action=$('#open-lab'),source=$('.project-actions [aria-label="Source on GitHub"]');
-    check('project page opens the separate lab chooser',action.getAttribute('href')==='lab.html'&&!$('canvas'));
+    check('project page opens Explore and Lessons',action.getAttribute('href')==='explore.html'&&Boolean($('.project-actions a[href="lessons.html"]'))&&!$('canvas'));
     check('project actions are visible and meet the target floor',[action,source].every(e=>e&&rect(e).width>=44&&rect(e).height>=44)&&rect(action).bottom<=w.innerHeight);
     check('project page retains the pinned source icon',source?.querySelector('svg.estate-github-mark')&&source.href==='https://github.com/Snowslash/parallax');
   }

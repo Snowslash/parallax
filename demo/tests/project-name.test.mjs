@@ -7,7 +7,7 @@ const demo=process.env.FTV_DEMO?pathToFileURL(process.env.FTV_DEMO.replace(/\/$/
 const root=new URL('../',demo);
 const read=path=>readFileSync(new URL(path,root),'utf8');
 const retiredName=/find[ _-]+the[ _-]+view/i;
-const pages=['index.html','lab.html','guided.html','beam3d.html','mesh-spike.html','licences.html'];
+const pages=['index.html','lab.html','explore.html','lessons.html','guided.html','beam3d.html','mesh-spike.html','femur-lesson.html','licences.html'];
 
 // Frozen input headers and the source-bound historical generator are evidence,
 // not active branding. Existing provenance tests bind their unchanged hashes.
@@ -23,7 +23,7 @@ test('every page title and project navigation uses Parallax',()=>{
     assert.match(html,/<title>[^<]*Parallax[^<]*<\/title>/,page);
     assert.doesNotMatch(html,retiredName,page);
     if(page==='index.html')assert.match(html,/<h1\b[^>]*>Parallax<\/h1>/);
-    else assert.match(html,/<a href="index.html" class="project-name">Parallax<\/a>/);
+    else assert.match(html,/<a href="index.html" class="project-name"(?: aria-current="page")?>Parallax<\/a>/);
   }
 });
 

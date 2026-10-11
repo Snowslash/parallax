@@ -14,7 +14,7 @@ const transport=createWorkerRenderer({onReady:data=>{
 }});
 const controller=new MeshController(transport.render,state=>{
   document.body.dataset.pending=String(state.pending);document.body.dataset.error=String(Boolean(state.error));
-  $('#requested-pose').textContent=poseLabel(state.requested.pose)+` · ${state.requested.size}²`;
+  $('#requested-pose').textContent='Requested: '+poseLabel(state.requested.pose)+` · ${state.requested.size}²`;
   if(state.frame&&state.frame!==drawnFrame){
     const f=state.frame;drawnFrame=f;paint(f);
     if(first){first=false;document.body.dataset.firstImageMs=performance.now();$('#load-metrics').textContent=JSON.stringify({navigationToFirstCanvasMs:Number(document.body.dataset.firstImageMs),...metrics},null,2);}
@@ -22,8 +22,8 @@ const controller=new MeshController(transport.render,state=>{
   $('#retry').hidden=!state.error;$('#mesh-status').classList.toggle('error',Boolean(state.error));
   $('#diagnostics').textContent=state.diagnostics?JSON.stringify(state.diagnostics,null,2):'';
   if(state.error)$('#mesh-status').textContent=state.error+(state.frame?'. Still showing the last valid image.':'. No valid image yet.');
-  else if(state.pending)$('#mesh-status').textContent=state.frame?'Updating… still showing the previous view.':'Loading the model and preparing the first image…';
-  else $('#mesh-status').textContent=`Image up to date · render time ${state.frame.renderMs.toFixed(1)} ms.`;
+  else if(state.pending)$('#mesh-status').textContent=state.frame?'Updating… still showing the previous view.':'Preparing the first image…';
+  else $('#mesh-status').textContent='Image ready.';
 });
 function paint(f){
   const mode=$('#material-mode').value,pixels=pixelBuffer(f,mode),c=$('#mesh-projection');

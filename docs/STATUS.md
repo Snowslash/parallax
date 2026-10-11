@@ -1,5 +1,9 @@
 # Verification and benchmarks
 
+## Navigation coverage
+
+`demo/tests/catalogue.test.mjs` checks the two-entry catalogue, static paired-route choices, hub entrypoints and active project sections. These are source/document checks, not browser, anatomical or learner validation. Existing explorer and guided lesson routes are retained.
+
 ## Coverage
 
 The guided and 3D Explore tests cover acquisition geometry, state transitions and image correspondence. Current Femur uses the BodyParts3D outer surface and authored core described in [model data](MODEL.md). It remains experimental: bounded geometric and paired-projection checks do not establish anatomical validity, radiographic realism or learning effectiveness. Current-model analytic and exact matched-projection integration tests are separate from the historical evidence below.

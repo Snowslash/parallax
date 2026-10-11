@@ -35,7 +35,7 @@ const controller=new BeamController(render,state=>{
   const status=$('#render-status');status.classList.toggle('error',Boolean(state.error));
   if(state.error)status.textContent=state.error+(state.frame?' Still showing the last image.':'');
   else if(state.pending)status.textContent=state.frame?'Updating… still showing the previous view.':'Preparing the first image…';
-  else status.textContent=`Image up to date · render time ${state.frame.renderMs.toFixed(1)} ms.`;
+  else status.textContent=`Image ready.`;
 });
 function updateControls(){
   for(const axis of axes){$('#'+axis).value=pose[axis];$('#'+axis+'-value').textContent=pose[axis].toFixed(1)+(['orbit','tilt'].includes(axis)?'°':' mm');}

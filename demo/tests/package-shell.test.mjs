@@ -4,17 +4,17 @@ import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const demo=new URL('../',import.meta.url),root=new URL('../../',import.meta.url);
 const read=(path,base=demo)=>{const u=new URL(path,base);assert.ok(existsSync(u),`missing packaged file: ${path}`);return readFileSync(u,'utf8');};
-const pages=['index.html','lab.html','guided.html','beam3d.html','mesh-spike.html'];
+const pages=['index.html','lab.html','explore.html','lessons.html','guided.html','beam3d.html','mesh-spike.html','femur-lesson.html'];
 
-test('lab chooser prioritises guided study and links the separate labs',()=>{
+test('lab chooser provides deliberate entry to exploration and lessons',()=>{
   const html=read('lab.html');
   assert.doesNotMatch(html,/http-equiv="refresh"/i);
-  for(const p of pages.slice(2))assert.ok(html.includes(`href="${p}"`));
-  assert.match(html,/Start the guided lesson/);assert.match(html,/A model femur\./);
+  for(const p of ['explore.html','lessons.html'])assert.ok(html.includes(`href="${p}"`));
+  assert.match(html,/Explore freely or work through a lesson/);
 });
-test('all three modes return home and have no links to omitted prototypes',()=>{
-  for(const p of pages){const html=read(p);assert.doesNotMatch(html,/href="(?:explore\.html|baseline\/)/);assert.match(html,/Content-Security-Policy/);assert.match(html,/href="licences.html"/);if(p!=='index.html')assert.match(html,/href="index.html"/);}
-  assert.equal(existsSync(new URL('baseline/',demo)),false);assert.equal(existsSync(new URL('explore.html',demo)),false);
+test('all experiences return through shared navigation without linking omitted prototypes',()=>{
+  for(const p of pages){const html=read(p);assert.doesNotMatch(html,/href="baseline\//);assert.match(html,/Content-Security-Policy/);assert.match(html,/href="licences.html"/);assert.match(html,/href="explore.html"/);assert.match(html,/href="lessons.html"/);if(p!=='index.html')assert.match(html,/href="index.html"/);}
+  assert.equal(existsSync(new URL('baseline/',demo)),false);assert.equal(existsSync(new URL('explore.html',demo)),true);
 });
 test('HTML links, resources and local module imports resolve inside the package',()=>{
   function files(dir){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(new URL(e.name+'/',dir)):[new URL(e.name,dir)]);}
