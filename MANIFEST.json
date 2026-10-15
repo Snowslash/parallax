@@ -53,7 +53,7 @@
     "demo/femur-lesson/worker.mjs": "c2d26426d454093c27cb368ca9939606863b55c58b30f28e2588d95f41f6bb59",
     "demo/guided.html": "029adb66ac88f72f2b8e53588f3f6a1d07f189a72f73486b4bd761e3d97945e0",
     "demo/guided.mjs": "4395687bf1ccb8722200297279a808b890ce4ae4939d8b70b5e10dc4dc67188b",
-    "demo/index.html": "6fd3d44eb5f330740bdf3b95a24151612139b66e2cf7b494b3fa3400a1c38904",
+    "demo/index.html": "c4ddb101c6a511c189c89e48f0f5913d162ba21251886b91110b3a8b9db39c85",
     "demo/lab.css": "edc62c6cea2541466e2e498e7e89aed128875712f78be93d2ae2ec3c2d7b22fe",
     "demo/lab.html": "7d436d37c895a9e2813a29acd0604617a7840aa119821d5b7169f80ee5298d66",
     "demo/lesson-model.mjs": "6f76b86aed2b35f490f16557d802f9d3a8204a4fa603c627d673955d6f87aa6c",
@@ -98,15 +98,15 @@
     "demo/tests/guided-browser.mjs": "cd812bd8e9a1d7f81814928f285d639116a97d69e3c61f0466a8a0847535fb7f",
     "demo/tests/guided-copy.test.mjs": "5262abd6c494fa016fcc8028aa7fb3f59e3808cdf89bb4ec70f35e5ca5ab87ea",
     "demo/tests/home-review.test.mjs": "d7fc55afc547a55a614f0af69bb772305b023d33dbb54adf04af9fa71a07cc56",
-    "demo/tests/learner-language.test.mjs": "a74919044c1043b512d395596d151f30be2c02bb6af8eb14823005837c1545b6",
+    "demo/tests/learner-language.test.mjs": "8a8e2aedd1f00a30fd24be1b76abc7f505e46f8339550f6ae6d9edd939b72835",
     "demo/tests/lesson-model.test.mjs": "a773c0af5673f4a8a6b7bfe557089be5a2b8c5b562caec663038ffacebd1c906",
     "demo/tests/mesh-spike-browser.mjs": "833d6cc89ed00544a7b8f6654c1f36c2382fbe5ebd34b3c7898a3520966a2e3d",
     "demo/tests/mesh-spike-geometry.test.mjs": "cd52234879de425d6d063b2ac886de3e2c25698dbfb297a99e04b294cd1f217b",
     "demo/tests/mesh-spike-state.test.mjs": "3f09d62899ffd6e786943ad0622c4fdffc1c4435bf6c9683e435d31e0f482883",
     "demo/tests/package-shell.test.mjs": "e240fd68b4134ea3d3e7b0d986ef860903fdb233cdff05fabf6057d9b0400ece",
     "demo/tests/plain-copy.test.mjs": "916513f08b59844a9c5249992386b6c202d8d8d06460cdab40c3e3d4380c3d09",
-    "demo/tests/project-landing.test.mjs": "db5cd625f36171caef4c00bc987990692a882f51abf92facaa14be0eec2732ac",
-    "demo/tests/project-name.test.mjs": "58ce627dde64ccfe4943795327903f0e5e5cfeb6febecc536a233cc49bd7aca2",
+    "demo/tests/project-landing.test.mjs": "194f1d38fcd7f24917d4146ccbed1fdbcf68fe891af8f0d080b0595580e54a94",
+    "demo/tests/project-name.test.mjs": "3e62a3ed217c1a43fbb4a77e410f7c2e84bad60be3512fe3cc7a0e83a63edd5b",
     "demo/tests/reveal.test.mjs": "04d98f50d769e509043c7dee1afc4063ca39c42edeca8e2bc01a47752a9bf42d",
     "demo/tests/routing.test.mjs": "68d33f61de473f8660ee53b3bf9a74ed37a3d991d0727b31fcaac93d11f182ee",
     "demo/tests/scene.test.mjs": "4ae476b3c0d557fe10b53aa53f68f3440a9e2fb9eb390109b287c45265ddce0d",
@@ -161,6 +161,8 @@
     "spikes/005-mesh-projection/test_export_readback.py": "fd6080602c10d750d2f1a701e0dffb787db96c90899df9755e620881f3efaaa9",
     "spikes/005-mesh-projection/test_independent_reference.py": "4a46e00d51dc3368f282afaeb6cd581112579a7ec297b98d72111d6c52637fa6",
     "spikes/008-bodyparts3d-cortex/evidence/report.json": "f7381330cf97c2c011c5ecde1b77d17eabae2c384000160b42ed343ac79fc492",
-    "spikes/008-bodyparts3d-cortex/framing.json": "e0631c3731774c1edfb2aeea387894f301499577025d3050b71bacfbeeedae4b"
+    "spikes/008-bodyparts3d-cortex/framing.json": "e0631c3731774c1edfb2aeea387894f301499577025d3050b71bacfbeeedae4b",
+    "demo/project-page.css": "9ccea01b2e576d9fe03732263dc490718c631f89108db978bbcc07566fce3e3e",
+    "demo/project-page.js": "642625c25021f83209af8464323d0c9a40a936511f2dec887f6ff211505bb5d3"
   }
 }

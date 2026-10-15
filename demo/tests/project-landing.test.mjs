@@ -15,11 +15,12 @@ test('project composition references only tokens defined by the pinned estate pa
 test('the project page explains Parallax before the Explore and Lessons hubs',()=>{
   const html=read('index.html');
   assert.match(html,/data-page="project"/);
-  assert.match(html,/<h1\b[^>]*>Parallax<\/h1>/);
+  assert.match(html,/<h1\b[^>]*>Parallax<span class="title-stop">\.<\/span><\/h1>/);
   assert.match(html,/id="open-lab"[^>]*href="explore.html"/);
   assert.match(html,/href="lessons.html"/);
-  assert.match(html,/href="https:\/\/github.com\/Snowslash\/parallax"[^>]*aria-label="Source on GitHub"/);
-  assert.match(html,/href="https:\/\/sangeev.me\/#projects"/);
+  assert.match(html,/href="https:\/\/github.com\/Snowslash\/parallax">Source code and notes on GitHub/);
+  assert.match(html,/class="back-link" href="https:\/\/sangeev.me\/#parallax"/);
+  assert.match(html,/<script src="project-page.js[^"]*" defer><\/script>/);
   for(const label of ['Explore','Lessons','femur'])assert.ok(html.includes(label),label);
   assert.doesNotMatch(html,/<script[^>]*type="module"|Start the guided lesson|id="lesson"|<canvas/);
   assert.match(html,/href="licences.html"/);

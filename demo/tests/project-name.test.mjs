@@ -22,7 +22,7 @@ test('every page title and project navigation uses Parallax',()=>{
     const html=read('demo/'+page);
     assert.match(html,/<title>[^<]*Parallax[^<]*<\/title>/,page);
     assert.doesNotMatch(html,retiredName,page);
-    if(page==='index.html')assert.match(html,/<h1\b[^>]*>Parallax<\/h1>/);
+    if(page==='index.html')assert.match(html,/<h1\b[^>]*>Parallax(?:<span class="title-stop">\.<\/span>)?<\/h1>/);
     else assert.match(html,/<a href="index.html" class="project-name"(?: aria-current="page")?>Parallax<\/a>/);
   }
 });

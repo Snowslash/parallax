@@ -34,7 +34,6 @@ test('current working pages explain the task without repeated modelling disclaim
 });
 test('decorative pre-heading text is removed without dropping status and answer hooks',()=>{
  const home=read('index.html'),guided=read('guided.html'),femur=read('femur-lesson.html'),explorer=read('mesh-spike.html');
- assert.doesNotMatch(home,/class="back-link"/);
  assert.ok(guided.indexOf('id="status"')>guided.indexOf('id="question"'));
  assert.ok(guided.indexOf('id="your-choice"')>guided.indexOf('<h2 id="feedback-title"'));
  assert.doesNotMatch(explorer,/<p class="readout">Requested pose<\/p>/);
