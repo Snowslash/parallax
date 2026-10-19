@@ -6,7 +6,7 @@ Parallax is a static HTML/CSS/ES-module application. The guided lesson displays 
 | --- | --- | --- |
 | Guided lesson | [`guided.mjs`](../demo/guided.mjs) | PNGs and metadata in `demo/assets/v2/` |
 | 3D Explore | [`beam3d.mjs`](../demo/beam3d.mjs) | Analytic finite-cylinder intersections in a worker |
-| Femur | [`mesh-spike/app.mjs`](../demo/mesh-spike/app.mjs) | Triangle-mesh path integration in a worker |
+| Femur explorer | [`mesh-spike/app.mjs`](../demo/mesh-spike/app.mjs) | Triangle-mesh path integration in a worker |
 
 Each page owns its in-memory state. Shared styling and the persisted theme preference are described in [Estate UI integration](ESTATE-UI.md).
 
@@ -67,7 +67,7 @@ Before accepting a result, the controller checks pose and image dimensions. A fr
 
 `beam3d.mjs` keeps observer yaw, elevation and zoom outside the controller. “Look around” changes only [`RigView`](../demo/beam-view.mjs). Reset beam changes acquisition but preserves observer and pin; reset observer leaves acquisition alone. The worker transport checks response IDs and terminates the worker on a crash, unreadable response or 15-second timeout. Retry can create a replacement worker.
 
-## Femur: mesh integration and worker lifecycle
+## Femur explorer: mesh integration and worker lifecycle
 
 [`mesh-spike/geometry.mjs`](../demo/mesh-spike/geometry.mjs) wraps the strict generic functions in [`integrator.mjs`](../demo/mesh-spike/integrator.mjs) for the current BodyParts3D pair. The generic integrator also supports historical v001 reproduction; its numerical functions retain their original behaviour.
 
@@ -89,6 +89,14 @@ Coplanar/near-parallel boundaries, mixed-sign or coincident crossings and incons
 The controller coalesces synchronous changes in a microtask and retains only the latest requested pose/resolution while rendering. It checks pose, dimensions and validity before replacing the last accepted frame. Femur has no pinned-image or judgement state. Observer controls remain local to the scene.
 
 [`transport.mjs`](../demo/mesh-spike/transport.mjs) permits one job at a time and validates response IDs. A worker crash, unreadable message or 30-second timeout terminates that worker and rejects the job. The displayed frame stays unchanged; retry can recreate the worker and reload its meshes.
+
+## Femur lesson: separate CT-informed model
+
+`demo/femur-lesson/` owns the preset lesson, its fixed placement constants and its `ct/` solver. It loads the already centred proximal-femur `assets/outer.obj`, `envelope.obj`, `density.u8` and `density.json`, verifying fixed asset hashes before use. This does not change the BodyParts3D whole-femur explorer or its renderer.
+
+Finite source–detector rays pass through strict outer/envelope intervals. The shell contributes 0.04/mm; the interior contributes 0.008/mm plus 0.004/mm times a trilinearly sampled normalized density field integrated at midpoint steps no longer than 0.5 mm. Analytic finite-cylinder chords add wire opacity at 0.65/mm. Any unresolved ray rejects the frame; no perturbation or repair is used. The density is a masked, smoothed derivative, not raw CT or calibrated attenuation.
+
+The 105 mm, radius-1 wire follows 130° to a measured local distal shaft axis with a −1° entry-azimuth rotation. A 33 mm head envelope is a framing bound, not an anatomical radius. Saved AP/lateral images, their actual poses and optional calipers belong to the lesson state; observer changes do not acquire images. A judgement and reason unlock the 3D wire. The paired tip-to-landmark value is a model-plane proxy, not clinical TAD. See [the full numerical contract](FEMUR-LESSON.md), [licence](CT-FEMUR-LICENCE.md) and [provenance](ct-femur-provenance.json). Anatomical status remains PARTIAL.
 
 ## Image mapping and numerical checks
 

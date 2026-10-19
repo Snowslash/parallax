@@ -1,0 +1,21 @@
+{
+  "shape": [
+    100,
+    71,
+    132
+  ],
+  "origin": [
+    -49.3884135,
+    -35.04662999999999,
+    -65.74703999999997
+  ],
+  "spacing": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "order": "C-xyz-z-fastest",
+  "normalization": "Masked Gaussian CT average sigma 1.25 mm; clip(mean / 1000, 0, 1); round to uint8 0..255. Illustrative, not HU calibration.",
+  "file": "density.u8",
+  "sha256": "ffb98c0ac02e9c36f078a9d2901e57683c94d914b0455917600f12cd2842f93a"
+}

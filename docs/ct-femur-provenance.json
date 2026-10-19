@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "model": "CT-informed restrained proximal femur, Norm_02",
+  "scope": "Preset femur lesson only; the BodyParts3D whole-femur explorer is a separate model.",
+  "anatomical_status": "PARTIAL: heuristic envelope, not accurate cortical segmentation",
+  "source": {
+    "title": "Dual Fluoroscopy In Vivo Pelvic and Hip Joint Kinematics in Patients With Cam Femoroacetabular Impingement Syndrome",
+    "creators": [
+      "Anderson, Andrew E.",
+      "Atkins, Penny R.",
+      "Fiorentino, Niccolo",
+      "Lisonbee, Rich",
+      "Zitnay, Jared",
+      "Schuring, Lindsay"
+    ],
+    "publisher": "The Hive: University of Utah Research Data Repository",
+    "publication_date": "2025-09-30",
+    "doi": "10.7278/typcv-c7c06",
+    "url": "https://hive.utah.edu/doi/10.7278/typcv-c7c06",
+    "metadata_url": "https://hive.utah.edu/api/records/cftes-sc590",
+    "subset": "Norm_02",
+    "licence": {
+      "id": "CC-BY-3.0",
+      "url": "https://creativecommons.org/licenses/by/3.0/",
+      "excluded_from_project_MIT": true
+    },
+    "input_sha256": {
+      "Norm_02_Landmarks.xlsx": "8c1df1c70f9c404f778e8ed35c63a3c108ec0a579bc86889420617a20953bd57",
+      "Norm_02_Hip_CT.nii.gz": "2626cddf33d5c5e92f72818ca175b2c665be12c1736c302f1ff9f163428a4bb7",
+      "Norm_02_Femur.k": "966536086fc6f9226b5fca9596e325cd2ec7eea0531d2423bbcebc90a22d5d03"
+    },
+    "ct_voxel_spacing_mm": [
+      0.6855469942092896,
+      0.6855469942092896,
+      1.0
+    ]
+  },
+  "derived_assets": {
+    "outer.obj": {
+      "sha256": "296926ae65829ad19d4c778942917532a25763b152fdedbd6d3a7d83d8a66117",
+      "bytes": 2180117,
+      "licence": "CC-BY-3.0"
+    },
+    "envelope.obj": {
+      "sha256": "c57021b50cdddb0a42f9a659afa3bd52140faa22d444f87a6b50c797c20cc674",
+      "bytes": 1957267,
+      "licence": "CC-BY-3.0"
+    },
+    "density.u8": {
+      "sha256": "ffb98c0ac02e9c36f078a9d2901e57683c94d914b0455917600f12cd2842f93a",
+      "bytes": 937200,
+      "licence": "CC-BY-3.0"
+    },
+    "density.json": {
+      "sha256": "206f15536b3eece33e1e6a0973d04814fe947cab19d23fe8d3853136e8cc568e",
+      "bytes": 454,
+      "licence": "CC-BY-3.0"
+    }
+  },
+  "asset_directory": "demo/femur-lesson/assets/",
+  "coordinates": {
+    "units": "model mm",
+    "native_mesh_to_scan_matrix": [
+      [
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "scan_to_render_translation_mm": [
+      111.6115865,
+      -166.04663,
+      -889.74704
+    ],
+    "nifti_affine": [
+      [
+        -0.6855469942092896,
+        0.0,
+        0.0,
+        177.15699768066406
+      ],
+      [
+        -0.0,
+        0.6855469942092896,
+        0.0,
+        -18.157516479492188
+      ],
+      [
+        0.0,
+        -0.0,
+        1.0,
+        827.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "serialized_meshes_already_in_render_frame": true,
+    "clinical_axes_certified": false
+  },
+  "grid": {
+    "origin_scan_mm": [
+      -161.0,
+      131.0,
+      824.0
+    ],
+    "spacing_mm": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "shape": [
+      100,
+      71,
+      132
+    ],
+    "origin_render_mm": [
+      -49.3884135,
+      -35.04662999999999,
+      -65.74703999999997
+    ],
+    "order": "C-xyz-z-fastest",
+    "sample_location": "sample centres; no additional half-voxel offset"
+  },
+  "methods": {
+    "outer": "Rasterize source surface at 1 mm; marching cubes at 0.5; no decimation or sculpting.",
+    "initial_interior": {
+      "threshold": 450,
+      "units": "source CT values (HU-like; not independently calibrated)",
+      "gaussian_sigma_mm": 0.8,
+      "minimum_inset_mm": 1.8,
+      "components": "largest 6-connected low-density region; enclosed holes filled",
+      "outer": "source surface rasterized at 1 mm then marching cubes .5",
+      "core": "smoothed CT <450 constrained by outer inset; not an offset-generated core"
+    },
+    "restrained_envelope": {
+      "operation": "Union original interior with physical binary closing, fill enclosed holes, intersect eligibility mask; preserve original interior.",
+      "closing_radius_mm": 4,
+      "eligibility": "outer Euclidean distance transform >1.8 mm"
+    },
+    "density": {
+      "equation": "clip((G_sigma(CT * envelope) / G_sigma(envelope)) / 1000, 0, 1)",
+      "sigma_mm": 1.25,
+      "padding": "zero",
+      "encoding": "round(normalized value * 255), uint8; zero outside envelope",
+      "exterior_intensities_excluded": true
+    }
+  },
+  "runtime_material": {
+    "shell_per_mm": 0.04,
+    "interior_base_per_mm": 0.008,
+    "interior_density_modulation_per_mm": 0.004,
+    "metal_per_mm": 0.65,
+    "density_interpolation": "trilinear",
+    "density_integration": "midpoint samples inside exact clipped envelope intervals",
+    "maximum_step_mm": 0.5,
+    "metal_composition": "additive finite-cylinder opacity; does not displace bone",
+    "image_mapping": "round(255 * (1 - exp(-attenuation)))",
+    "invalid_rays": "strict rejection; no perturbation or silent repair"
+  },
+  "wire": {
+    "length_mm": 105,
+    "radius_mm": 1,
+    "angle_to_measured_distal_shaft_degrees": 130,
+    "entry_azimuth_rotation_degrees": -1,
+    "entry_azimuth_convention": "right-hand rotation about measured distal shaft",
+    "constants": "demo/femur-lesson/constants.mjs",
+    "entry_validation": "72 sampled circumference-offset rays; not a continuous entry-disk certificate",
+    "continuous_course_bound": "1-Lipschitz capsule-distance lower bound after excluded first 3 mm entry collar"
+  },
+  "limitations": [
+    "Resampling adds no source resolution.",
+    "Imposed 1.8 mm inset is not measured cortical thickness.",
+    "Heuristic envelope and synthetic density are not calibrated HU, attenuation or resolved trabeculae.",
+    "Artificial end caps and source shaft truncation remain.",
+    "No exhaustive all-pose or independent self-intersection certification.",
+    "Model-defined AP/lateral and fixed apex proxy are not clinical TAD or clinically registered views.",
+    "No clinical, anatomical or learner validation; no source-author endorsement."
+  ],
+  "distribution": {
+    "raw_ct_included": false,
+    "source_scans_included": false,
+    "source_pipeline_included": false,
+    "diagnostic_reports_included": false,
+    "changes_by": "Parallax contributors",
+    "attribution_document": "CT-FEMUR-LICENCE.md"
+  }
+}

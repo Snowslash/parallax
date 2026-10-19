@@ -1,4 +1,4 @@
-import {renderMeshProjection} from '../mesh-spike/geometry.mjs?bp3d-cortex-v001';
+import {renderRestrained} from './ct/material.mjs';
 import {caseForId,validatePose,measureCase,captureAdequacy} from './model.mjs';
 export const MU_METAL=.65;
 const sub=(a,b)=>a.map((v,i)=>v-b[i]),dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0);
@@ -12,10 +12,10 @@ export function wireChord(source,detector,wire){
   if(Math.abs(dz)<1e-12){if(z<0||z>h)return 0;}else{const x=-z/dz,y=(h-z)/dz;lo=Math.max(lo,Math.min(x,y));hi=Math.min(hi,Math.max(x,y));}
   return Math.max(0,hi-lo);
 }
-export function renderLessonProjection(outer,core,caseId,pose,{size=256,raw=false}={}){
+export function renderLessonProjection(outer,envelope,caseId,pose,{size=256,raw=false,field,stepMm=.5}={}){
   const c=caseForId(caseId),normalized=validatePose(pose);
-  // Reuse bone integrator byte-for-byte; additive illustrative metal opacity, no material displacement claim.
-  const frame=renderMeshProjection(outer,core,normalized,{size,raw:true}),camera=frame.camera,n=size*size,wire=new Float64Array(n),boneAttenuation=frame.attenuation.slice();
+  // Exact approved restrained bone term; existing additive metal, not material displacement.
+  const frame=renderRestrained(outer,envelope,field,normalized,{size,raw:true,stepMm}),camera=frame.camera,n=size*size,wire=new Float64Array(n),boneAttenuation=frame.attenuation.slice();
   for(let row=0,i=0;row<size;row++)for(let col=0;col<size;col++,i++){
     const x=(col+.5-size/2)*camera.pixelMm,y=(size/2-row-.5)*camera.pixelMm,detector=camera.centre.map((v,k)=>v+x*camera.right[k]+y*camera.up[k]);
     wire[i]=wireChord(camera.source,detector,c.wire);
@@ -24,6 +24,6 @@ export function renderLessonProjection(outer,core,caseId,pose,{size=256,raw=fals
   }
   const result={...frame,caseId,measurement:measureCase(caseId,normalized,size),adequacy:captureAdequacy(caseId,normalized,size,frame.invalidCount),material:{metal:MU_METAL,units:'synthetic mm^-1',composition:'additive metal opacity over unchanged bone',mapping:'round(255*(1-exp(-A)))'}};
   delete result.uniformPixels;delete result.uniformAttenuation;
-  if(raw){result.wire=wire;result.boneAttenuation=boneAttenuation;}else for(const k of ['outer','core','shell','attenuation'])delete result[k];
+  if(raw){result.wire=wire;result.boneAttenuation=boneAttenuation;}else for(const k of ['outer','core','shell','interior','densityIntegral','corticalAttenuation','interiorAttenuation','attenuation'])delete result[k];
   return result;
 }

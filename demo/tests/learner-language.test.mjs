@@ -11,7 +11,7 @@ test('About explains image generation without confusing projections with the obs
  const html=read('licences.html');
  const section=html.match(/<h2 id="xray-images"[^>]*>[\s\S]*?(?=<h2\b)/)?.[0];
  assert.ok(section,'A dedicated X-ray explanation precedes the femur lesson notes');
- for(const meaning of [/source.*detector/,/pixel/,/brighter/,/cortex.*core/,/same brightness scale/,/in your browser/,/calculated in advance/,/Looking around.*does not change/,/soft tissue.*scatter.*noise/])assert.match(section,meaning);
+ for(const meaning of [/source.*detector/,/pixel/,/brighter/,/(?:cortex|outer shell).*core/,/same brightness scale/,/in your browser/,/calculated in advance/,/Looking around.*does not change/,/soft tissue.*scatter.*noise/])assert.match(section,meaning);
  assert.match(html,/not clinical TAD/);
  assert.match(html,/BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International/);
 });
@@ -45,7 +45,7 @@ test('femur criteria remain explicit and link to the clinical-TAD distinction on
  assert.match(html,/25 mm/);assert.match(html,/8 mm/);assert.match(html,/screw tip/);
  assert.match(html,/href="licences.html#femur-lesson"[^>]*>[^<]*clinical TAD/);
  assert.equal((html.match(/clinical TAD/g)||[]).length,1);
- assert.match(about,/not clinical TAD/);assert.match(about,/depth/);assert.match(about,/not calibrated/);
+ assert.match(about,/not clinical TAD/);assert.match(about,/depth/);assert.match(about,/not (?:calibrated|independently validated anatomical measurements)/);
  assert.match(about,/not anatomically validated/);
 });
 test('all preset outcomes use plain observations while preserving their different meanings',()=>{

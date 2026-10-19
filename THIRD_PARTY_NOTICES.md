@@ -16,6 +16,12 @@ Literata and Atkinson Hyperlegible Next retain their verbatim SIL Open Font Lice
 
 Numerical reproduction uses NumPy installed separately into the developer's own environment; it is not bundled. The pinned requirement is not a runtime requirement for the browser. Consult the installed NumPy distribution for its BSD licence and notices.
 
+## CT-informed femur lesson
+
+The Norm_02-derived proximal-femur outer surface, restrained interior envelope and density in `demo/femur-lesson/assets/` are **CC BY 3.0**, excluded from MIT. Source: Andrew E. Anderson, Penny R. Atkins, Niccolo Fiorentino, Rich Lisonbee, Jared Zitnay and Lindsay Schuring, *Dual Fluoroscopy In Vivo Pelvic and Hip Joint Kinematics in Patients With Cam Femoroacetabular Impingement Syndrome*, The Hive: University of Utah Research Data Repository (2025-09-30), DOI [10.7278/typcv-c7c06](https://hive.utah.edu/doi/10.7278/typcv-c7c06). [CC BY 3.0 licence](https://creativecommons.org/licenses/by/3.0/).
+
+Parallax transformed and rasterized the surface, reconstructed a heuristic interior envelope, and masked, smoothed and quantized a CT-derived density field. These are derivatives, not raw CT or validated anatomy. No endorsement by the source authors or repository is implied. See [full attribution and changes](docs/CT-FEMUR-LICENCE.md) and [hashes and methods](docs/ct-femur-provenance.json). The separate whole-femur explorer is unchanged.
+
 ## BodyParts3D femur and derived core
 
 BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International

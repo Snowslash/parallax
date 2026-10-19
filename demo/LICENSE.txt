@@ -7,6 +7,19 @@ Historical OBJ comments retain CC Attribution-Share Alike 2.1 Japan;
 the accompanying anatomy notice explains the discrepancy. Bundled libraries
 and fonts retain their own licences, linked from licences.html.
 
+The CT-derived proximal-femur outer.obj, envelope.obj, density.u8 and density
+metadata in femur-lesson/assets/ are excluded from MIT and use CC BY 3.0:
+https://creativecommons.org/licenses/by/3.0/
+Source: Andrew E. Anderson, Penny R. Atkins, Niccolo Fiorentino, Rich Lisonbee,
+Jared Zitnay and Lindsay Schuring, Dual Fluoroscopy In Vivo Pelvic and Hip
+Joint Kinematics in Patients With Cam Femoroacetabular Impingement Syndrome,
+The Hive: University of Utah Research Data Repository (2025-09-30).
+https://hive.utah.edu/doi/10.7278/typcv-c7c06
+Changes: coordinate conversion, surface rasterization/reconstruction, heuristic
+interior envelope, and masked/smoothed/quantized density. No endorsement implied.
+See licences.html for attribution and limitations. This is a separate model
+from the BodyParts3D whole-femur explorer. Raw CT is not included.
+
 MIT License
 
 Copyright (c) 2026 Parallax contributors

@@ -1,0 +1,18 @@
+{
+  "outer": {
+    "file": "outer.obj",
+    "sha256": "296926ae65829ad19d4c778942917532a25763b152fdedbd6d3a7d83d8a66117"
+  },
+  "envelope": {
+    "file": "envelope.obj",
+    "sha256": "c57021b50cdddb0a42f9a659afa3bd52140faa22d444f87a6b50c797c20cc674"
+  },
+  "density": {
+    "file": "density.u8",
+    "sha256": "ffb98c0ac02e9c36f078a9d2901e57683c94d914b0455917600f12cd2842f93a"
+  },
+  "densityInfo": {
+    "file": "density.json",
+    "sha256": "206f15536b3eece33e1e6a0973d04814fe947cab19d23fe8d3853136e8cc568e"
+  }
+}

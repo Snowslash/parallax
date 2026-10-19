@@ -8,7 +8,7 @@ Built for junior trauma & orthopaedics trainees. Choose another view, compare pr
 
 ## Choose an experience
 
-- **Femur:** Explore the model without a wire, or compare AP/lateral views of a preset wire in the lesson. Record a judgement and reason before revealing the wire. Model-defined views are not validated clinical projections.
+- **Femur:** Explore a whole-femur BodyParts3D model without a wire, or compare AP/lateral views of a preset wire in the separate CT-informed proximal-femur lesson. These are different bone models. Record a judgement and reason before revealing the wire. Model-defined views are not validated clinical projections.
 - **Projection fundamentals:** Move the beam freely in 3D Explore, or work through three wire-position challenges in the Guided lesson.
 
 Both hubs offer the same two experiences. Existing `lab.html`, `mesh-spike.html`, `beam3d.html` and `guided.html` links remain available.
@@ -31,5 +31,7 @@ Open **http://localhost:8000/** in a current browser. On Windows, you may need `
 For teaching and exploration, not clinical use. See [limitations](docs/SAFETY.md).
 
 ## Licence
+
+The femur lesson’s CT-derived proximal-femur surface, interior envelope and density use **CC BY 3.0**, not MIT: see [source attribution and changes](docs/CT-FEMUR-LICENCE.md) and [provenance](docs/ct-femur-provenance.json). The free explorer remains a separate BodyParts3D whole-femur model.
 
 Original code and procedural teaching assets: [MIT](LICENSE). The BodyParts3D-derived femur and authored core use the publisher’s CC BY 4.0 grant, not MIT; see [anatomy attribution and the retained historical licence notice](docs/BODYPARTS3D-LICENCE.md). Bundled libraries and fonts retain [their own licences](THIRD_PARTY_NOTICES.md).
