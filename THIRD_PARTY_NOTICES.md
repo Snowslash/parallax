@@ -31,3 +31,6 @@ BodyParts3D, © The Database Center for Life Science licensed under CC Attributi
 ## Original synthetic data
 
 The primitive images, fixtures and frozen procedural bone exports are original synthetic project assets, under the root MIT licence. That historical procedural model’s authoring provenance reports no external anatomy, donor scan, downloaded model or texture; this does not describe the current Femur assets. Blender was an authoring tool, not a redistributed application or a browser dependency. Model generation source is outside this package; see `docs/MODEL.md`.
+## HFValid guidewire lesson
+
+The outer surface and approximate central-shaft canal in `demo/guidewire-fracture/model/` derive from HFValid collection v3, Aldieri, La Mattina, Szyszko, Baruffaldi and Viceconti (2025), https://amsacta.unibo.it/id/eprint/8431/ . These anatomy derivatives are CC BY 4.0, not MIT. Changes include canal derivation, artificial caps, rigid coordinate transformation and an authored fracture displacement; the fixed wire and projections are illustrative additions. No endorsement is implied. See [attribution and changes](docs/HFVALID-LICENCE.md) and [provenance](docs/guidewire-fracture-provenance.json). The served model directory carries LICENSE.md and PROVENANCE.json; raw CT and source archives are not included.

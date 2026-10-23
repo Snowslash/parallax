@@ -20,6 +20,15 @@ interior envelope, and masked/smoothed/quantized density. No endorsement implied
 See licences.html for attribution and limitations. This is a separate model
 from the BodyParts3D whole-femur explorer. Raw CT is not included.
 
+The HFValid-derived outer surface and approximate central-shaft canal in
+guidewire-fracture/model/ are excluded from MIT and use CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+Source: HFValid collection v3, Aldieri, La Mattina, Szyszko, Baruffaldi and
+Viceconti (2025), https://amsacta.unibo.it/id/eprint/8431/ .
+Changes: canal derivation, artificial caps, coordinate transformation and
+authored fracture displacement. No endorsement implied. See that directory's
+LICENSE.md and PROVENANCE.json. Raw CT and source archives are not included.
+
 MIT License
 
 Copyright (c) 2026 Parallax contributors

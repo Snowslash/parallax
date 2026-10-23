@@ -2,7 +2,7 @@
 
 ## Navigation coverage
 
-`demo/tests/catalogue.test.mjs` checks the two-entry catalogue, static paired-route choices, hub entrypoints and active project sections. These are source/document checks, not browser, anatomical or learner validation. Existing explorer and guided lesson routes are retained.
+`demo/tests/catalogue.test.mjs` checks the three-entry catalogue, paired routes for the original two experiences and a lesson-only guidewire route, hub entrypoints and active project sections. These are source/document checks, not browser, anatomical or learner validation. Existing explorer and guided lesson routes are retained.
 
 ## Coverage
 
@@ -43,3 +43,7 @@ Full raw frames can be regenerated. Very small errors reflect agreement between 
 ## Limits of these measurements
 
 The sampled rays and poses do not cover every continuous configuration or establish robust-exact intersection predicates. Fresh-document timing is not empty-cache timing. The recorded browser checks do not establish physical-touchscreen usability or broad browser/accessibility coverage. Anatomical validity and educational effectiveness remain untested; see [limitations](SAFETY.md).
+
+## Guidewire across a fracture
+
+The guidewire lesson adds finite-source C-arm acquisition to a fixed AP comparison and post-commit reveal. Source/hash integrity, model geometry, projection checks and browser acceptance are separate gates. No new performance benchmark, anatomical approval or learner-validation result is asserted by its navigation integration. See [the lesson contract](GUIDEWIRE-FRACTURE.md) and [HFValid attribution](HFVALID-LICENCE.md).

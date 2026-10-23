@@ -146,3 +146,7 @@ These checks change controls, themes or acquired frames; reload afterwards. A na
 ## Integrity snapshot
 
 `MANIFEST.json` records the distributed files and excludes itself. The checker rejects missing, modified and unexpected files, with exceptions for generated numerical outputs and development directories. `--skip-snapshot` is for an edited checkout; it does not establish agreement with the distributed snapshot. The checker verifies the manifest but does not rewrite it.
+
+## Guidewire across a fracture
+
+Open `demo/guidewire-fracture/index.html` through the same local server (URL `/guidewire-fracture/` when serving `demo/`). Compare AP, move the C-arm, save an additional angle and commit each answer before inspecting 3D. Check pending/error retry, case reset and observer/image-rotation separation. The shipped meshes and modules reproduce projections; source CT acquisition and canal derivation are not bundled. The Blob-decoded verified PNG requires `blob:` in the image CSP, not in the script policy. See [the lesson contract](GUIDEWIRE-FRACTURE.md) and [HFValid attribution](HFVALID-LICENCE.md).

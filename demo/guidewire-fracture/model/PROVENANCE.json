@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "title": "Guidewire across a fracture \u2014 HFValid-derived model",
+  "source": {
+    "title": "HFValid collection v3",
+    "authors": [
+      "Aldieri",
+      "La Mattina",
+      "Szyszko",
+      "Baruffaldi",
+      "Viceconti"
+    ],
+    "year": 2025,
+    "url": "https://amsacta.unibo.it/id/eprint/8431/",
+    "specimen": "Pat059",
+    "members": [
+      {
+        "filename": "Subjects/Pat059/Pat059.nrrd",
+        "sha256": "7a2605c68c4d6c3e832dda64ae36c0eef41e6a3cc10de0ce152f5c919fd90a94",
+        "complete_member_crc_checked": true
+      },
+      {
+        "filename": "Subjects/Pat059/Pat059.stl",
+        "sha256": "8dac4449e6981aec81594e1af678c8e3fc364bbc9f3c2261b94c050c717c9919",
+        "complete_member_crc_checked": true
+      },
+      {
+        "filename": "Subjects/Pat059/Pat059_palp.inp",
+        "sha256": "e9c6e45f1bb8e670c914e21c1157a17fa174b4bf2dfc8f69d0a24ad8080ff3d8",
+        "complete_member_crc_checked": true
+      }
+    ],
+    "whole_archive_sha256": null
+  },
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "raw_ct_bundled": false,
+  "distributed_sha256": {
+    "model/outer.stl": "5e8fc7631ebe0092ba854b0cb94a5bd31c1931fd19b150621b49b955a4b5e1fa",
+    "model/canal.stl": "92ab77d67c93852025553bee9c276ec32600c33e42448fa051d4f98c2ed24200",
+    "lesson.json": "5cba880c1daabf8aa6a48d12a382a57d96b1dd8c7f0045bae0f07f01de518a6d"
+  },
+  "changes": {
+    "canal": "Largest enclosed interior of largest connected 500-stored-unit ring within source surface; native-grid marching cubes 0.5; no smoothing, dilation, closing or broken-ring repair.",
+    "source_slice_centres": [
+      61,
+      167
+    ],
+    "source_spacing_mm": [
+      0.585938,
+      0.585938,
+      2
+    ],
+    "source_slice_thickness_mm": 2.5,
+    "artificial_caps_source_z_mm": [
+      -376.25,
+      -162.25
+    ],
+    "coordinate_frame": "Rigid LPS to centred right-handed X lateral, Y proximal, Z anterior millimetres",
+    "fracture_gap_mm": 16,
+    "distal_translation_mm": [
+      0,
+      0,
+      -10
+    ],
+    "wire": "Authored straight finite capsule union, higher start Y=72, collinear interior vertex Y=60, olive centre Y=-50",
+    "wire_radius_mm": 1.25,
+    "olive_radius_mm": 2.25
+  },
+  "limitations": [
+    "Approximate central-shaft canal only; artificial caps are not anatomical ends.",
+    "Not a whole instrument or proximal entry route.",
+    "Illustrative finite-source projections, not clinical fluoroscopy.",
+    "Anatomical validity, clinical views and learner effectiveness remain unvalidated.",
+    "No endorsement by source authors or repository."
+  ]
+}

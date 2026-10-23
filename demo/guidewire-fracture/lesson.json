@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "fracture": {
+    "gapMm": 16,
+    "distalTranslation": [
+      0.0,
+      0.0,
+      -10.0
+    ]
+  },
+  "camera": {
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "sourcePivot": 800,
+    "sdd": 1200,
+    "fieldMm": 210
+  },
+  "views": [
+    {
+      "id": "ap",
+      "label": "AP reference",
+      "angleDeg": 0
+    },
+    {
+      "id": "oblique",
+      "label": "Oblique 30\u00b0",
+      "angleDeg": 30
+    },
+    {
+      "id": "lateral",
+      "label": "Lateral reference",
+      "angleDeg": 90
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-a",
+      "label": "Case 1",
+      "wire": {
+        "points": [
+          [
+            7.948929524760951,
+            72.0,
+            -0.9099486510606938
+          ],
+          [
+            6.70464912996687,
+            60.0,
+            -1.7485578109708457
+          ],
+          [
+            -4.701254488978868,
+            -50.0,
+            -9.435808443480571
+          ]
+        ],
+        "radiusMm": 1.25,
+        "oliveRadiusMm": 2.25
+      },
+      "truth": "entered",
+      "feedback": "The guidewire has entered the distal canal in this preset. The olive and the segment beyond the fracture lie inside the modelled canal.",
+      "frames": {
+        "ap": {
+          "url": "frames/case-a-ap.png",
+          "sha256": "9f56b2e0289dd9923c964fc4ffce99ed33225c5c3fbdeec8e6c77698bfeafc3a",
+          "width": 320,
+          "height": 320,
+          "viewId": "ap",
+          "valid": true,
+          "displayRotationDeg": 0
+        },
+        "oblique": {
+          "url": "frames/case-a-oblique.png",
+          "sha256": "3e777e3f73b1158c26c7b745d3213d6d475127db80806029671941774f4e3e11",
+          "width": 320,
+          "height": 320,
+          "viewId": "oblique",
+          "valid": true,
+          "displayRotationDeg": 0
+        },
+        "lateral": {
+          "url": "frames/case-a-lateral.png",
+          "sha256": "cd032fed9e87022edb6fc9cec8df27d1f5bcdafdfe528bf4fb5de85b69dc9f48",
+          "width": 320,
+          "height": 320,
+          "viewId": "lateral",
+          "valid": true,
+          "displayRotationDeg": 90
+        }
+      }
+    },
+    {
+      "id": "case-b",
+      "label": "Case 2",
+      "wire": {
+        "points": [
+          [
+            8.384015179994257,
+            72.0,
+            -3.3254422111799165
+          ],
+          [
+            7.001560227168714,
+            60.0,
+            -2.168431398931891
+          ],
+          [
+            -5.67094350706544,
+            -50.0,
+            8.43750104667501
+          ]
+        ],
+        "radiusMm": 1.25,
+        "oliveRadiusMm": 2.25
+      },
+      "truth": "missed",
+      "feedback": "The guidewire has missed the distal canal. It leaves through the fracture gap and runs anterior to the distal fragment; this is not a new perforation through intact cortex.",
+      "frames": {
+        "ap": {
+          "url": "frames/case-b-ap.png",
+          "sha256": "5a3ef7c108a41a84a6504f9ad736568c3ee3e9afb1d82de7f7ad894bc459a32a",
+          "width": 320,
+          "height": 320,
+          "viewId": "ap",
+          "valid": true,
+          "displayRotationDeg": 0
+        },
+        "oblique": {
+          "url": "frames/case-b-oblique.png",
+          "sha256": "60167c5af9ce43a0d0f25de8ee5ae4280d77901e30215c4fc0c0053ac47a9d70",
+          "width": 320,
+          "height": 320,
+          "viewId": "oblique",
+          "valid": true,
+          "displayRotationDeg": 0
+        },
+        "lateral": {
+          "url": "frames/case-b-lateral.png",
+          "sha256": "8f538a1864085579a475d44a2e0403b36254b09c8c1fac75a26aaedce2c6cc0e",
+          "width": 320,
+          "height": 320,
+          "viewId": "lateral",
+          "valid": true,
+          "displayRotationDeg": 90
+        }
+      }
+    }
+  ],
+  "source": {
+    "title": "HFValid collection v3",
+    "url": "https://amsacta.unibo.it/id/eprint/8431/",
+    "license": "CC BY 4.0",
+    "authors": "Aldieri, La Mattina, Szyszko, Baruffaldi and Viceconti (2025)"
+  },
+  "models": {
+    "outer": {
+      "url": "model/outer.stl",
+      "sha256": "5e8fc7631ebe0092ba854b0cb94a5bd31c1931fd19b150621b49b955a4b5e1fa"
+    },
+    "canal": {
+      "url": "model/canal.stl",
+      "sha256": "92ab77d67c93852025553bee9c276ec32600c33e42448fa051d4f98c2ed24200"
+    }
+  }
+}

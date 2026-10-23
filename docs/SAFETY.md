@@ -25,3 +25,7 @@ There are no accounts, analytics, uploads, patient inputs or persisted learner a
 ## Known status
 
 Numerical agreement, browser responsiveness, model appearance and educational effectiveness are separate claims. See [verification and benchmarks](STATUS.md) for measured results and test coverage.
+
+## Guidewire across a fracture
+
+The guidewire lesson uses a separate HFValid-derived outer surface and approximate central-shaft canal with artificial caps. The 16 mm gap, 10 mm posterior distal shift and straight finite capsule/olive wire are authored approximations. They do not represent a full instrument or entry route. A saved non-AP view permits a decision but does not certify sufficient evidence; model truth is not clinical safety. Anatomy, clinical views and learner effectiveness remain unvalidated. See [the lesson contract](GUIDEWIRE-FRACTURE.md) and [HFValid attribution](HFVALID-LICENCE.md).

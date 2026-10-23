@@ -1,5 +1,4 @@
-// Keep the catalogue JSON-compatible: the static page renderer reads this data
-// without executing JavaScript. Both hubs work before any browser script runs.
+// JSON-compatible data shared by static Lessons and Explore navigation.
 export const catalogue = [
   {
     "id": "femur",
@@ -16,5 +15,13 @@ export const catalogue = [
     "lesson": "guided.html",
     "exploreDescription": "Move the beam around a cylinder and wire, save an image for comparison and look around in 3D.",
     "lessonDescription": "Work through three wire-position challenges. Choose another view and give your answer before revealing the wire."
+  },
+  {
+    "id": "guidewire-fracture",
+    "title": "Guidewire across a fracture",
+    "explore": "",
+    "lesson": "guidewire-fracture/index.html",
+    "exploreDescription": "",
+    "lessonDescription": "Compare the AP image with another angle. Move the C-arm, save a view and decide whether the guidewire enters the distal canal, then check in 3D."
   }
 ];

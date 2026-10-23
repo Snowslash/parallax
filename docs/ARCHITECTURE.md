@@ -109,3 +109,7 @@ grey = round(255 × (1 − exp(−attenuation)))
 There is no per-image normalisation, alignment or warping. Detector pixels are point samples; changing resolution changes the ray set. The theme does not alter projection intensities.
 
 The Python primitive implementation supports guided generation and independent 3D checks. The mesh evidence exporter records raw path lengths and images; a separate Python oracle compares triangle-plane/cross-product intersections and solid-angle containment. See [development](REPRODUCING.md) for commands and [verification and benchmarks](STATUS.md) for configurations and results.
+
+## Guidewire across a fracture
+
+The self-contained `demo/guidewire-fracture/` lesson uses hash-checked HFValid-derived meshes, a verified cached AP and a finite-source worker for arbitrary C-arm poses. Requested/displayed/captured state stays separate; observer controls do not acquire images. Its finite capsule/olive wire is hidden until commitment. The existing public runtimes are unchanged. See [the lesson contract](GUIDEWIRE-FRACTURE.md) and [HFValid attribution](HFVALID-LICENCE.md).

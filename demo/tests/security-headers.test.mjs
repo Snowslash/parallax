@@ -19,3 +19,15 @@ test('Pages responses restrict framing and retain same-origin workers and model 
   }
   assert.doesNotMatch(csp, /unsafe-inline|unsafe-eval|https?:/);
 });
+
+
+test('only guidewire images gain Blob decoding; all other CSP directives stay identical', () => {
+  const headers=readFileSync(headersUrl,'utf8'), blocks=headers.trim().split(/\n\s*\n/);
+  assert.equal(blocks.length,2);
+  assert.ok(blocks[0].startsWith('/*\n'));
+  assert.ok(blocks[1].startsWith('/guidewire-fracture/*\n'));
+  assert.match(blocks[1],/^  ! Content-Security-Policy$/m);
+  const policy=b=>b.match(/^  Content-Security-Policy: (.+)$/m)[1];
+  assert.equal(policy(blocks[1]),policy(blocks[0]).replace("img-src 'self' data:","img-src 'self' data: blob:"));
+  assert.doesNotMatch(policy(blocks[1]),/unsafe-inline|unsafe-eval|https?:/);
+});
