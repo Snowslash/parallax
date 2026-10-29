@@ -13,9 +13,10 @@ test('femur catalogue description explains the current experience without a perf
   assert.match(femurRow,/bone without a wire/);
   assert.doesNotMatch(femurRow,/PARTIAL|250 ms|frozen synthetic|anatomically validated/);
 });
-test('femur catalogue retains the explorer and adds its lesson destination',()=>{
+test('archived femur explorer does not imply a shared model with the current lesson',()=>{
   assert.match(femurRow,/href="mesh-spike.html"/);
-  assert.match(femurRow,/href="femur-lesson.html"/);
+  assert.doesNotMatch(femurRow,/href="femur-lesson.html"/);
+  assert.match(femurRow,/different model/);
 });
 test('homepage group 3: remove the privacy paragraph and footer warning, retain provenance access',()=>{
   assert.doesNotMatch(html,/class="privacy-note"|Responses reset when/);

@@ -2,7 +2,7 @@
 <html lang="en-GB" data-theme="dark">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Acquire AP and lateral views of a preset femoral wire, judge the planned implant position, then inspect the geometry.">
-<title>Femur: tip apex distance — Parallax</title>
+<title>Femoral wire position — Parallax</title>
 <meta name="theme-color" content="#061e1d">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <link rel="icon" href="data:,">
@@ -12,46 +12,52 @@
 
 <link rel="stylesheet" href="lab.css?v=estate-3">
 <link rel="stylesheet" href="femur-lesson/lesson.css?v=femur-lesson-1">
+<link rel="stylesheet" href="lesson-workspace.css?v=consolidation-1">
 <script type="module" src="femur-lesson/app.mjs?v=femur-lesson-1"></script>
 </head>
 <body data-page="femur-lesson" data-pending="true" data-error="false" data-revealed="false">
 <a class="skip-link" href="#lesson">Skip to the lesson</a>
 <header class="estate-site-header" data-estate-ui="2.0.0-alpha.7" data-print-hidden="true"><div class="estate-site-header__inner"><a class="estate-wordmark" href="https://sangeev.me">Sangeev<span class="estate-wordmark__suffix">.me</span></a><nav aria-label="Primary navigation"><a href="https://sangeev.me/#projects">Projects</a><a href="https://github.com/Snowslash" class="estate-github-link" aria-label="GitHub" title="GitHub"><svg class="estate-github-mark" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.435.372.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.627.297 12 .297z"></path></svg></a></nav><button type="button" class="estate-theme-toggle" aria-label="Switch to light mode" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"></path></svg><span>Light</span></button></div></header>
-<div class="estate-shell estate-shell--wide-app lab" data-estate-layout="wide-app">
-<nav class="project-nav" aria-label="Project modes"><a href="index.html" class="project-name">Parallax</a><a href="explore.html">Explore</a><a href="lessons.html" aria-current="page">Lessons</a></nav>
+<div class="estate-shell estate-shell--wide-app lab lesson-lab" data-estate-layout="wide-app">
+<nav class="project-nav" aria-label="Project modes"><a href="index.html" class="project-name">Parallax</a><a href="lessons.html" aria-current="page">Lessons</a></nav>
 <main id="lesson" tabindex="-1">
-<header class="page-intro"><h1 class="estate-page-title estate-page-title--app">Femur: tip apex distance</h1><p id="case-brief">Take AP and lateral views, then judge the wire position.</p></header>
-<div class="lesson-start"><label for="case-select">Case</label><select id="case-select" disabled><option>Loading cases…</option></select><button id="reset-case" disabled>Restart case</button><a href="mesh-spike.html">Explore a separate whole-femur model</a></div>
+<header class="page-intro"><h1 class="estate-page-title estate-page-title--app">Femoral wire position</h1><p id="case-brief">Take AP and lateral views, then judge the wire position.</p></header>
+<div class="lesson-start"><label for="case-select">Case</label><select id="case-select" disabled><option>Loading cases…</option></select><button id="reset-case" disabled>Restart case</button></div>
 <details class="lesson-criteria"><summary>What should I look for?</summary><p>Treat the wire tip as the planned screw tip. Measure from the tip to the gold dot in each image. For this exercise, check both:</p><ul><li>The two distances add up to 25 mm or less.</li><li>The tip is within 8 mm of the head centre on the lateral view.</li></ul><p>Background reading: <a href="https://pubmed.ncbi.nlm.nih.gov/7608228/" target="_blank" rel="noopener noreferrer">Baumgaertner et al. (1995)</a> on tip–apex distance and screw cut-out (PubMed, new tab).</p><p><a href="licences.html#femur-lesson">How this differs from clinical TAD</a></p></details>
-<div class="femur-workbench">
-<section class="lesson-acquisition" aria-labelledby="current-title"><h2 id="current-title">Acquire a view</h2>
-<figure><canvas id="live-projection" width="256" height="256" role="img" aria-label="Waiting for the first femur and wire projection"></canvas><figcaption id="displayed-pose">No image yet</figcaption></figure>
-<p id="render-status" role="status">Loading the femur…</p><button id="retry" hidden>Retry rendering</button>
-<div class="lesson-actions"><button id="capture" disabled>Save this view</button><span id="view-quality">Adjust the beam to obtain an AP or lateral view.</span></div>
-<fieldset><legend>Move the beam</legend>
-<label for="assistance"><input id="assistance" type="checkbox" checked> Show view guidance</label>
-<div id="view-guidance"><p id="guidance-text"></p><div class="lesson-actions"><button id="aim-ap">Set up AP</button><button id="aim-lateral">Set up lateral</button></div></div>
+<div class="lesson-workspace">
+<section class="lesson-current lesson-panel" aria-labelledby="current-title"><h2 id="current-title">Current X-ray</h2>
+<figure><canvas id="live-projection" width="256" height="256" role="img" aria-label="Waiting for the first femur and wire projection"></canvas></figure>
+<fieldset class="lesson-beam-controls"><legend>Move the beam</legend>
 <label for="orbit">Orbit <output id="orbit-value"></output></label><input id="orbit" type="range" min="0" max="359.9" step="0.1" value="0">
 <label for="tilt">Angulation <output id="tilt-value"></output></label><input id="tilt" type="range" min="-60" max="60" step="0.1" value="0">
+<label for="assistance"><input id="assistance" type="checkbox" checked> Show view guidance</label>
+<div id="view-guidance"><div class="lesson-actions"><button id="aim-ap">Set up AP</button><button id="aim-lateral">Set up lateral</button></div><p id="guidance-text"></p></div>
+</fieldset>
+<p id="displayed-pose">No image yet</p>
+<p id="render-status" role="status">Loading the femur…</p><button id="retry" hidden>Retry rendering</button>
+<div class="lesson-actions"><button id="capture" disabled>Save this view</button><span id="view-quality">Adjust the beam to obtain an AP or lateral view.</span></div>
+</section>
+<section class="lesson-saved lesson-panel" aria-labelledby="compare-title"><h2 id="compare-title">Saved views</h2><div class="lesson-pair">
+<figure><div class="lesson-film"><canvas id="saved-ap" width="256" height="256" role="img" aria-label="No saved AP view" aria-describedby="caliper-help"></canvas><svg id="marks-ap" class="learner-marks" viewBox="0 0 256 256" aria-hidden="true"></svg><svg id="measure-ap" viewBox="0 0 256 256" aria-hidden="true" hidden></svg></div><figcaption id="caption-ap">AP · not yet saved</figcaption><button id="mark-ap" disabled>Measure AP</button><p id="estimate-ap" class="quiet" role="status"></p></figure>
+<figure><div class="lesson-film"><canvas id="saved-lateral" width="256" height="256" role="img" aria-label="No saved lateral view" aria-describedby="caliper-help"></canvas><svg id="marks-lateral" class="learner-marks" viewBox="0 0 256 256" aria-hidden="true"></svg><svg id="measure-lateral" viewBox="0 0 256 256" aria-hidden="true" hidden></svg></div><figcaption id="caption-lateral">Lateral · not yet saved</figcaption><button id="mark-lateral" disabled>Measure lateral</button><p id="estimate-lateral" class="quiet" role="status"></p></figure>
+</div><p id="caliper-help" class="quiet">Select Measure, then mark the wire tip followed by the gold dot. Click or use arrow keys and Enter. A third mark starts again. Your marks are blue.</p><p id="estimate-total" class="quiet" role="status"></p>
+<section class="lesson-decision" aria-labelledby="decision-title"><h2 id="decision-title">Does the tip meet both criteria?</h2>
+<p id="evidence-status" role="status">Save an AP and a lateral view before answering.</p>
+<div class="answer-fields"><label for="judgement">Your answer<select id="judgement" disabled><option value="">Choose an answer</option><option value="meets">Meets the criteria</option><option value="does-not-meet">Does not meet the criteria</option><option value="insufficient">I am not yet sure</option></select></label><label for="reason">What in the images supports your answer?<textarea id="reason" rows="3" maxlength="2000" disabled></textarea></label></div>
+<button id="commit" class="estate-primary-action" disabled>Confirm answer</button>
+</section></section>
+<section class="lesson-geometry lesson-context lesson-panel" aria-labelledby="scene-title"><h2 id="scene-title">3D view</h2><div class="lesson-context-grid"><div><div class="scene-wrap"><canvas id="lesson-scene" role="img" aria-label="Femur and imaging rig; wire hidden until you answer"></canvas><span class="inset-label">Close-up</span></div><p id="scene-note">The wire stays hidden here until you answer. Looking around does not change the images.</p></div><div>
+<fieldset><legend>Look around</legend><label for="observer-yaw">Rotate view</label><input id="observer-yaw" type="range" min="-180" max="180" step="1" value="-35"><label for="observer-elevation">Tilt view</label><input id="observer-elevation" type="range" min="-70" max="70" step="1" value="22"><label for="observer-zoom">Zoom</label><input id="observer-zoom" type="range" min="0.7" max="1.6" step="0.1" value="1"><button id="reset-observer">Reset view</button></fieldset>
 <details><summary>Reposition the rig</summary>
 <label for="x">X (mm) <output id="x-value"></output></label><input id="x" type="range" min="-120" max="120" step="0.1" value="0">
 <label for="y">Y (mm) <output id="y-value"></output></label><input id="y" type="range" min="-200" max="200" step="0.1" value="0">
 <label for="z">Z (mm) <output id="z-value"></output></label><input id="z" type="range" min="-120" max="120" step="0.1" value="0">
 </details>
-</fieldset></section>
-<section class="lesson-geometry" aria-labelledby="scene-title"><h2 id="scene-title">3D view</h2><div class="scene-wrap"><canvas id="lesson-scene" role="img" aria-label="Femur and imaging rig; wire hidden until you answer"></canvas><span class="inset-label">Close-up</span></div><p id="scene-note">The wire stays hidden here until you answer. Looking around does not change the images.</p>
-<fieldset><legend>Look around</legend><label for="observer-yaw">Rotate view</label><input id="observer-yaw" type="range" min="-180" max="180" step="1" value="-35"><label for="observer-elevation">Tilt view</label><input id="observer-elevation" type="range" min="-70" max="70" step="1" value="22"><label for="observer-zoom">Zoom</label><input id="observer-zoom" type="range" min="0.7" max="1.6" step="0.1" value="1"><button id="reset-observer">Reset view</button></fieldset>
-<section aria-labelledby="compare-title"><h2 id="compare-title">Compare your saved views</h2><div class="lesson-pair">
-<figure><div class="lesson-film"><canvas id="saved-ap" width="256" height="256" role="img" aria-label="No saved AP view" aria-describedby="caliper-help"></canvas><svg id="marks-ap" class="learner-marks" viewBox="0 0 256 256" aria-hidden="true"></svg><svg id="measure-ap" viewBox="0 0 256 256" aria-hidden="true" hidden></svg></div><figcaption id="caption-ap">AP · not yet saved</figcaption><button id="mark-ap" disabled>Measure AP</button><p id="estimate-ap" class="quiet" role="status"></p></figure>
-<figure><div class="lesson-film"><canvas id="saved-lateral" width="256" height="256" role="img" aria-label="No saved lateral view" aria-describedby="caliper-help"></canvas><svg id="marks-lateral" class="learner-marks" viewBox="0 0 256 256" aria-hidden="true"></svg><svg id="measure-lateral" viewBox="0 0 256 256" aria-hidden="true" hidden></svg></div><figcaption id="caption-lateral">Lateral · not yet saved</figcaption><button id="mark-lateral" disabled>Measure lateral</button><p id="estimate-lateral" class="quiet" role="status"></p></figure>
-</div><p id="caliper-help" class="quiet">Select Measure, then mark the wire tip followed by the gold dot. Click or use arrow keys and Enter. A third mark starts again. Your marks are blue.</p><p id="estimate-total" class="quiet" role="status"></p></section></section>
-</div>
-<section class="lesson-decision" aria-labelledby="decision-title"><h2 id="decision-title">Does the tip meet both criteria?</h2>
-<p id="evidence-status" role="status">Save an AP and a lateral view before answering.</p>
-<div class="answer-fields"><label for="judgement">Your answer<select id="judgement" disabled><option value="">Choose an answer</option><option value="meets">Meets the criteria</option><option value="does-not-meet">Does not meet the criteria</option><option value="insufficient">I am not yet sure</option></select></label><label for="reason">What in the images supports your answer?<textarea id="reason" rows="3" maxlength="2000" disabled></textarea></label></div>
-<button id="commit" class="estate-primary-action" disabled>Save answer and reveal</button>
+</div></div>
 </section>
-<section id="reveal" class="lesson-reveal" hidden aria-labelledby="reveal-title"><h2 id="reveal-title" tabindex="-1">Check your answer</h2><p id="your-answer"></p><p id="feedback"></p><p id="measurements"></p><p class="quiet">Gold lines show the reference distances on your saved images.</p><div class="lesson-actions"><button id="next-case">Next case</button><a href="lessons.html">All lessons</a></div></section>
+</div>
+
+<section id="reveal" class="lesson-reveal lesson-panel" hidden aria-labelledby="reveal-title"><h2 id="reveal-title" tabindex="-1">Check your answer</h2><p id="your-answer"></p><p id="feedback"></p><p id="measurements"></p><p class="quiet">Gold lines show the reference distances on your saved images.</p><div class="lesson-actions"><button id="next-case">Next case</button><a href="lessons.html">All lessons</a></div></section>
 </main><footer class="project-footer"><a href="licences.html">About &amp; licences</a></footer></div>
 <noscript>Enable JavaScript to acquire and compare views.</noscript>
 </body></html>

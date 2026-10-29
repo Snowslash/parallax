@@ -6,7 +6,7 @@ const html=readFileSync(new URL('../mesh-spike.html',import.meta.url),'utf8');
 test('Femur presents the reviewed material comparison without changing modes',()=>{
   assert.match(html,/<label for="material-mode">Bone appearance<\/label>/);
   assert.match(html,/<select id="material-mode"><option value="layered">Cortex \+ core<\/option><option value="uniform">Uniform<\/option><\/select>/);
-  assert.match(html,/Brighter areas block more of the beam/);
+  assert.doesNotMatch(html,/Brighter areas block more of the beam/);
   assert.match(html,/<title>Femur — Parallax<\/title>/);
   assert.match(html,/href="lessons.html"/);
   assert.match(html,/href="explore.html"[^>]*aria-current="page"/);

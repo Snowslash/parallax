@@ -15,10 +15,10 @@ test('About explains image generation without confusing projections with the obs
  assert.match(html,/not clinical TAD/);
  assert.match(html,/BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International/);
 });
-test('femur lesson uses the requested tip apex distance title',()=>{
+test('femur lesson names wire position rather than presenting the proxy as clinical TAD',()=>{
  const html=read('femur-lesson.html');
- assert.match(html,/<h1[^>]*>Femur: tip apex distance<\/h1>/);
- assert.match(html,/<title>Femur: tip apex distance — Parallax<\/title>/);
+ assert.match(html,/<h1[^>]*>Femoral wire position<\/h1>/);
+ assert.match(html,/<title>Femoral wire position — Parallax<\/title>/);
  assert.match(html,/href="licences.html#femur-lesson"/);
 });
 test('femur lesson criteria link to the original Baumgaertner study without leaving the lesson',()=>{

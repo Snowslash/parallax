@@ -1,0 +1,13 @@
+/* Page composition; tokens and shared chrome remain in the pinned estate package. */
+.project-opening { padding-block: var(--estate-space-8) var(--estate-space-6); max-width: 66ch; }
+.project-opening p { margin-block: var(--estate-space-5); }
+.project-summary { font-size: 1.3rem; line-height: 1.5; }
+.project-preview { margin: 0 0 var(--estate-space-8); }
+.project-preview img { display: block; width: 100%; height: auto; border: 1px solid var(--estate-rule); }
+.project-preview figcaption { color: var(--muted-foreground); margin-top: var(--estate-space-3); }
+.mode-register { margin-bottom: var(--estate-space-8); }
+.mode-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); }
+@media (max-width: 760px) {
+  .mode-row { grid-template-columns: minmax(0, 1fr); }
+  .project-opening { padding-block: var(--estate-space-6); }
+}

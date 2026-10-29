@@ -6,14 +6,14 @@ const demo=new URL('../',import.meta.url),root=new URL('../../',import.meta.url)
 const read=(path,base=demo)=>{const u=new URL(path,base);assert.ok(existsSync(u),`missing packaged file: ${path}`);return readFileSync(u,'utf8');};
 const pages=['index.html','lab.html','explore.html','lessons.html','guided.html','beam3d.html','mesh-spike.html','femur-lesson.html'];
 
-test('lab chooser provides deliberate entry to exploration and lessons',()=>{
+test('legacy lab entry leads to the current chooser',()=>{
   const html=read('lab.html');
   assert.doesNotMatch(html,/http-equiv="refresh"/i);
-  for(const p of ['explore.html','lessons.html'])assert.ok(html.includes(`href="${p}"`));
-  assert.match(html,/Explore freely or work through a lesson/);
+  assert.ok(html.includes('href="lessons.html"'));
+  assert.match(html,/Choose a lesson/);
 });
 test('all experiences return through shared navigation without linking omitted prototypes',()=>{
-  for(const p of pages){const html=read(p);assert.doesNotMatch(html,/href="baseline\//);assert.match(html,/Content-Security-Policy/);assert.match(html,/href="licences.html"/);assert.match(html,/href="explore.html"/);assert.match(html,/href="lessons.html"/);if(p!=='index.html')assert.match(html,/href="index.html"/);}
+  for(const p of pages){const html=read(p);assert.doesNotMatch(html,/href="baseline\//);assert.match(html,/Content-Security-Policy/);assert.match(html,/href="licences.html"/);assert.match(html,/href="lessons.html"/);if(p!=='index.html')assert.match(html,/href="index.html"/);}
   assert.equal(existsSync(new URL('baseline/',demo)),false);assert.equal(existsSync(new URL('explore.html',demo)),true);
 });
 test('HTML links, resources and local module imports resolve inside the package',()=>{

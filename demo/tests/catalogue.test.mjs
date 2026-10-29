@@ -2,65 +2,52 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {existsSync, readFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
-
 const demo = process.env.FTV_DEMO ? pathToFileURL(process.env.FTV_DEMO.replace(/\/$/, '') + '/') : new URL('../', import.meta.url);
 const read = name => readFileSync(new URL(name, demo), 'utf8');
 const expected = [
-  {id: 'femur', title: 'Femur', explore: 'mesh-spike.html', lesson: 'femur-lesson.html'},
-  {id: 'fundamentals', title: 'Projection fundamentals', explore: 'beam3d.html', lesson: 'guided.html'},
-  {id: 'guidewire-fracture', title: 'Guidewire across a fracture', explore: '', lesson: 'guidewire-fracture/index.html'}
+  {id: 'guidewire-fracture', title: 'Guidewire across a fracture', lesson: 'guidewire-fracture/index.html'},
+  {id: 'femur', title: 'Femoral wire position', lesson: 'femur-lesson.html'}
 ];
-
-test('catalogue preserves paired experiences and adds a lesson-only guidewire', async () => {
-  assert.ok(existsSync(new URL('catalogue.mjs', demo)), 'shared catalogue exists');
+test('catalogue names the two current learning tasks without separate explorers', async () => {
   const {catalogue} = await import(new URL('catalogue.mjs', demo));
-  assert.deepEqual(catalogue.map(({id, title, explore, lesson}) => ({id, title, explore, lesson})), expected);
+  assert.deepEqual(catalogue.map(({id,title,lesson}) => ({id,title,lesson})), expected);
+  assert.ok(catalogue.every(item => !item.explore));
 });
-
-test('hubs offer accessible static choices only for supported modes without JavaScript', () => {
-  for (const name of ['explore.html', 'lessons.html']) {
-    assert.ok(existsSync(new URL(name, demo)), `${name} exists`);
-    const html = read(name);
-    const rows = [...html.matchAll(/<article\b[^>]*data-experience="([^"]+)"[\s\S]*?<\/article>/g)];
-    assert.deepEqual(rows.map(row => row[1]), expected.filter(item => name === 'lessons.html' || item.explore).map(item => item.id));
-    for (const [i, row] of rows.entries()) {
-      const item = expected.filter(item => name === 'lessons.html' || item.explore)[i];
-      assert.ok(row[0].includes(`aria-labelledby="${item.id}-title"`));
-      assert.ok(row[0].includes(`id="${item.id}-title"`));
-      assert.ok(row[0].includes(item.title));
-      if (item.explore) assert.ok(row[0].includes(`href="${item.explore}"`));
-      else { assert.doesNotMatch(row[0], /Explore:|href=""/); }
-      assert.ok(row[0].includes(`href="${item.lesson}"`));
-    }
-    assert.doesNotMatch(html, /<select|disabled|coming soon/i);
+test('chooser offers both real lessons without JavaScript and no retired choices', () => {
+  const html = read('lessons.html');
+  const rows = [...html.matchAll(/<article\b[^>]*data-experience="([^"]+)"[\s\S]*?<\/article>/g)];
+  assert.deepEqual(rows.map(row => row[1]), expected.map(item => item.id));
+  for (const [i,row] of rows.entries()) {
+    const item = expected[i];
+    assert.ok(row[0].includes(`aria-labelledby="${item.id}-title"`));
+    assert.ok(row[0].includes(`id="${item.id}-title"`));
+    assert.ok(row[0].includes(item.title));
+    assert.ok(row[0].includes(`href="${item.lesson}"`));
+    assert.doesNotMatch(row[0], /Explore:|href=""/);
   }
+  assert.doesNotMatch(html, /<select|disabled|coming soon|href="(?:guided|beam3d|mesh-spike|explore)\.html"/i);
 });
-
-test('project navigation has only Parallax Explore Lessons and highlights each route section', () => {
-  const sections = {'index.html': 'index.html', 'lab.html': 'index.html', 'explore.html': 'explore.html', 'lessons.html': 'lessons.html', 'beam3d.html': 'explore.html', 'mesh-spike.html': 'explore.html', 'guided.html': 'lessons.html', 'licences.html': null};
-  sections['femur-lesson.html'] = 'lessons.html';
-  for (const [name, section] of Object.entries(sections)) {
+test('active navigation uses Parallax and Lessons; archived pages identify the archive', () => {
+  for (const name of ['index.html','lab.html','lessons.html','licences.html','femur-lesson.html','guidewire-fracture/index.html']) {
     const nav = read(name).match(/<nav class="project-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
-    assert.ok(nav, `${name} project navigation`);
-    const links = [...nav.matchAll(/<a href="([^"]+)"([^>]*)>([^<]+)<\/a>/g)];
-    assert.deepEqual(links.map(link => [link[1], link[3]]), [['index.html', 'Parallax'], ['explore.html', 'Explore'], ['lessons.html', 'Lessons']], name);
-    assert.deepEqual(links.filter(link => link[2].includes('aria-current="page"')).map(link => link[1]), section ? [section] : [], name);
+    assert.ok(nav, name);
+    assert.doesNotMatch(nav,/Explore|Archive/);
+    assert.match(nav,/Parallax/); assert.match(nav,/Lessons/);
+  }
+  for (const name of ['explore.html','guided.html','beam3d.html','mesh-spike.html']) {
+    assert.match(read(name), /href="explore.html"[^>]*aria-current="page"[^>]*>Archive/);
   }
 });
-
-test('catalogue explorer and lesson destinations exist as independent documents', async t => {
-  for (const item of expected) {
-    for (const route of [item.explore, item.lesson].filter(Boolean)) {
-      await t.test(route, () => {
-        assert.match(read(route), /<!doctype html>/i);
-      });
-    }
+test('archive preserves original routes but does not pair different femur models', () => {
+  const archive = read('explore.html');
+  for (const route of ['guided.html','beam3d.html','mesh-spike.html']) {
+    assert.ok(existsSync(new URL(route,demo)));
+    assert.ok(archive.includes(`href="${route}"`));
   }
+  assert.match(archive,/diagonal/);
+  assert.doesNotMatch(archive,/href="femur-lesson.html"/);
+  assert.match(read('licences.html'),/href="explore.html"/);
 });
-
-test('landing and legacy lab lead into both hubs rather than disconnected demos', () => {
-  for (const name of ['index.html', 'lab.html']) {
-    const main = read(name).match(/<main\b[^>]*>([\s\S]*?)<\/main>/)[1];
-    for (const href of ['explore.html', 'lessons.html']) assert.ok(main.includes(`href="${href}"`), `${name}: ${href}`);
-  }
+test('each active lesson destination exists', () => {
+  for (const item of expected) assert.match(read(item.lesson),/<!doctype html>/i);
 });

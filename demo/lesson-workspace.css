@@ -1,0 +1,109 @@
+/* Compare workspace. Composition only; the pinned estate owns its shell,
+   header, tokens, type roles, focus treatment and primary-action geometry. */
+.lesson-workspace {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--estate-space-5);
+  align-items: start;
+}
+.lesson-lab .lesson-panel {
+  min-width: 0;
+  margin: 0;
+  padding: var(--estate-space-5);
+  border: 1px solid var(--estate-rule);
+  background: var(--card);
+}
+.lesson-lab .lesson-panel h2:not(.estate-section-title) {
+  margin: 0 0 var(--estate-space-4);
+  font: 700 1.25rem/1.4 var(--estate-font-heading);
+}
+.lesson-lab .lesson-panel p { margin-block: var(--estate-space-3); }
+.lesson-start, .lesson-actions, .button-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--estate-space-3);
+}
+.lesson-lab .lesson-start { margin-bottom: var(--estate-space-4); }
+.lesson-lab .lesson-start select { width: auto; }
+.lesson-lab .lesson-current > figure { margin: 0; }
+.lesson-lab .lesson-current .evidence-image,
+.lesson-lab .lesson-current #live-projection {
+  width: min(100%, 320px);
+  height: auto;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  display: block;
+  background: #000;
+}
+.lesson-lab .lesson-current .evidence-image canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.lesson-lab .lesson-beam-controls { margin: var(--estate-space-4) 0; }
+.lesson-lab .lesson-beam-controls label { align-items: center; }
+.lesson-lab .lesson-beam-controls label:has(input[type="range"]) { display: block; }
+.lesson-lab .lesson-beam-controls output { float: right; }
+.lesson-lab #render-status { min-height: 44px; margin: 0; padding-block: var(--estate-space-2); }
+.lesson-lab #requested-pose, .lesson-lab #displayed-pose {
+  font-size: .85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+  overflow-wrap: anywhere;
+}
+.lesson-saved .lesson-pair, .lesson-saved .comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--estate-space-3);
+}
+.lesson-lab .lesson-saved figure { min-width: 0; margin: 0; }
+.lesson-lab .lesson-saved figcaption { margin-block: var(--estate-space-2); }
+.lesson-lab .lesson-saved .evidence-image { aspect-ratio: 1; }
+.lesson-lab .lesson-saved .evidence-image:empty::after {
+  color: var(--estate-foam);
+  font-size: .85rem;
+  text-align: center;
+}
+.lesson-context { grid-column: 1 / -1; }
+.lesson-context-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--estate-space-5);
+  align-items: start;
+}
+.lesson-context-grid > div { min-width: 0; }
+.lesson-lab .lesson-context .scene-wrap, .lesson-lab #rig-host {
+  height: 340px;
+  background: var(--estate-night-panel);
+}
+.lesson-lab .lesson-context fieldset { margin-top: 0; }
+.lesson-lab .lesson-context #scene-note { min-height: 0; }
+.lesson-lab .lesson-context details { margin-block: 0; }
+.lesson-lab .lesson-context label { display: block; }
+.lesson-lab .lesson-decision, .lesson-lab .lesson-reveal {
+  margin-block: var(--estate-space-5);
+}
+.lesson-lab .lesson-decision label { display: block; }
+.lesson-lab .lesson-decision select { display: block; }
+.lesson-lab .lesson-decision .answer-fields { margin-block: var(--estate-space-4); grid-template-columns: minmax(0, 1fr); gap: var(--estate-space-3); }
+.lesson-lab .lesson-saved .lesson-decision { border: 0; border-top: 1px solid var(--estate-rule); padding: var(--estate-space-4) 0 0; margin-bottom: 0; }
+.lesson-lab .lesson-saved fieldset:disabled { opacity: 1; }
+.lesson-lab .lesson-current > .lesson-beam-controls { border: 0; padding: 0; }
+.lesson-lab .lesson-current > .lesson-beam-controls legend { padding: 0; }
+.lesson-lab .lesson-saved #commit { margin-top: var(--estate-space-3); }
+@media (max-width: 780px) {
+  .lesson-workspace, .lesson-context-grid { grid-template-columns: minmax(0, 1fr); }
+  .lesson-lab .lesson-panel { padding: var(--estate-space-4); }
+  .lesson-lab .lesson-current #live-projection,
+  .lesson-lab .lesson-current .evidence-image { width: min(100%, 256px); }
+  .lesson-lab .lesson-context .scene-wrap, .lesson-lab #rig-host { height: 320px; }
+  .lesson-lab .lesson-saved .lesson-pair,
+  .lesson-lab .lesson-saved .comparison { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lesson-lab .lesson-saved figure { width: 100%; }
+}
+@media (max-width: 360px) {
+  .lesson-lab .lesson-saved .lesson-pair,
+  .lesson-lab .lesson-saved .comparison { grid-template-columns: minmax(0, 1fr); }
+}
