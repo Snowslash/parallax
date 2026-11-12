@@ -69,8 +69,10 @@ def main():
         except ImportError:
             print('Optional NumPy missing: use your own virtual environment and requirements-numerical.txt.');return 1
     print('Snapshot/boundary checks passed. Pattern scan only, not comprehensive secret assurance.',flush=True)
-    run('node','--test',*[str(p.relative_to(ROOT)) for p in sorted((ROOT/'demo/tests').glob('*.test.mjs'))])
-    run('node','--test','spikes/005-mesh-projection/evidence.test.mjs')
+    tests = sorted((ROOT/'demo/tests').glob('*.test.mjs')) + sorted((ROOT/'scripts/wasm').glob('*.test.mjs'))
+    run('node','--test','--test-concurrency=1',*[str(p.relative_to(ROOT)) for p in tests])
+    run('node','--test','--test-concurrency=1','spikes/005-mesh-projection/evidence.test.mjs')
+    run(sys.executable,'-B','scripts/test_check.py')
     if args.numerical:
         for directory,pattern in [('001-projection-geometry','test_geometry.py'),('002-guided-lessons','test_*.py'),('004-3d-beam','test_*.py')]:
             run(sys.executable,'-B','-m','unittest','discover','-s','spikes/'+directory,'-p',pattern,'-v')

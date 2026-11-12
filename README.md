@@ -28,6 +28,7 @@ Open **http://localhost:8000/** in a current browser. On Windows, you may need `
 ## Documentation
 
 - [Technical notes and development](docs/REPRODUCING.md)
+- [Local opt-in Rust/Wasm candidate, fallback and adoption gates](docs/WASM-CANDIDATE.md) — JavaScript remains default.
 - [Guidewire lesson geometry and limitations](docs/GUIDEWIRE-FRACTURE.md)
 - [Contributing](CONTRIBUTING.md)
 

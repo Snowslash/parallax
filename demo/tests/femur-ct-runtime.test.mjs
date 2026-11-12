@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {Worker} from 'node:worker_threads';
 const base=new URL('../',import.meta.url),load=p=>import(new URL(p,base));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const pins={outer:['outer.obj','296926ae65829ad19d4c778942917532a25763b152fdedbd6d3a7d83d8a66117'],envelope:['envelope.obj','c57021b50cdddb0a42f9a659afa3bd52140faa22d444f87a6b50c797c20cc674'],density:['density.u8','ffb98c0ac02e9c36f078a9d2901e57683c94d914b0455917600f12cd2842f93a'],densityInfo:['density.json','206f15536b3eece33e1e6a0973d04814fe947cab19d23fe8d3853136e8cc568e']};
@@ -16,20 +17,19 @@ test('six 256 square frames retain reviewed exact pixels',async()=>{
  assert.throws(()=>renderLessonProjection(outer,envelope,'central-deep',m.DEFAULT_LESSON_POSE,{size:32}),/density/);
 });
 test('actual worker rejects tampered or missing fields and coordinated manifest replacement, then retries',async()=>{
- const saved={self:globalThis.self,fetch:globalThis.fetch};let messages=[],mode='good',target='density',fetches=0;
- const m=await load('femur-lesson/model.mjs'),job={id:7,caseId:'central-deep',pose:m.DEFAULT_LESSON_POSE,size:32};
- const manifest=Object.fromEntries(Object.entries(pins).map(([k,[file,sha256]])=>[k,{file,sha256}]));
- globalThis.self={postMessage:x=>messages.push(x)};
- globalThis.fetch=async url=>{fetches++;const file=new URL(url).pathname.split('/').at(-1),copy=structuredClone(manifest);
-  if(file==='manifest.json'){if(mode==='missing-record')delete copy[target];if(mode==='coordinated'){const b=await readFile(new URL('femur-lesson/assets/'+pins[target][0],base));b[50]^=1;copy[target].sha256=hash(b);}return {ok:true,json:async()=>copy};}
-  if(mode==='missing'&&file===pins[target][0])return {ok:false,status:404};
-  const b=new Uint8Array(await readFile(new URL('femur-lesson/assets/'+file,base)));if(['tamper','coordinated'].includes(mode)&&file===pins[target][0])b[50]^=1;return {ok:true,arrayBuffer:async()=>b.buffer};
- };
- try{
-  for(target of Object.keys(pins))for(mode of ['tamper','coordinated','missing','missing-record']){
-   messages=[];await import(new URL('femur-lesson/worker.mjs?test='+target+'-'+mode,base));await self.onmessage({data:job});assert.ok(messages.at(-1)?.error,target+'/'+mode);assert.ok(!messages.some(x=>x.frame||x.type==='ready'));assert.match(messages.at(-1).error,/hash mismatch|manifest|HTTP/);
-   mode='good';messages=[];await self.onmessage({data:job});assert.equal(messages[0]?.type,'ready');assert.equal(messages.at(-1)?.frame?.invalidCount,0);for(const [k,[,pin]]of Object.entries(pins))assert.equal(messages.at(-1).frame.assetHashes[k],pin);
-  }
-  const before=fetches;for(const data of [null,{...job,caseId:'absent'},{...job,size:NaN}]){messages=[];await self.onmessage({data});assert.ok(messages.at(-1).error);}assert.equal(fetches,before);
- }finally{globalThis.self=saved.self;globalThis.fetch=saved.fetch;}
+ // Cache-busting imports cannot unload their module-level mesh promises. Give
+ // each failure/retry pair its own disposable isolate instead of retaining 16 meshes.
+ let executed=0;
+ for(const target of Object.keys(pins))for(const mode of ['tamper','coordinated','missing','missing-record']){
+  const worker=new Worker(new URL('./femur-worker-fixture.mjs',import.meta.url),{workerData:{pins,target,mode}});
+  let timer;
+  try{
+   const result=await new Promise((resolve,reject)=>{
+    timer=setTimeout(()=>reject(Error('CT fixture timed out')),30000);
+    worker.once('message',resolve);worker.once('error',reject);worker.once('exit',code=>reject(Error('CT fixture exited before result: '+code)));
+   });
+   assert.deepEqual(result,{target,mode,passed:true});executed++;
+  }finally{clearTimeout(timer);await worker.terminate();}
+ }
+ assert.equal(executed,16);
 });

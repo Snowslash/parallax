@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Optional Rust/WebAssembly renderer
+
+`demo/guidewire-fracture/wasm/renderer.wasm` is built with Rust 1.99.1 and may include statically linked Rust standard-library/compiler support. The installed toolchain's verbatim [library copyright and licence inventory](demo/guidewire-fracture/wasm/RUST-COPYRIGHT.html) accompanies the binary. That inventory covers the toolchain's libraries broadly; it does not assert that every listed component is linked into this small renderer. The crate adds no external Cargo dependencies. Original Parallax Rust/JavaScript source remains under the root MIT licence.
+
 ## Three.js 0.186.0 (r186)
 
 `demo/vendor/three-r186/` contains `three.module.js`, `three.core.js`, the exact upstream MIT `LICENSE` and `provenance.json` with version, upstream archive/commit and SHA-256 values. The licence belongs to the original Three.js contributors and is not replaced by this project's notice.
